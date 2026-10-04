@@ -1,20 +1,14 @@
-from pathlib import Path
-
 import pytest
 from alembic import command
-from alembic.config import Config
+
+from tests.conftest import alembic_config_para
 
 pytestmark = pytest.mark.integration
 
-BACKEND_ROOT = Path(__file__).resolve().parents[2]
-
 
 @pytest.fixture
-def alembic_config(test_database_url) -> Config:
-    config = Config(str(BACKEND_ROOT / "alembic.ini"))
-    config.attributes["database_url"] = test_database_url
-    config.attributes["configure_logger"] = False
-    return config
+def alembic_config(test_database_url):
+    return alembic_config_para(test_database_url)
 
 
 def test_las_migraciones_suben_y_bajan_sin_errores(alembic_config):

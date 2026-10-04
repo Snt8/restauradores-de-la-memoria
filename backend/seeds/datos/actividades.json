@@ -1,0 +1,266 @@
+{
+  "creditos_por_defecto": "Archivo del proyecto Restauradores de la Memoria, Colegio Tom Adams IED",
+  "elementos": [
+    {
+      "slug": "salida-cmpr-centro-historico-2022",
+      "nombre": "Centro de Memoria, Paz y Reconciliación y centro histórico de Bogotá",
+      "tipo": "salida_pedagogica",
+      "fecha": { "anio": 2022 },
+      "lugar": "Centro histórico, Bogotá",
+      "descripcion": "Recorrido por el Centro de Memoria, Paz y Reconciliación (CMPR) y el centro histórico de la ciudad.",
+      "evidencias": [
+        {
+          "tipo": "foto",
+          "url": "media/salidas/cmpr-centro-historico",
+          "titulo": "Estudiantes en el Centro de Memoria, Paz y Reconciliación"
+        }
+      ]
+    },
+    {
+      "slug": "salida-museo-ciudad-autoconstruida-2023",
+      "nombre": "Museo de la Ciudad Autoconstruida",
+      "tipo": "salida_pedagogica",
+      "fecha": { "anio": 2023 },
+      "lugar": "Ciudad Bolívar, Bogotá",
+      "descripcion": "Visita al Museo de la Ciudad Autoconstruida, en la localidad de Ciudad Bolívar.",
+      "evidencias": [
+        {
+          "tipo": "foto",
+          "url": "media/salidas/museo-ciudad-autoconstruida",
+          "titulo": "Vista de Ciudad Bolívar durante la salida"
+        }
+      ]
+    },
+    {
+      "slug": "salida-casa-de-la-memoria-suba-2024",
+      "nombre": "Casa de la Memoria de Suba",
+      "tipo": "salida_pedagogica",
+      "fecha": { "anio": 2024 },
+      "lugar": "Suba, Bogotá",
+      "evidencias": [
+        {
+          "tipo": "foto",
+          "url": "media/salidas/casa-memoria-suba",
+          "titulo": "Estudiantes junto a un mural en Suba"
+        }
+      ]
+    },
+    {
+      "slug": "salida-cerveceria-la-roja-casa-de-la-paz",
+      "nombre": "Cervecería La Roja – Casa de la Paz",
+      "tipo": "salida_pedagogica",
+      "descripcion": "Encuentro con firmantes del Acuerdo de Paz.",
+      "evidencias": [
+        {
+          "tipo": "foto",
+          "url": "media/salidas/cerveceria-la-roja",
+          "titulo": "Conversación con firmantes del Acuerdo de Paz"
+        }
+      ]
+    },
+    {
+      "slug": "salida-eje-de-la-memoria-cnmh-2025",
+      "nombre": "Eje de la Memoria y la Paz – Centro Nacional de Memoria Histórica",
+      "tipo": "salida_pedagogica",
+      "fecha": { "anio": 2025, "mes": 6 },
+      "lugar": "Bogotá",
+      "descripcion": "Salida pedagógica por el Eje de la Memoria con el Centro Nacional de Memoria Histórica (CNMH).",
+      "evidencias": [
+        {
+          "tipo": "foto",
+          "url": "media/salidas/eje-memoria-cnmh",
+          "titulo": "Estudiantes durante el recorrido por el Eje de la Memoria"
+        },
+        {
+          "tipo": "video",
+          "url": "https://web.facebook.com/reel/1748586202702527",
+          "titulo": "Video del CNMH sobre la salida pedagógica",
+          "creditos": "Centro Nacional de Memoria Histórica"
+        }
+      ]
+    },
+    {
+      "slug": "salida-encuentro-intergeneracional-olla-comunitaria",
+      "nombre": "Encuentro intergeneracional – Olla comunitaria",
+      "tipo": "salida_pedagogica",
+      "evidencias": [
+        {
+          "tipo": "foto",
+          "url": "media/salidas/olla-comunitaria",
+          "titulo": "Olla comunitaria durante el encuentro"
+        }
+      ]
+    },
+    {
+      "slug": "salida-casa-de-memoria-mafapo",
+      "nombre": "Casa de Memoria MAFAPO",
+      "tipo": "salida_pedagogica",
+      "descripcion": "Visita a la Casa de Memoria de Madres de Falsos Positivos (MAFAPO).",
+      "evidencias": [
+        {
+          "tipo": "foto",
+          "url": "media/salidas/casa-memoria-mafapo",
+          "titulo": "Estudiantes recorren la Casa de Memoria"
+        }
+      ]
+    },
+    {
+      "slug": "salida-reconocimiento-entorno-escolar",
+      "nombre": "Reconocimiento del entorno escolar",
+      "tipo": "salida_pedagogica",
+      "lugar": "Localidad de Kennedy, Bogotá",
+      "descripcion": "Recorrido de reconocimiento por el entorno del colegio.",
+      "evidencias": [
+        {
+          "tipo": "foto",
+          "url": "media/salidas/reconocimiento-entorno",
+          "titulo": "Estudiantes recorren el entorno escolar"
+        }
+      ]
+    },
+    {
+      "slug": "conmemoracion-12-de-febrero",
+      "nombre": "Día de las Manos Rojas",
+      "tipo": "fecha_conmemorativa",
+      "fecha": { "mes": 2, "dia": 12 },
+      "descripcion": "Día internacional contra el uso de niñas, niños y adolescentes en la guerra. En el colegio se conmemoró con una intervención colectiva de manos rojas.",
+      "evidencias": [
+        {
+          "tipo": "foto",
+          "url": "media/conmemoraciones/12-febrero",
+          "titulo": "Collage de la jornada de las Manos Rojas"
+        }
+      ]
+    },
+    {
+      "slug": "conmemoracion-9-de-abril",
+      "nombre": "Día Nacional de la Memoria y Solidaridad con las Víctimas del Conflicto Armado",
+      "tipo": "fecha_conmemorativa",
+      "fecha": { "mes": 4, "dia": 9 },
+      "descripcion": "Fecha establecida por la Ley 1448 de 2011. En el colegio se conmemoró con performances de estudiantes que la presentación del proyecto agrupa bajo el título «Memorias corporales».",
+      "evidencias": [
+        {
+          "tipo": "foto",
+          "url": "media/conmemoraciones/9-abril-1",
+          "titulo": "Performance de estudiantes en el patio"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/conmemoraciones/9-abril-2",
+          "titulo": "Performance ante estudiantes de primaria"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/conmemoraciones/9-abril-3",
+          "titulo": "Danza con la bandera de Colombia"
+        }
+      ]
+    },
+    {
+      "slug": "conmemoracion-28-de-abril",
+      "nombre": "Conmemoración del 28 de abril",
+      "tipo": "fecha_conmemorativa",
+      "fecha": { "mes": 4, "dia": 28 },
+      "descripcion": "Las piezas registradas en esta fecha recuerdan a las personas que sufrieron lesiones oculares durante las protestas del Paro Nacional que comenzó el 28 de abril de 2021.",
+      "evidencias": [
+        {
+          "tipo": "foto",
+          "url": "media/conmemoraciones/28-abril-1",
+          "titulo": "Instalación con velas y la bandera de Colombia"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/conmemoraciones/28-abril-2",
+          "titulo": "Conversatorio con invitados"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/conmemoraciones/28-abril-3",
+          "titulo": "Estudiantes presentan la historia de Leidy Natalia Cadena"
+        }
+      ]
+    },
+    {
+      "slug": "conmemoracion-25-de-mayo",
+      "nombre": "Día Nacional por la Dignidad de las Mujeres Víctimas de Violencia Sexual en el Conflicto Armado",
+      "tipo": "fecha_conmemorativa",
+      "fecha": { "mes": 5, "dia": 25 },
+      "descripcion": "Fecha declarada por el Decreto 1480 de 2014. En el colegio se conmemoró con performances y carteles contra la violencia sexual, dentro de las «Memorias corporales».",
+      "evidencias": [
+        {
+          "tipo": "foto",
+          "url": "media/conmemoraciones/25-mayo-1",
+          "titulo": "Performance de estudiantes"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/conmemoraciones/25-mayo-2",
+          "titulo": "Cartel «Violencia sexual y discriminación»"
+        }
+      ]
+    },
+    {
+      "slug": "conmemoracion-31-de-agosto",
+      "nombre": "Conmemoración del 31 de agosto",
+      "tipo": "fecha_conmemorativa",
+      "fecha": { "mes": 8, "dia": 31 },
+      "descripcion": "La presentación del proyecto registra esta fecha con una intervención colectiva de grafiti sobre paneles en el colegio.",
+      "evidencias": [
+        {
+          "tipo": "foto",
+          "url": "media/conmemoraciones/31-agosto-1",
+          "titulo": "Panel intervenido con grafiti"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/conmemoraciones/31-agosto-2",
+          "titulo": "Estudiantes junto a los paneles"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/conmemoraciones/31-agosto-3",
+          "titulo": "Intervención con aerosol"
+        }
+      ]
+    },
+    {
+      "slug": "diplomado-memoria-y-verdad-2024",
+      "nombre": "Diplomado en Memoria y Verdad",
+      "tipo": "formacion",
+      "fecha": { "anio": 2024 },
+      "descripcion": "Cualificación docente con el Centro Nacional de Memoria Histórica (CNMH).",
+      "evidencias": [
+        {
+          "tipo": "foto",
+          "url": "media/formacion/diplomado-memoria-verdad-1",
+          "titulo": "Sesión del diplomado"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/formacion/diplomado-memoria-verdad-2",
+          "titulo": "Entrega de certificados"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/formacion/diplomado-memoria-verdad-3",
+          "titulo": "Grupo de participantes del diplomado"
+        }
+      ]
+    },
+    {
+      "slug": "diplomado-sistematizacion-educacion-para-la-paz-2026",
+      "nombre": "Diplomado en Sistematización de Experiencias de Educación para la Paz",
+      "tipo": "formacion",
+      "fecha": { "anio": 2026 },
+      "descripcion": "Cualificación docente ofrecida por el Instituto Colombo-Alemán para la Paz (CAPAZ), la Universidad Pedagógica Nacional y el Colectivo Montes de María.",
+      "evidencias": [
+        {
+          "tipo": "foto",
+          "url": "media/formacion/diplomado-sistematizacion",
+          "titulo": "Convocatoria del diplomado",
+          "creditos": "Instituto CAPAZ"
+        }
+      ]
+    }
+  ]
+}

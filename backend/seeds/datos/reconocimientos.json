@@ -1,0 +1,148 @@
+{
+  "creditos_por_defecto": "Archivo del proyecto Restauradores de la Memoria, Colegio Tom Adams IED",
+  "elementos": [
+    {
+      "slug": "gala-de-los-mejores-2023",
+      "nombre": "Premio Gala de los Mejores 2023",
+      "otorgante": "Secretaría de Educación del Distrito, Subsecretaría de Integración Interinstitucional",
+      "fecha": { "anio": 2023 },
+      "descripcion": "Premio en la categoría «El colegio, la comunidad y la ciudad», que reconoce a las instituciones educativas que integraron la educación socioemocional y ciudadana.",
+      "evidencias": [
+        {
+          "tipo": "foto",
+          "url": "media/reconocimientos/gala-mejores-2023-premio",
+          "titulo": "Anuncio del premio en la transmisión de la gala",
+          "creditos": "Capital / Secretaría de Educación del Distrito"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/reconocimientos/gala-mejores-2023-trofeo",
+          "titulo": "Trofeo Gala de los Mejores 2023"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/reconocimientos/gala-mejores-2023-entrega",
+          "titulo": "Entrega del premio"
+        }
+      ]
+    },
+    {
+      "slug": "mencion-de-honor-docente-2023",
+      "nombre": "Mención de Honor a la docente Ángela Marcela Gutiérrez Veloza",
+      "otorgante": "Alcaldía Mayor de Bogotá, Secretaría de Educación del Distrito y Colegio Tom Adams IED",
+      "fecha": { "anio": 2023, "mes": 11, "dia": 28 },
+      "descripcion": "Por su liderazgo en la implementación de estrategias y experiencias pedagógicas que impactan positivamente el crecimiento personal y académico de los estudiantes.",
+      "evidencias": [
+        {
+          "tipo": "foto",
+          "url": "media/reconocimientos/mencion-honor-2023",
+          "titulo": "Diploma de la Mención de Honor"
+        }
+      ]
+    },
+    {
+      "slug": "incentivo-alcaldia-local-kennedy-2024",
+      "nombre": "Incentivo de la Alcaldía Local de Kennedy",
+      "otorgante": "Alcaldía Local de Kennedy",
+      "fecha": { "anio": 2024 },
+      "descripcion": "Incentivo de $7.600.000 para el acompañamiento pedagógico in situ «Constructores de paz» (víctimas del conflicto armado) y para «Semilleros de Paz».",
+      "evidencias": [
+        {
+          "tipo": "foto",
+          "url": "media/reconocimientos/incentivo-kennedy-1",
+          "titulo": "Estudiantes y docentes del proyecto"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/reconocimientos/incentivo-kennedy-2",
+          "titulo": "Encuentro de Semilleros de Paz"
+        }
+      ]
+    },
+    {
+      "slug": "entornos-escolares-inspiradores-2025",
+      "nombre": "Entornos Escolares Inspiradores – Categoría 5: Aliados por un entorno inspirador",
+      "otorgante": "Alcaldía Mayor de Bogotá, Secretaría de Educación del Distrito",
+      "fecha": { "anio": 2025, "mes": 2 },
+      "descripcion": "Reconoce la sostenibilidad del trabajo articulado entre la institución educativa, líderes, organizaciones y entidades para impulsar una iniciativa conjunta de mejora del entorno escolar.",
+      "evidencias": [
+        {
+          "tipo": "foto",
+          "url": "media/reconocimientos/entornos-inspiradores-1",
+          "titulo": "Pieza oficial de la categoría «Aliados por un entorno inspirador»",
+          "creditos": "Secretaría de Educación del Distrito"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/reconocimientos/entornos-inspiradores-2",
+          "titulo": "Entrega del reconocimiento"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/reconocimientos/entornos-inspiradores-3",
+          "titulo": "Muestra del proyecto en la ceremonia"
+        },
+        {
+          "tipo": "enlace",
+          "url": "https://x.com/Educacionbogota/status/1902046716477477112",
+          "titulo": "Publicación de la Secretaría de Educación",
+          "creditos": "Secretaría de Educación del Distrito"
+        },
+        {
+          "tipo": "enlace",
+          "url": "https://x.com/Bogota/status/1894407697602080927",
+          "titulo": "Publicación de la Alcaldía Mayor de Bogotá",
+          "creditos": "Alcaldía Mayor de Bogotá"
+        }
+      ]
+    },
+    {
+      "slug": "cnmh-lugar-de-memoria-museo-virtual-2026",
+      "nombre": "Lugar de Memoria en Colombia – Museo Virtual del CNMH",
+      "otorgante": "Centro Nacional de Memoria Histórica (CNMH)",
+      "fecha": { "anio": 2026 },
+      "descripcion": "El proyecto aparece en el Museo Virtual del CNMH, un mapa interactivo de los Lugares de Memoria en Colombia.",
+      "evidencias": [
+        {
+          "tipo": "foto",
+          "url": "media/reconocimientos/cnmh-museo-virtual",
+          "titulo": "Museo Virtual del CNMH",
+          "creditos": "Centro Nacional de Memoria Histórica"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/reconocimientos/mural-memoria-nos-une",
+          "titulo": "Mural «La memoria nos une»"
+        }
+      ]
+    },
+    {
+      "slug": "cnmh-registro-readh-2026",
+      "nombre": "Registro Especial de Archivos de Derechos Humanos y Memoria Histórica (READH)",
+      "otorgante": "Centro Nacional de Memoria Histórica (CNMH), Dirección de Archivo de los Derechos Humanos",
+      "fecha": { "anio": 2026, "mes": 8, "dia": 6 },
+      "descripcion": "Los documentos del colegio vinculados a los derechos humanos se incorporaron al Archivo Virtual – Módulo READH con el código Co.11001000.10496.",
+      "evidencias": [
+        {
+          "tipo": "foto",
+          "url": "media/reconocimientos/readh-carta-1",
+          "titulo": "Comunicación del CNMH (página 1)",
+          "creditos": "Centro Nacional de Memoria Histórica"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/reconocimientos/readh-carta-2",
+          "titulo": "Comunicación del CNMH (página 2)",
+          "creditos": "Centro Nacional de Memoria Histórica"
+        }
+      ]
+    },
+    {
+      "slug": "cnmh-red-nacional-colegios-museos-escolares-2026",
+      "nombre": "Red Nacional de Colegios con Museos Escolares de Memoria",
+      "otorgante": "Centro Nacional de Memoria Histórica (CNMH)",
+      "fecha": { "anio": 2026 },
+      "descripcion": "El colegio hace parte de la Red Nacional de Colegios con Museos Escolares de Memoria."
+    }
+  ]
+}

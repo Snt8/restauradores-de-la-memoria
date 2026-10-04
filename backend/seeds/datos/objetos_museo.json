@@ -1,0 +1,25 @@
+{
+  "creditos_por_defecto": "Modelo provisional generado por código (equipo de desarrollo)",
+  "elementos": [
+    {
+      "slug": "pieza-de-prueba-caja-de-archivo",
+      "nombre": "Pieza de prueba: caja de archivo",
+      "descripcion": "Modelo 3D provisional creado para probar el Museo Virtual. Se reemplazará por un objeto real del Museo Escolar de la Memoria, digitalizado por el equipo mediante fotogrametría.",
+      "importancia_memoria": "Pendiente: el equipo de contenidos describirá la relación del objeto real con la memoria institucional.",
+      "modelo_3d_url": "models/pieza-prueba-caja.glb",
+      "creditos": "Modelo provisional generado por código (equipo de desarrollo)",
+      "ubicacion": { "x": -2.2, "y": 1.05, "z": -5, "rotacion_y": 20, "escala": 1.6 },
+      "orden": 1
+    },
+    {
+      "slug": "pieza-de-prueba-vasija",
+      "nombre": "Pieza de prueba: vasija",
+      "descripcion": "Modelo 3D provisional creado para probar el Museo Virtual. Se reemplazará por un objeto real del Museo Escolar de la Memoria, digitalizado por el equipo mediante fotogrametría.",
+      "importancia_memoria": "Pendiente: el equipo de contenidos describirá la relación del objeto real con la memoria institucional.",
+      "modelo_3d_url": "models/pieza-prueba-vasija.glb",
+      "creditos": "Modelo provisional generado por código (equipo de desarrollo)",
+      "ubicacion": { "x": 2.2, "y": 1.05, "z": -5, "rotacion_y": -20, "escala": 1.6 },
+      "orden": 2
+    }
+  ]
+}

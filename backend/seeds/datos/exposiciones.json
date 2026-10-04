@@ -1,0 +1,305 @@
+{
+  "creditos_por_defecto": "Archivo del proyecto Restauradores de la Memoria, Colegio Tom Adams IED",
+  "elementos": [
+    {
+      "slug": "museo-escolar-2021",
+      "nombre": "Museo Escolar de la Memoria 2021",
+      "fecha": { "anio": 2021, "mes": 9 },
+      "lugar": "Colegio Tom Adams IED",
+      "descripcion": "Primera edición del Museo Escolar de la Memoria. Estudiantes del colegio crearon esculturas, pinturas e intervenciones sobre la memoria del conflicto armado y las exhibieron ante la comunidad educativa.",
+      "evidencias": [
+        {
+          "tipo": "video",
+          "url": "https://www.youtube.com/watch?v=EvR31L2aH44",
+          "titulo": "Video resumen del Museo Escolar de la Memoria 2021"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/museo/2021-modelado-en-arcilla",
+          "titulo": "Estudiantes modelan piezas en arcilla"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/museo/2021-busto-intervenido",
+          "titulo": "Busto intervenido por estudiantes"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/museo/2021-mano-escultura",
+          "titulo": "Escultura de una mano en arcilla"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/museo/2021-pintura-calaveras",
+          "titulo": "Pintura de calaveras entre flores"
+        }
+      ]
+    },
+    {
+      "slug": "arte-y-memoria-2022",
+      "nombre": "Arte y Memoria 2022",
+      "fecha": { "anio": 2022, "mes": 10 },
+      "lugar": "Colegio Tom Adams IED",
+      "descripcion": "Edición «Arte y Memoria» del Museo Escolar, con montajes fotográficos, piezas exhibidas y representaciones teatrales de estudiantes.",
+      "evidencias": [
+        {
+          "tipo": "foto",
+          "url": "media/museo/2022-collage-fotografico",
+          "titulo": "Montaje fotográfico"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/museo/2022-recorrido-exposicion",
+          "titulo": "Visitantes recorren la exposición"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/museo/2022-representacion-teatral",
+          "titulo": "Representación teatral de estudiantes"
+        }
+      ]
+    },
+    {
+      "slug": "museo-escolar-2023",
+      "nombre": "Museo Escolar de la Memoria 2023",
+      "fecha": { "anio": 2023, "mes": 10 },
+      "lugar": "Colegio Tom Adams IED",
+      "descripcion": "Edición del Museo Escolar de la Memoria con maquetas, murales fotográficos, objetos intervenidos e intervenciones de estudiantes.",
+      "evidencias": [
+        {
+          "tipo": "video",
+          "url": "https://www.youtube.com/watch?v=7KZMLHnJLM8",
+          "titulo": "Video resumen del Museo Escolar de la Memoria 2023"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/museo/2023-intervencion-podio",
+          "titulo": "Intervención de un estudiante en el podio"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/museo/2023-maqueta-barrio",
+          "titulo": "Maqueta de un barrio"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/museo/2023-muro-fotografias",
+          "titulo": "Muro de fotografías"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/museo/2023-calavera-decorada",
+          "titulo": "Calavera decorada"
+        }
+      ]
+    },
+    {
+      "slug": "arte-y-memoria-2024",
+      "nombre": "Arte y Memoria 2024",
+      "fecha": { "anio": 2024, "mes": 10 },
+      "lugar": "Colegio Tom Adams IED",
+      "descripcion": "Edición «Arte y Memoria» del Museo Escolar. Además de las piezas de arte y las representaciones, el recorrido incluyó una experiencia con gafas de realidad virtual.",
+      "evidencias": [
+        {
+          "tipo": "foto",
+          "url": "media/museo/2024-muro-herramientas",
+          "titulo": "Instalación de herramientas sobre un muro"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/museo/2024-grupo-teatro",
+          "titulo": "Grupo de teatro estudiantil"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/museo/2024-realidad-virtual",
+          "titulo": "Recorrido con gafas de realidad virtual"
+        }
+      ]
+    },
+    {
+      "slug": "museo-escolar-2025",
+      "nombre": "Museo Escolar de la Memoria 2025",
+      "fecha": { "anio": 2025, "mes": 11 },
+      "lugar": "Colegio Tom Adams IED",
+      "descripcion": "Quinta versión del Museo Escolar de la Memoria, con acompañamiento pedagógico del Centro Nacional de Memoria Histórica (CNMH).",
+      "evidencias": [
+        {
+          "tipo": "video",
+          "url": "https://www.youtube.com/watch?v=-O6inKLKRRI",
+          "titulo": "Video resumen del Museo Escolar de la Memoria 2025"
+        },
+        {
+          "tipo": "enlace",
+          "url": "https://x.com/CentroMemoriaH/status/1993854790150050186",
+          "titulo": "Publicación del CNMH sobre el acompañamiento pedagógico a la quinta versión",
+          "creditos": "Centro Nacional de Memoria Histórica"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/museo/2025-altar-sanacion",
+          "titulo": "Instalación «La sanación me libera»"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/museo/2025-danza",
+          "titulo": "Presentación de danza"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/museo/2025-cabeza-espinas",
+          "titulo": "Escultura de una cabeza con corona de espinas"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/museo/2025-boceto-lapiz",
+          "titulo": "Boceto a lápiz"
+        }
+      ]
+    },
+    {
+      "slug": "arte-y-memoria-2026",
+      "nombre": "Arte y Memoria 2026",
+      "fecha": { "anio": 2026, "mes": 10 },
+      "lugar": "Colegio Tom Adams IED",
+      "descripcion": "Edición «Arte y Memoria» del Museo Escolar, con maquetas, cajas escénicas, bocetos y objetos de memoria presentados por estudiantes.",
+      "evidencias": [
+        { "tipo": "foto", "url": "media/museo/2026-maqueta", "titulo": "Maqueta con figuras" },
+        {
+          "tipo": "foto",
+          "url": "media/museo/2026-cuadros-ajedrez",
+          "titulo": "Cajas escénicas y tablero de ajedrez"
+        },
+        { "tipo": "foto", "url": "media/museo/2026-boceto", "titulo": "Boceto de una escultura" },
+        {
+          "tipo": "foto",
+          "url": "media/museo/2026-estudiantes-botas",
+          "titulo": "Estudiantes con botas intervenidas"
+        }
+      ]
+    },
+    {
+      "slug": "la-escuela-territorio-de-paz",
+      "nombre": "La Escuela: territorio de paz",
+      "fecha": { "anio": 2025, "mes": 10, "dia": 22 },
+      "lugar": "Centro de Memoria, Paz y Reconciliación, Bogotá",
+      "descripcion": "Exposición temporal inaugurada el 22 de octubre de 2025. Reunió el trabajo sobre memorias vivas de 10 colegios de distintas localidades de Bogotá que pertenecen a la Red de colegios como lugares de memoria.",
+      "evidencias": [
+        {
+          "tipo": "foto",
+          "url": "media/museo/escuela-territorio-paz-invitacion",
+          "titulo": "Invitación a la inauguración",
+          "creditos": "Centro de Memoria, Paz y Reconciliación"
+        },
+        {
+          "tipo": "enlace",
+          "url": "https://www.instagram.com/p/DQMuGmsjtRB/",
+          "titulo": "Publicación en Instagram sobre la exposición"
+        },
+        {
+          "tipo": "enlace",
+          "url": "https://www.instagram.com/p/DQDKQEFjv6b/",
+          "titulo": "Publicación en Instagram sobre la exposición (2)"
+        },
+        {
+          "tipo": "enlace",
+          "url": "https://web.facebook.com/CMPReconciliacion/posts/enfotos-as%C3%AD-fue-la-inauguraci%C3%B3n-de-la-exposici%C3%B3n-la-escuela-territorio-de-paz-re/1242731244564095/",
+          "titulo": "Fotos de la inauguración en Facebook",
+          "creditos": "Centro de Memoria, Paz y Reconciliación"
+        }
+      ]
+    },
+    {
+      "slug": "escuelas-que-recuerdan-2018",
+      "nombre": "Escuelas que recuerdan, narran y resignifican la guerra",
+      "fecha": { "anio": 2018 },
+      "lugar": "Feria del Libro de Bogotá",
+      "descripcion": "Exposición en la Feria del Libro 2018. Es el antecedente del proyecto Restauradores de la Memoria.",
+      "evidencias": [
+        {
+          "tipo": "enlace",
+          "url": "https://x.com/Educacionbogota/status/988831073281900544",
+          "titulo": "Publicación de la Secretaría de Educación sobre la exposición",
+          "creditos": "Secretaría de Educación del Distrito"
+        },
+        {
+          "tipo": "video",
+          "url": "https://www.youtube.com/watch?v=pdQ-DnRZfyQ",
+          "titulo": "Video de la exposición en la Feria del Libro 2018"
+        }
+      ]
+    },
+    {
+      "slug": "muestras-comunitarias",
+      "nombre": "Muestras comunitarias del Museo Escolar de la Memoria",
+      "descripcion": "Muestras del Museo Escolar de la Memoria realizadas con la comunidad, fuera del aula: carpas, danzas, música, teatro y piezas de arte.",
+      "evidencias": [
+        {
+          "tipo": "foto",
+          "url": "media/museo/muestras-comunitarias-1",
+          "titulo": "Piezas del museo y público"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/museo/muestras-comunitarias-2",
+          "titulo": "Niñas y niños visitan el museo"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/museo/muestras-comunitarias-3",
+          "titulo": "Equipo del Museo Escolar de la Memoria"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/museo/muestras-comunitarias-4",
+          "titulo": "Estudiantes muestran fotografías"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/museo/muestras-comunitarias-5",
+          "titulo": "Presentación frente a las carpas"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/museo/muestras-comunitarias-6",
+          "titulo": "Presentación de danza"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/museo/muestras-comunitarias-7",
+          "titulo": "Pieza de arte exhibida"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/museo/muestras-comunitarias-8",
+          "titulo": "Presentación musical"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/museo/muestras-comunitarias-9",
+          "titulo": "Estudiante presenta el mapa «Pasado»"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/museo/muestras-comunitarias-10",
+          "titulo": "Danza ante la comunidad"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/museo/muestras-comunitarias-11",
+          "titulo": "Representación de estudiantes"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/museo/muestras-comunitarias-12",
+          "titulo": "Mesa con piezas del museo"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/museo/muestras-comunitarias-13",
+          "titulo": "Escultura de un corazón sostenido por una mano"
+        }
+      ]
+    }
+  ]
+}

@@ -8,6 +8,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from app.core.config import Settings, get_settings
 from app.infrastructure.db.database import Database
+from app.presentation.api.errores import registrar_manejadores_de_errores
 from app.presentation.api.v1.router import api_router
 
 
@@ -38,6 +39,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         allow_methods=["GET", "POST", "PUT", "PATCH", "DELETE"],
         allow_headers=["*"],
     )
+    registrar_manejadores_de_errores(app)
     app.include_router(api_router, prefix=settings.api_v1_prefix)
     return app
 

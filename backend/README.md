@@ -14,6 +14,7 @@ API REST que gestiona la información del portal: objetos del museo, exposicione
 | 📁 [`app/presentation/`](app/presentation/README.md) | API HTTP: routers, schemas y composición de dependencias |
 | 📄 `app/main.py` | Fábrica `create_app()` que ensambla todo |
 | 📁 [`alembic/`](alembic/README.md) | Migraciones de base de datos |
+| 📁 [`seeds/`](seeds/README.md) | Contenido inicial real y su cargador idempotente |
 | 📁 [`tests/`](tests/README.md) | Pruebas unitarias y de integración |
 | 📄 `pyproject.toml` | Dependencias y configuración de pytest y ruff |
 | 📄 `.env.example` | Variables de entorno disponibles |
@@ -29,6 +30,7 @@ Persistir y exponer de forma segura y escalable la información institucional pa
 | `sqlalchemy[asyncio]`, `asyncpg` | ORM y driver asíncrono de PostgreSQL |
 | `alembic` | Migraciones versionadas |
 | `pydantic-settings` | Configuración tipada desde el entorno |
+| `pydantic[email]` | Validación de correos del formulario de contacto |
 | `pytest`, `pytest-asyncio`, `httpx2`, `ruff` | Pruebas y calidad (extra `dev`) |
 
 ## 🛠️ Cómo lo soluciona: Clean Architecture
@@ -51,13 +53,18 @@ pytest                                 # todas las pruebas
 pytest -m unit                         # solo unitarias (sin base de datos)
 pytest -m integration                  # solo integración (requiere docker compose up -d db)
 ruff check . && ruff format .          # lint y formato
-alembic revision --autogenerate -m "crear tabla eventos"
+alembic revision --autogenerate -m "agrega tabla publicaciones"
 alembic upgrade head
+python -m seeds.load                   # carga el contenido inicial (idempotente)
 ```
+
+La lista completa de endpoints está en [`app/presentation/`](app/presentation/README.md) y, con el servidor arriba, en http://localhost:8000/docs.
 
 | Endpoint | Descripción |
 |---|---|
-| `GET /api/v1/health` | Liveness: el proceso está vivo |
+| `GET /api/v1/objetos` | Objetos del museo con su modelo 3D y ubicación en la sala virtual |
+| `GET /api/v1/galeria?seccion=salidas` | Evidencias filtradas por sección o tipo |
+| `POST /api/v1/visitantes` | Formulario de contacto y libro de visitas |
 | `GET /api/v1/health/ready` | Readiness: comprueba la base de datos (`503` si no responde) |
 
 ## ⚠️ Nota para Windows con Control de aplicaciones (Smart App Control)

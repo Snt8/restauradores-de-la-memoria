@@ -1,0 +1,91 @@
+{
+  "creditos_por_defecto": "Archivo del proyecto Restauradores de la Memoria, Colegio Tom Adams IED",
+  "elementos": [
+    {
+      "slug": "centro-nacional-de-memoria-historica",
+      "nombre": "Centro Nacional de Memoria Histórica (CNMH)",
+      "tipo": "Entidad pública nacional",
+      "descripcion": "Acompañó pedagógicamente la quinta versión del Museo Escolar (2025), ofreció el Diplomado en Memoria y Verdad (2024), guio la salida al Eje de la Memoria y reconoció al proyecto como Lugar de Memoria en 2026.",
+      "logo_url": "media/aliados/logo-cnmh",
+      "sitio_web": "https://centrodememoriahistorica.gov.co"
+    },
+    {
+      "slug": "centro-de-memoria-paz-y-reconciliacion",
+      "nombre": "Centro de Memoria, Paz y Reconciliación (CMPR)",
+      "tipo": "Entidad distrital, Alcaldía Mayor de Bogotá",
+      "descripcion": "Sede de la exposición «La Escuela: territorio de paz» (2025), del taller de co-creación «Exposición permanente» y de salidas pedagógicas del proyecto.",
+      "logo_url": "media/aliados/logo-cmpr"
+    },
+    {
+      "slug": "museo-nacional-de-colombia",
+      "nombre": "Museo Nacional de Colombia",
+      "tipo": "Museo",
+      "descripcion": "Espacio de formación in situ para estudiantes, de la formación en curaduría y restauración y del taller «Bordado y Memoria» con ASOMUJER.",
+      "logo_url": "media/aliados/logo-museo-nacional",
+      "sitio_web": "https://www.museonacional.gov.co"
+    },
+    {
+      "slug": "secretaria-de-educacion-del-distrito",
+      "nombre": "Secretaría de Educación del Distrito (SED)",
+      "tipo": "Entidad distrital, Alcaldía Mayor de Bogotá",
+      "descripcion": "Impulsa los Entornos Escolares Inspiradores, en los que el proyecto fue reconocido en 2025, y otorgó el premio Gala de los Mejores 2023.",
+      "logo_url": "media/aliados/logo-sed",
+      "sitio_web": "https://www.educacionbogota.edu.co"
+    },
+    {
+      "slug": "escuela-tecnologica-instituto-tecnico-central",
+      "nombre": "Escuela Tecnológica Instituto Técnico Central (ETITC)",
+      "tipo": "Institución de educación superior",
+      "descripcion": "Alianza interinstitucional 2024–2026: digitalización de un objeto de memoria, página web y Museo Virtual de la Memoria, y formación entre pares con estudiantes del colegio.",
+      "logo_url": "media/aliados/logo-etitc",
+      "sitio_web": "https://etitc.edu.co",
+      "evidencias": [
+        {
+          "tipo": "foto",
+          "url": "media/aliados/etitc-objeto-memoria",
+          "titulo": "Objeto de memoria: máscara intervenida"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/aliados/etitc-pagina-web",
+          "titulo": "Página web «Museo de la Memoria»"
+        },
+        {
+          "tipo": "enlace",
+          "url": "https://lozanoalcuadrado.github.io/MuseoDeLaMemoria/exhibicion4.html",
+          "titulo": "Visitar la página web «Museo de la Memoria»"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/aliados/etitc-museo-virtual",
+          "titulo": "Sala del Museo Virtual de la Memoria"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/aliados/etitc-museo-virtual-2",
+          "titulo": "Modelo 3D del objeto de memoria en la página web"
+        },
+        {
+          "tipo": "enlace",
+          "url": "https://edu.cospaces.io/SRH-SUX",
+          "titulo": "Recorrer el Museo Virtual de la Memoria en CoSpaces Edu"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/aliados/etitc-cospaces-1",
+          "titulo": "Sala del museo virtual en CoSpaces Edu"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/aliados/etitc-cospaces-2",
+          "titulo": "Recorrido exterior del museo virtual"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/aliados/etitc-formacion-pares",
+          "titulo": "Formación entre pares con gafas de realidad virtual"
+        }
+      ]
+    }
+  ]
+}
