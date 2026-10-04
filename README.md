@@ -18,6 +18,7 @@ Este repositorio contiene el portal que divulga, organiza y presenta la memoria 
 | 📁 [`docs/`](docs/README.md) | Cumplimiento de la primera entrega, pendientes y guion de la demo |
 | 📁 [`docker/`](docker/README.md) | Scripts de inicialización de PostgreSQL |
 | 📄 `docker-compose.yml` | Servicio de PostgreSQL 18 para desarrollo |
+| 📄 `render.yaml` | Blueprint de Render (base, API y portal): ver [`docs/despliegue.md`](docs/despliegue.md) |
 | 📁 `.github/workflows/` | CI: lint, formato, tests y build en cada push o PR |
 | 📁 `.claude/` | Instrucciones, reglas y stack del proyecto |
 

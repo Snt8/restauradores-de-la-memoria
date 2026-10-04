@@ -26,3 +26,17 @@ def test_rechaza_un_entorno_desconocido():
 def test_rechaza_un_tiempo_limite_no_positivo():
     with pytest.raises(ValidationError):
         Settings(_env_file=None, db_health_timeout_seconds=0)
+
+
+@pytest.mark.parametrize(
+    "url",
+    [
+        "postgres://u:p@db.internal/restauradores",
+        "postgresql://u:p@db.internal/restauradores",
+        "postgresql+asyncpg://u:p@db.internal/restauradores",
+    ],
+)
+def test_usa_asyncpg_aunque_el_proveedor_entregue_otro_esquema(url):
+    settings = Settings(_env_file=None, database_url=url)
+
+    assert settings.database_url == "postgresql+asyncpg://u:p@db.internal/restauradores"

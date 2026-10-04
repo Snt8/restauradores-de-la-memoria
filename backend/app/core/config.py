@@ -3,7 +3,7 @@
 from functools import lru_cache
 from typing import Literal
 
-from pydantic import Field
+from pydantic import Field, field_validator
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -21,6 +21,18 @@ class Settings(BaseSettings):
     db_health_timeout_seconds: float = Field(default=2.0, gt=0)
 
     cors_origins: list[str] = ["http://localhost:5173"]
+
+    @field_validator("database_url")
+    @classmethod
+    def usar_driver_asincrono(cls, url: str) -> str:
+        """
+        Render y otros proveedores entregan la URL como postgres:// o postgresql://.
+        La API usa SQLAlchemy asíncrono, que necesita el driver explícito (asyncpg).
+        """
+        for esquema in ("postgres://", "postgresql://"):
+            if url.startswith(esquema):
+                return "postgresql+asyncpg://" + url.removeprefix(esquema)
+        return url
 
 
 @lru_cache
