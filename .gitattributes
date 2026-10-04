@@ -1,0 +1,20 @@
+# Finales de línea LF en el repositorio, sin importar el sistema operativo del equipo.
+* text=auto eol=lf
+
+*.bat  text eol=crlf
+*.ps1  text eol=crlf
+
+# Binarios
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.webp binary
+*.gif  binary
+*.ico  binary
+*.glb  binary
+*.gltf text
+*.mp3  binary
+*.mp4  binary
+*.pdf  binary
+*.docx binary
+*.pptx binary
