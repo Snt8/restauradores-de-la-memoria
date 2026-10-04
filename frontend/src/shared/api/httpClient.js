@@ -30,9 +30,11 @@ async function parseBody(response) {
 
 /**
  * Crea un cliente HTTP JSON.
- * `fetchFn` se inyecta para poder sustituirlo en pruebas o en otros entornos.
+ * `fetchFn` se inyecta para poder sustituirlo en pruebas o en otros entornos. Por defecto
+ * se resuelve `fetch` en cada petición (no al crear el cliente), así funcionan los polyfills
+ * y los dobles de prueba instalados después.
  */
-export function createHttpClient({ baseUrl, fetchFn = globalThis.fetch.bind(globalThis) }) {
+export function createHttpClient({ baseUrl, fetchFn = (...args) => globalThis.fetch(...args) }) {
   async function request(path, { method, params, body, signal } = {}) {
     const hasBody = body !== undefined
     let response

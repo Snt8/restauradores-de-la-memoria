@@ -1,4 +1,6 @@
-import { Link, Outlet } from 'react-router'
+import { Outlet, ScrollRestoration } from 'react-router'
+import { Encabezado } from './Encabezado.jsx'
+import { PieDePagina } from './PieDePagina.jsx'
 
 const MAIN_CONTENT_ID = 'contenido-principal'
 
@@ -8,22 +10,19 @@ export function RootLayout() {
     <div className="flex min-h-dvh flex-col">
       <a
         href={`#${MAIN_CONTENT_ID}`}
-        className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:rounded focus:bg-white focus:px-4 focus:py-2"
+        className="sr-only z-50 focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:rounded-full focus:bg-vela focus:px-4 focus:py-2 focus:font-semibold"
       >
         Saltar al contenido principal
       </a>
 
-      <header className="border-b px-4 py-4">
-        <Link to="/" className="font-semibold">
-          Restauradores de la Memoria
-        </Link>
-      </header>
+      <Encabezado />
 
-      <main id={MAIN_CONTENT_ID} className="flex-1 px-4 py-8">
+      <main id={MAIN_CONTENT_ID} tabIndex={-1} className="flex-1 focus:outline-none">
         <Outlet />
       </main>
 
-      <footer className="border-t px-4 py-4 text-sm">Colegio Tom Adams IED</footer>
+      <PieDePagina />
+      <ScrollRestoration />
     </div>
   )
 }

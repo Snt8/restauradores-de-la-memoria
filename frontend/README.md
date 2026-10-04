@@ -6,20 +6,23 @@ Aplicación de una sola página (SPA) que presenta el portal y el Museo Virtual 
 
 ## 🗂️ Archivos y carpetas
 
-| Ruta                                     | Qué hace                                                              |
-| ---------------------------------------- | --------------------------------------------------------------------- |
-| 📁 [`src/app/`](src/app/README.md)       | Arranque de la app: providers, router y layout base                   |
-| 📁 [`src/pages/`](src/pages/README.md)   | Una página por sección del portal; solo compone features              |
-| 📁 [`src/shared/`](src/shared/README.md) | Código reutilizable: cliente HTTP, configuración y UI compartida      |
-| 📁 [`src/test/`](src/test/README.md)     | Utilidades y setup de pruebas                                         |
-| 📁 `src/styles/`                         | CSS global y tokens de Tailwind (`@theme`)                            |
-| 📄 `src/main.jsx`                        | Punto de entrada: monta providers y router                            |
-| 📄 `vite.config.js`                      | Plugins (React, Tailwind), alias `@`, proxy `/api` y config de Vitest |
-| 📄 `.oxlintrc.json`                      | Reglas de lint                                                        |
-| 📄 `.prettierrc.json`                    | Formato (con orden automático de clases Tailwind)                     |
-| 📄 `.env.example`                        | Variables de entorno disponibles                                      |
-
-Más adelante se sumarán `src/features/` (una carpeta por dominio: museo, salidas, eventos...) y `src/museum/` (escena A-Frame).
+| Ruta                                         | Qué hace                                                                     |
+| -------------------------------------------- | ---------------------------------------------------------------------------- |
+| 📁 [`src/app/`](src/app/README.md)           | Arranque: mapa del sitio, providers, router y layout                         |
+| 📁 [`src/pages/`](src/pages/README.md)       | Una página por sección del portal; solo compone                              |
+| 📁 [`src/features/`](src/features/README.md) | Funcionalidades con lógica: museo, actividades, eventos, galería, visitantes |
+| 📁 [`src/entities/`](src/entities/README.md) | UI de conceptos del dominio que se repiten: evidencias y contenido fechado   |
+| 📁 [`src/shared/`](src/shared/README.md)     | Código reutilizable: API, utilidades y componentes de interfaz               |
+| 📁 [`src/content/`](src/content/README.md)   | Textos institucionales fijos                                                 |
+| 📁 [`src/styles/`](src/styles/README.md)     | Identidad visual: tokens de Tailwind (`@theme`) y estilos base               |
+| 📁 [`src/test/`](src/test/README.md)         | API simulada, datos de prueba y utilidades de renderizado                    |
+| 📁 `public/media/`                           | Imágenes WebP generadas por `assets-pipeline`                                |
+| 📁 `public/models/`                          | Modelos 3D (`.glb`) del museo                                                |
+| 📄 `src/main.jsx`                            | Punto de entrada: monta providers y router                                   |
+| 📄 `vite.config.js`                          | Plugins (React, Tailwind), alias `@`, proxy `/api` y config de Vitest        |
+| 📄 `.oxlintrc.json`                          | Reglas de lint                                                               |
+| 📄 `.prettierrc.json`                        | Formato (con orden automático de clases Tailwind)                            |
+| 📄 `.env.example`                            | Variables de entorno disponibles                                             |
 
 ## 🎯 Problema que resuelve
 
@@ -27,18 +30,30 @@ Ofrecer al visitante una experiencia clara, accesible y adaptable a cualquier di
 
 ## 🔗 Dependencias
 
-| Paquete                                 | Para qué                        |
-| --------------------------------------- | ------------------------------- |
-| `react`, `react-dom`                    | UI                              |
-| `react-router`                          | Navegación entre secciones      |
-| `@tanstack/react-query`                 | Caché y estado de datos remotos |
-| `tailwindcss`, `@tailwindcss/vite`      | Estilos                         |
-| `vitest`, `@testing-library/*`, `jsdom` | Pruebas                         |
-| `oxlint`, `prettier`                    | Calidad de código               |
+| Paquete                                 | Para qué                             |
+| --------------------------------------- | ------------------------------------ |
+| `react`, `react-dom`                    | UI                                   |
+| `react-router`                          | Navegación entre secciones           |
+| `@tanstack/react-query`                 | Caché y estado de datos remotos      |
+| `tailwindcss`, `@tailwindcss/vite`      | Estilos                              |
+| `@fontsource-variable/*`                | Fuentes servidas desde el sitio      |
+| `aframe`                                | Museo Virtual en 3D (carga diferida) |
+| `vitest`, `@testing-library/*`, `jsdom` | Pruebas                              |
+| `oxlint`, `prettier`                    | Calidad de código                    |
 
 ## 🛠️ Cómo lo soluciona
 
-Capas con dependencias en una sola dirección: **pages → features → shared**. Las páginas no saben cómo se obtienen los datos, las features exponen hooks y `shared/api` es el único lugar que habla HTTP.
+Capas con dependencias en una sola dirección:
+
+```
+pages ──▶ features ──▶ entities ──▶ shared
+  └──────────┴────────────┴──────────▶ content
+```
+
+- **`shared/api`** es el único lugar que habla HTTP; `recursos.js` describe cada colección como opciones de TanStack Query.
+- Las **páginas** no hacen peticiones ni contienen reglas: componen.
+- Una **feature** no importa de otra; lo que comparten vive en `entities` o `shared`.
+- El contenido de las secciones llega de la API; solo los textos institucionales fijos viven en `content/`.
 
 ## 💡 Ejemplos de uso
 

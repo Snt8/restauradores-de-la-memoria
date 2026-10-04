@@ -1,0 +1,372 @@
+{
+  "creditos_por_defecto": "Archivo del proyecto Restauradores de la Memoria, Colegio Tom Adams IED",
+  "elementos": [
+    {
+      "slug": "presentacion-monologo",
+      "nombre": "Presentación de monólogo",
+      "tipo": "evento"
+    },
+    {
+      "slug": "jesus-abad-colorado",
+      "nombre": "Encuentro con Jesús Abad Colorado",
+      "tipo": "visita",
+      "descripcion": "Encuentro con el fotógrafo y reportero colombiano Jesús Abad Colorado, conocido por documentar el conflicto armado."
+    },
+    {
+      "slug": "desmovilizado-farc-ep",
+      "nombre": "Encuentro con un desmovilizado de las FARC-EP",
+      "tipo": "visita"
+    },
+    {
+      "slug": "certificacion-eco-sed",
+      "nombre": "Certificación ECO – SED",
+      "tipo": "evento"
+    },
+    {
+      "slug": "encuentro-internacional-jer",
+      "nombre": "Primer Encuentro Internacional de Justicia Escolar Restaurativa (JER)",
+      "tipo": "evento"
+    },
+    {
+      "slug": "conversatorio-mafapo",
+      "nombre": "Conversatorio con MAFAPO",
+      "tipo": "visita",
+      "descripcion": "Conversatorio con integrantes de Madres de Falsos Positivos (MAFAPO)."
+    },
+    {
+      "slug": "exposicion-fotografia-forense",
+      "nombre": "Exposición de fotografía forense",
+      "tipo": "evento"
+    },
+    {
+      "slug": "unidad-de-busqueda",
+      "nombre": "Unidad de Búsqueda de Personas dadas por Desaparecidas",
+      "tipo": "visita"
+    },
+    {
+      "slug": "batucada-estudiantil",
+      "nombre": "Batucada estudiantil",
+      "tipo": "evento"
+    },
+    {
+      "slug": "primer-museo-a-la-calle",
+      "nombre": "1.er Museo de la Memoria a la Calle",
+      "tipo": "evento",
+      "descripcion": "Primera salida del Museo Escolar de la Memoria al espacio público."
+    },
+    {
+      "slug": "segundo-museo-a-la-calle",
+      "nombre": "2.º Museo de la Memoria a la Calle",
+      "tipo": "evento",
+      "descripcion": "Segunda salida del Museo Escolar de la Memoria al espacio público, con carpas y piezas expuestas a la comunidad.",
+      "evidencias": [
+        {
+          "tipo": "foto",
+          "url": "media/eventos/segundo-museo-calle-1",
+          "titulo": "Carpas del museo en el espacio público"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/eventos/segundo-museo-calle-2",
+          "titulo": "Piezas del museo expuestas"
+        }
+      ]
+    },
+    {
+      "slug": "encuentros-comunitarios-entornos-escolares",
+      "nombre": "Encuentros comunitarios Entornos Escolares Inspiradores – SED",
+      "tipo": "evento",
+      "evidencias": [
+        {
+          "tipo": "foto",
+          "url": "media/eventos/encuentros-comunitarios-1",
+          "titulo": "Stand del Museo Escolar de la Memoria"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/eventos/encuentros-comunitarios-2",
+          "titulo": "Foto grupal del encuentro comunitario"
+        }
+      ]
+    },
+    {
+      "slug": "festival-de-arte-de-kennedy",
+      "nombre": "Festival de Arte de Kennedy",
+      "tipo": "evento",
+      "lugar": "Localidad de Kennedy, Bogotá",
+      "evidencias": [
+        {
+          "tipo": "foto",
+          "url": "media/eventos/festival-arte-kennedy-1",
+          "titulo": "Actividad con el público del festival"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/eventos/festival-arte-kennedy-2",
+          "titulo": "Piezas del museo en el festival"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/eventos/festival-arte-kennedy-3",
+          "titulo": "Estudiantes presentan sus piezas"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/eventos/rolotopia-2025",
+          "titulo": "Pieza gráfica de Rolotopía, festival de artes vivas de Kennedy (2025)",
+          "fecha": { "anio": 2025 },
+          "creditos": "Rolotopía Festival 2025"
+        }
+      ]
+    },
+    {
+      "slug": "formacion-in-situ-museo-nacional",
+      "nombre": "Formación in situ en el Museo Nacional de Colombia",
+      "tipo": "visita",
+      "lugar": "Museo Nacional de Colombia, Bogotá",
+      "evidencias": [
+        {
+          "tipo": "foto",
+          "url": "media/eventos/formacion-museo-nacional-1",
+          "titulo": "Vitrina con objetos de memoria"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/eventos/formacion-museo-nacional-2",
+          "titulo": "Cartelera elaborada en la formación"
+        }
+      ]
+    },
+    {
+      "slug": "bordado-y-memoria-asomujer",
+      "nombre": "Bordado y Memoria con ASOMUJER",
+      "tipo": "visita",
+      "lugar": "Museo Nacional de Colombia, Bogotá",
+      "evidencias": [
+        {
+          "tipo": "foto",
+          "url": "media/eventos/bordado-memoria-asomujer",
+          "titulo": "Taller de bordado y memoria"
+        }
+      ]
+    },
+    {
+      "slug": "conversatorio-memorias-afro",
+      "nombre": "Conversatorio Memorias Afro",
+      "tipo": "evento",
+      "evidencias": [
+        {
+          "tipo": "foto",
+          "url": "media/eventos/conversatorio-memorias-afro",
+          "titulo": "Estudiantes en el conversatorio"
+        }
+      ]
+    },
+    {
+      "slug": "formacion-curaduria-y-restauracion",
+      "nombre": "Formación en curaduría y restauración",
+      "tipo": "visita",
+      "lugar": "Museo Nacional de Colombia, Bogotá",
+      "evidencias": [
+        {
+          "tipo": "foto",
+          "url": "media/eventos/curaduria-restauracion-1",
+          "titulo": "Recorrido por las salas del museo"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/eventos/curaduria-restauracion-2",
+          "titulo": "Práctica de restauración"
+        }
+      ]
+    },
+    {
+      "slug": "entrevista-city-tv-2024",
+      "nombre": "Entrevista en «Arriba Bogotá», Canal City TV",
+      "tipo": "medios",
+      "fecha": { "anio": 2024, "mes": 3, "dia": 22 },
+      "lugar": "Colegio Tom Adams IED",
+      "descripcion": "Nota del programa «Arriba Bogotá» sobre el Museo Escolar de la Memoria: «A través de imágenes, buscan aprender de historia».",
+      "evidencias": [
+        {
+          "tipo": "video",
+          "url": "https://www.youtube.com/watch?v=tudL3XZiGPc",
+          "titulo": "Entrevista en City TV, primera parte",
+          "creditos": "Canal City TV"
+        },
+        {
+          "tipo": "enlace",
+          "url": "https://x.com/CityNoticiasTv/status/1771228569949090082",
+          "titulo": "Entrevista en City TV, segunda parte",
+          "creditos": "Canal City TV"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/eventos/city-tv-1",
+          "titulo": "Emisión de City TV en el museo",
+          "creditos": "Canal City TV"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/eventos/city-tv-2",
+          "titulo": "Emisión de City TV con estudiantes",
+          "creditos": "Canal City TV"
+        }
+      ]
+    },
+    {
+      "slug": "incitar-para-la-paz",
+      "nombre": "Participación en el evento «Incitar para la Paz» de la SED",
+      "tipo": "evento"
+    },
+    {
+      "slug": "entrevista-red-escuelas-territorios-de-paz-2023",
+      "nombre": "Entrevista en el Encuentro Distrital Red de Escuelas como Territorios de Paz",
+      "tipo": "medios",
+      "fecha": { "anio": 2023 },
+      "descripcion": "Entrevista realizada en el encuentro distrital organizado por la Secretaría de Educación del Distrito.",
+      "evidencias": [
+        {
+          "tipo": "video",
+          "url": "https://www.youtube.com/watch?v=Igaz95346rM",
+          "titulo": "Entrevista en el Encuentro Distrital de la Red de Escuelas como Territorios de Paz"
+        }
+      ]
+    },
+    {
+      "slug": "el-guateque-115-catedra-de-paz",
+      "nombre": "El Guateque, episodio 115: Especial Cátedra de Paz",
+      "tipo": "medios",
+      "fecha": { "anio": 2025, "mes": 10, "dia": 12 },
+      "lugar": "Javeriana Estéreo 91.9 FM",
+      "descripcion": "«Apuntes para construir paz desde el aula, parte III», en el programa El Guateque – Memorias Rurales. Invitada: Ángela Gutiérrez, docente de Ciencias Sociales del Colegio Tom Adams IED.",
+      "evidencias": [
+        {
+          "tipo": "audio",
+          "url": "https://soundcloud.com/javeriana919fm/el-guateque-12-de-octubre-de-2025-especial-catedra-de-la-paz",
+          "titulo": "Escuchar el episodio 115",
+          "creditos": "Javeriana Estéreo 91.9 FM"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/eventos/guateque-115",
+          "titulo": "Pieza gráfica del episodio 115",
+          "creditos": "Javeriana Estéreo 91.9 FM"
+        }
+      ]
+    },
+    {
+      "slug": "el-guateque-121-restauradores-de-la-memoria",
+      "nombre": "El Guateque, episodio 121: Proyecto Restauradores de la Memoria",
+      "tipo": "medios",
+      "fecha": { "anio": 2025, "mes": 11, "dia": 23 },
+      "lugar": "Javeriana Estéreo 91.9 FM",
+      "descripcion": "Episodio del programa El Guateque – Memorias Rurales dedicado a los proyectos Restauradores de la Memoria Histórica en las escuelas.",
+      "evidencias": [
+        {
+          "tipo": "audio",
+          "url": "https://soundcloud.com/javeriana919fm/el-guateque-23-de-noviembre-de-2025-proyectos-restauradores-de-la-memoria-historica-en-escuelas",
+          "titulo": "Escuchar el episodio 121",
+          "creditos": "Javeriana Estéreo 91.9 FM"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/eventos/guateque-121",
+          "titulo": "Pieza gráfica del episodio 121",
+          "creditos": "Javeriana Estéreo 91.9 FM"
+        }
+      ]
+    },
+    {
+      "slug": "el-guateque-132-madres-de-falsos-positivos",
+      "nombre": "El Guateque, episodio 132: Las madres de falsos positivos",
+      "tipo": "medios",
+      "fecha": { "anio": 2026, "mes": 3, "dia": 22 },
+      "lugar": "Javeriana Estéreo 91.9 FM",
+      "descripcion": "«Las madres de falsos positivos en el marco del proyecto Restauradores de la Memoria de la IED Tom Adams», en el programa El Guateque – Memorias Rurales.",
+      "evidencias": [
+        {
+          "tipo": "audio",
+          "url": "https://soundcloud.com/javeriana919fm/22-de-marzo-de-2026-museo",
+          "titulo": "Escuchar el episodio 132",
+          "creditos": "Javeriana Estéreo 91.9 FM"
+        },
+        {
+          "tipo": "foto",
+          "url": "media/eventos/guateque-132",
+          "titulo": "Pieza gráfica del episodio 132",
+          "creditos": "Javeriana Estéreo 91.9 FM"
+        }
+      ]
+    },
+    {
+      "slug": "infomatrix-sudamerica-2025",
+      "nombre": "Participación en INFOMATRIX Sudamérica",
+      "tipo": "evento",
+      "fecha": { "anio": 2025, "mes": 11 },
+      "descripcion": "XX Concurso Iberoamericano de Proyectos de Ciencia y Tecnología. El proyecto participó en la categoría Diseño de Software con el Museo Virtual de la Memoria.",
+      "evidencias": [
+        {
+          "tipo": "enlace",
+          "url": "https://infomatrix.lat/colombia/",
+          "titulo": "INFOMATRIX Colombia",
+          "creditos": "INFOMATRIX Sudamérica"
+        },
+        {
+          "tipo": "enlace",
+          "url": "https://solacyt.org/plataforma/index.php/administracion/proyecto/35059",
+          "titulo": "Ficha del proyecto en la plataforma SOLACYT",
+          "creditos": "SOLACYT"
+        }
+      ]
+    },
+    {
+      "slug": "cuerpos-que-recuerdan-2025",
+      "nombre": "Actividad hito «Cuerpos que recuerdan, arte y memoria»",
+      "tipo": "evento",
+      "fecha": { "anio": 2025, "mes": 6, "dia": 5 },
+      "lugar": "Bahía frente a la Alcaldía Local de Kennedy, Bogotá",
+      "descripcion": "Espacio de encuentro del Entorno Escolar Inspirador La Amistad para revivir, reflexionar y resignificar la memoria colectiva del territorio desde el arte y la cultura, con estudiantes, docentes, vecinos y organizaciones.",
+      "evidencias": [
+        {
+          "tipo": "foto",
+          "url": "media/eventos/cuerpos-que-recuerdan",
+          "titulo": "Invitación a la actividad hito",
+          "creditos": "Entornos Escolares Inspiradores – Secretaría de Educación del Distrito"
+        }
+      ]
+    },
+    {
+      "slug": "museo-inspirador-de-la-memoria-2024",
+      "nombre": "Museo Inspirador de la Memoria",
+      "tipo": "evento",
+      "fecha": { "anio": 2024, "mes": 10, "dia": 30 },
+      "lugar": "Bahía frente a la Alcaldía Local de Kennedy, Bogotá",
+      "descripcion": "Muestra del Museo Escolar «Restauradores de la Memoria» convocada por el Entorno Escolar Inspirador La Amistad, con los colegios Tom Adams IED y Los Periodistas IED, un museo vivo y un memorial para los habitantes del entorno.",
+      "evidencias": [
+        {
+          "tipo": "foto",
+          "url": "media/eventos/museo-inspirador-memoria",
+          "titulo": "Invitación al Museo Inspirador de la Memoria",
+          "creditos": "Entornos Escolares Inspiradores – Secretaría de Educación del Distrito"
+        }
+      ]
+    },
+    {
+      "slug": "taller-cocreacion-exposicion-permanente-2025",
+      "nombre": "Taller de co-creación «Exposición permanente»",
+      "tipo": "evento",
+      "fecha": { "anio": 2025, "mes": 8, "dia": 30 },
+      "lugar": "Centro de Memoria, Paz y Reconciliación, Bogotá",
+      "descripcion": "Taller para construir de forma colectiva una exposición desde experiencias de resistencia y construcción de memoria.",
+      "evidencias": [
+        {
+          "tipo": "foto",
+          "url": "media/eventos/taller-cocreacion-cmpr",
+          "titulo": "Invitación al taller de co-creación",
+          "creditos": "Centro de Memoria, Paz y Reconciliación"
+        }
+      ]
+    }
+  ]
+}

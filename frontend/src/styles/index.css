@@ -1,3 +1,66 @@
+@import '@fontsource-variable/fraunces';
+@import '@fontsource-variable/inter';
 @import 'tailwindcss';
 
-/* Los tokens de identidad visual (@theme) se definen en la Fase 2 (sistema de diseño). */
+/*
+ * Identidad visual del portal. Los colores salen de la presentación del proyecto
+ * (negro, verde azulado, amarillo y rosa) sobre un fondo de papel cálido de archivo.
+ * Cada combinación de texto cumple el contraste WCAG AA.
+ */
+@theme {
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Fraunces Variable', ui-serif, Georgia, serif;
+
+  --color-papel: #faf6ee;
+  --color-papel-hondo: #f1e9da;
+  --color-linea: #ddd2bf;
+  --color-tinta: #1b1916;
+  --color-tinta-suave: #514b42;
+  --color-noche: #141311;
+  --color-noche-suave: #2a2724;
+
+  --color-memoria: #176b6b;
+  --color-memoria-hondo: #0f4f4f;
+  --color-memoria-claro: #3aa9a9;
+  --color-vela: #f2c230;
+  --color-rosa: #c92f63;
+
+  --radius-tarjeta: 1rem;
+  --shadow-tarjeta: 0 1px 2px rgb(27 25 22 / 0.06), 0 8px 24px -12px rgb(27 25 22 / 0.18);
+}
+
+@layer base {
+  html {
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    @apply bg-papel font-sans text-tinta antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3 {
+    @apply font-display text-balance;
+  }
+
+  :focus-visible {
+    @apply outline-3 outline-offset-2 outline-memoria;
+  }
+
+  ::selection {
+    @apply bg-vela text-tinta;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

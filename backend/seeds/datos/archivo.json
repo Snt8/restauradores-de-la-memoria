@@ -1,0 +1,63 @@
+{
+  "creditos_por_defecto": "Archivo del proyecto Restauradores de la Memoria, Colegio Tom Adams IED",
+  "elementos": [
+    {
+      "tipo": "foto",
+      "url": "media/archivo/salida-lugares-memoria-1",
+      "titulo": "Salida pedagógica a lugares de memoria",
+      "descripcion": "Registro del archivo de evidencias del proyecto."
+    },
+    {
+      "tipo": "foto",
+      "url": "media/archivo/salida-lugares-memoria-2",
+      "titulo": "Recorrido de estudiantes por la ciudad"
+    },
+    {
+      "tipo": "foto",
+      "url": "media/archivo/salida-lugares-memoria-3",
+      "titulo": "Estudiantes reunidos durante una salida"
+    },
+    {
+      "tipo": "foto",
+      "url": "media/archivo/salida-lugares-memoria-4",
+      "titulo": "Encuentro en un espacio de memoria"
+    },
+    {
+      "tipo": "foto",
+      "url": "media/archivo/salida-lugares-memoria-5",
+      "titulo": "Foto grupal durante una salida"
+    },
+    {
+      "tipo": "foto",
+      "url": "media/archivo/trabajo-colectivo-tela-1",
+      "titulo": "Tela intervenida de forma colectiva"
+    },
+    {
+      "tipo": "foto",
+      "url": "media/archivo/trabajo-colectivo-tela-2",
+      "titulo": "Participantes junto a la tela intervenida"
+    },
+    {
+      "tipo": "foto",
+      "url": "media/archivo/historieta-1",
+      "titulo": "Historieta: viñeta digitalizada",
+      "descripcion": "Historieta de cómic dibujada a mano y digitalizada por estudiantes."
+    },
+    {
+      "tipo": "foto",
+      "url": "media/archivo/historieta-2",
+      "titulo": "Historieta: página dibujada a mano"
+    },
+    {
+      "tipo": "foto",
+      "url": "media/archivo/historieta-3",
+      "titulo": "Historieta: viñeta a color"
+    },
+    {
+      "tipo": "enlace",
+      "url": "https://colegiotomadams.edu.co/category/opinion/",
+      "titulo": "Publicaciones en la página web del Colegio Tom Adams IED",
+      "creditos": "Colegio Tom Adams IED"
+    }
+  ]
+}

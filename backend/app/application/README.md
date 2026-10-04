@@ -1,41 +1,47 @@
 # 🎯 app/application/
 
 ## 📖 Introducción
+
 Casos de uso del sistema: cada clase resuelve **una** acción concreta orquestando el dominio.
 
 ## 🗂️ Archivos
 
-| Archivo | Qué hace |
-|---|---|
-| `health.py` | Caso de uso `CheckReadiness` |
+| Archivo         | Qué hace                                                                       |
+| --------------- | ------------------------------------------------------------------------------ |
+| `contenido.py`  | `ListarContenido[T, F]` y `ObtenerContenido[T]`: genéricos para todo el contenido |
+| `visitantes.py` | `RegistrarVisitante`: guarda un contacto o una firma del libro de visitas      |
+| `health.py`     | `CheckReadiness`: comprueba si la API puede atender peticiones                 |
 
 ## 🎯 Problema que resuelve
-Separa *qué hace* el sistema (casos de uso) de *cómo* se expone (HTTP) y de *dónde* se guarda (base de datos).
+
+Separa _qué hace_ el sistema (casos de uso) de _cómo_ se expone (HTTP) y de _dónde_ se guarda (base de datos).
 
 ## 🔗 Dependencias
+
 Solo `app.domain`. Nunca importa FastAPI ni SQLAlchemy.
 
 ## 🛠️ Cómo lo soluciona
-**`CheckReadiness(database_probe, timeout_seconds)`**
-- Recibe el puerto `DatabaseProbe` por constructor (inyección de dependencias).
-- `execute()` comprueba la base de datos dentro de `asyncio.timeout`. Si tarda más del límite la reporta como `down`, así una base de datos colgada no bloquea el endpoint.
-- Devuelve un `ReadinessReport` de dominio.
+
+- **Casos de uso genéricos, sin lógica repetida:** las siete colecciones del portal (exposiciones, objetos, eventos, actividades, reconocimientos, aliados y galería) se consultan igual. En vez de catorce clases casi idénticas hay dos genéricas que reciben el repositorio por constructor (DIP).
+- **`ObtenerContenido`** traduce "no existe" en `EntidadNoEncontrada`; la presentación lo convierte en un `404`.
+- **`CheckReadiness`** comprueba la base de datos dentro de `asyncio.timeout`: una base colgada no bloquea el endpoint.
 
 ## 💡 Ejemplos de uso
 
 ```python
-use_case = CheckReadiness(SqlAlchemyDatabaseProbe(engine), timeout_seconds=2)
-report = await use_case.execute()
+pagina = await ListarContenido(repositorio_eventos).ejecutar(
+    FiltrosEventos(tipo=TipoEvento.MEDIOS), Paginacion(limite=20)
+)
+objeto = await ObtenerContenido(repositorio_objetos, "objetos del museo").ejecutar("pieza-1")
 ```
 
-En pruebas, con un doble:
+En pruebas, con un doble en memoria:
 
 ```python
-class FakeProbe:
-    async def ping(self) -> bool:
-        return False
+class RepositorioEnMemoria:
+    async def obtener(self, slug):
+        return None
 
 
-report = await CheckReadiness(FakeProbe(), timeout_seconds=1).execute()
-assert not report.is_ready
+await ObtenerContenido(RepositorioEnMemoria(), "eventos").ejecutar("x")  # EntidadNoEncontrada
 ```
