@@ -40,16 +40,18 @@ Mantiene las reglas del negocio independientes de frameworks, bases de datos y H
 ```python
 from app.domain.shared import FechaParcial
 
-FechaParcial(anio=2023, mes=10)    # octubre de 2023
+FechaParcial(anio=2023, mes=10)  # octubre de 2023
 FechaParcial(mes=4, dia=9).es_recurrente  # True: 9 de abril de cada año
-FechaParcial(mes=4)                # FechaInvalida: un mes sin año ni día no es una fecha
+FechaParcial(mes=4)  # FechaInvalida: un mes sin año ni día no es una fecha
 ```
 
 ```python
 from app.domain.visitantes import NuevoVisitante, OrigenVisitante
 
 NuevoVisitante(
-    nombre="Ana", correo="ana@example.com",
-    origen=OrigenVisitante.CONTACTO, consentimiento_datos=False,
+    nombre="Ana",
+    correo="ana@example.com",
+    origen=OrigenVisitante.CONTACTO,
+    consentimiento_datos=False,
 )  # ConsentimientoRequerido
 ```
