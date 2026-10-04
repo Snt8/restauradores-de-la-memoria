@@ -1,0 +1,37 @@
+[project]
+name = "restauradores-assets"
+version = "0.1.0"
+description = "Pipeline de medios del portal: imágenes WebP desde las fuentes y modelos 3D provisionales"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = ["pillow>=11"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.3", "ruff>=0.8"]
+
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["media_pipeline*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "unit: pruebas aisladas, en memoria",
+    "integration: pruebas que leen y escriben archivos reales",
+]
+addopts = "--strict-markers"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "B", "SIM", "RUF"]
+# N818 exige el sufijo inglés "Error"; en español el término va al inicio.
+ignore = ["N818"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["media_pipeline", "tests"]

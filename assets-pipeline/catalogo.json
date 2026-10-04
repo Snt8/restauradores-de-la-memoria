@@ -1,0 +1,620 @@
+{
+  "fuentes": {
+    "presentacion": "RESTAURADORES DE LA MEMORIA _compressed (1).pptx",
+    "evidencias": "EVIDENCIAS PROYECTO 2025.docx"
+  },
+  "tamanos": {
+    "sm": 480,
+    "lg": 1280
+  },
+  "calidad": 72,
+  "imagenes": [
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image19.jpg",
+      "destino": "identidad/escudo-colegio"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image21.jpg",
+      "destino": "identidad/cerebro-corazon"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image23.jpg",
+      "destino": "identidad/tejer-memoria"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image24.png",
+      "destino": "museo/2021-modelado-en-arcilla"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image25.png",
+      "destino": "museo/2021-busto-intervenido"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image27.png",
+      "destino": "museo/2021-mano-escultura"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image28.png",
+      "destino": "museo/2021-pintura-calaveras"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image29.png",
+      "destino": "museo/2022-collage-fotografico"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image30.png",
+      "destino": "museo/2022-recorrido-exposicion"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image32.png",
+      "destino": "museo/2022-representacion-teatral"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image33.png",
+      "destino": "museo/2023-intervencion-podio"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image36.png",
+      "destino": "museo/2023-maqueta-barrio"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image37.png",
+      "destino": "museo/2023-muro-fotografias"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image38.png",
+      "destino": "museo/2023-calavera-decorada"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image34.png",
+      "destino": "museo/2024-muro-herramientas"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image39.png",
+      "destino": "museo/2024-grupo-teatro"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image41.png",
+      "destino": "museo/2024-realidad-virtual"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image44.png",
+      "destino": "museo/2025-altar-sanacion"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image45.png",
+      "destino": "museo/2025-danza"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image46.png",
+      "destino": "museo/2025-cabeza-espinas"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image47.png",
+      "destino": "museo/2025-boceto-lapiz"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image48.png",
+      "destino": "museo/2026-maqueta"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image49.png",
+      "destino": "museo/2026-cuadros-ajedrez"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image50.png",
+      "destino": "museo/2026-boceto"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image51.png",
+      "destino": "museo/2026-estudiantes-botas"
+    },
+    {
+      "fuente": "evidencias",
+      "miembro": "word/media/image4.jpeg",
+      "destino": "museo/escuela-territorio-paz-invitacion"
+    },
+    {
+      "fuente": "evidencias",
+      "miembro": "word/media/image25.jpeg",
+      "destino": "museo/muestras-comunitarias-1"
+    },
+    {
+      "fuente": "evidencias",
+      "miembro": "word/media/image26.jpeg",
+      "destino": "museo/muestras-comunitarias-2"
+    },
+    {
+      "fuente": "evidencias",
+      "miembro": "word/media/image27.jpeg",
+      "destino": "museo/muestras-comunitarias-3"
+    },
+    {
+      "fuente": "evidencias",
+      "miembro": "word/media/image28.jpeg",
+      "destino": "museo/muestras-comunitarias-4"
+    },
+    {
+      "fuente": "evidencias",
+      "miembro": "word/media/image29.jpeg",
+      "destino": "museo/muestras-comunitarias-5"
+    },
+    {
+      "fuente": "evidencias",
+      "miembro": "word/media/image30.jpeg",
+      "destino": "museo/muestras-comunitarias-6"
+    },
+    {
+      "fuente": "evidencias",
+      "miembro": "word/media/image31.jpeg",
+      "destino": "museo/muestras-comunitarias-7"
+    },
+    {
+      "fuente": "evidencias",
+      "miembro": "word/media/image32.jpeg",
+      "destino": "museo/muestras-comunitarias-8"
+    },
+    {
+      "fuente": "evidencias",
+      "miembro": "word/media/image33.jpeg",
+      "destino": "museo/muestras-comunitarias-9"
+    },
+    {
+      "fuente": "evidencias",
+      "miembro": "word/media/image34.jpeg",
+      "destino": "museo/muestras-comunitarias-10"
+    },
+    {
+      "fuente": "evidencias",
+      "miembro": "word/media/image39.jpeg",
+      "destino": "museo/muestras-comunitarias-11"
+    },
+    {
+      "fuente": "evidencias",
+      "miembro": "word/media/image40.jpeg",
+      "destino": "museo/muestras-comunitarias-12"
+    },
+    {
+      "fuente": "evidencias",
+      "miembro": "word/media/image42.jpeg",
+      "destino": "museo/muestras-comunitarias-13",
+      "rotacion": 270
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image68.jpg",
+      "destino": "salidas/cmpr-centro-historico"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image69.jpg",
+      "destino": "salidas/cerveceria-la-roja"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image70.jpg",
+      "destino": "salidas/casa-memoria-suba"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image71.jpg",
+      "destino": "salidas/museo-ciudad-autoconstruida"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image73.jpg",
+      "destino": "salidas/eje-memoria-cnmh"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image74.jpg",
+      "destino": "salidas/reconocimiento-entorno"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image75.jpg",
+      "destino": "salidas/olla-comunitaria"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image76.jpg",
+      "destino": "salidas/casa-memoria-mafapo"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image77.png",
+      "destino": "conmemoraciones/9-abril-1"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image78.png",
+      "destino": "conmemoraciones/9-abril-2"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image81.png",
+      "destino": "conmemoraciones/9-abril-3"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image79.png",
+      "destino": "conmemoraciones/25-mayo-1"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image80.png",
+      "destino": "conmemoraciones/25-mayo-2"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image89.png",
+      "destino": "conmemoraciones/12-febrero"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image86.png",
+      "destino": "conmemoraciones/28-abril-1"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image87.png",
+      "destino": "conmemoraciones/28-abril-2"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image88.png",
+      "destino": "conmemoraciones/28-abril-3"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image91.png",
+      "destino": "conmemoraciones/31-agosto-1"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image92.png",
+      "destino": "conmemoraciones/31-agosto-2"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image93.png",
+      "destino": "conmemoraciones/31-agosto-3"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image56.jpg",
+      "destino": "eventos/encuentros-comunitarios-1"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image57.jpg",
+      "destino": "eventos/encuentros-comunitarios-2"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image55.jpg",
+      "destino": "eventos/festival-arte-kennedy-1"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image58.jpg",
+      "destino": "eventos/festival-arte-kennedy-2"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image60.jpg",
+      "destino": "eventos/festival-arte-kennedy-3"
+    },
+    {
+      "fuente": "evidencias",
+      "miembro": "word/media/image5.jpeg",
+      "destino": "eventos/rolotopia-2025"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image54.jpg",
+      "destino": "eventos/formacion-museo-nacional-1"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image61.jpg",
+      "destino": "eventos/formacion-museo-nacional-2"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image53.jpg",
+      "destino": "eventos/segundo-museo-calle-1"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image59.jpg",
+      "destino": "eventos/segundo-museo-calle-2"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image64.jpg",
+      "destino": "eventos/bordado-memoria-asomujer"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image66.jpg",
+      "destino": "eventos/conversatorio-memorias-afro"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image63.jpg",
+      "destino": "eventos/curaduria-restauracion-1"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image65.jpg",
+      "destino": "eventos/curaduria-restauracion-2"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image109.jpg",
+      "destino": "eventos/city-tv-1"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image110.jpg",
+      "destino": "eventos/city-tv-2"
+    },
+    {
+      "fuente": "evidencias",
+      "miembro": "word/media/image1.jpeg",
+      "destino": "eventos/guateque-115"
+    },
+    {
+      "fuente": "evidencias",
+      "miembro": "word/media/image2.jpeg",
+      "destino": "eventos/guateque-121"
+    },
+    {
+      "fuente": "evidencias",
+      "miembro": "word/media/image3.jpeg",
+      "destino": "eventos/guateque-132"
+    },
+    {
+      "fuente": "evidencias",
+      "miembro": "word/media/image13.jpeg",
+      "destino": "eventos/cuerpos-que-recuerdan"
+    },
+    {
+      "fuente": "evidencias",
+      "miembro": "word/media/image14.png",
+      "destino": "eventos/museo-inspirador-memoria"
+    },
+    {
+      "fuente": "evidencias",
+      "miembro": "word/media/image7.jpeg",
+      "destino": "eventos/taller-cocreacion-cmpr"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image95.jpg",
+      "destino": "reconocimientos/gala-mejores-2023-premio"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image100.jpg",
+      "destino": "reconocimientos/gala-mejores-2023-trofeo"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image102.jpg",
+      "destino": "reconocimientos/gala-mejores-2023-entrega"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image99.jpg",
+      "destino": "reconocimientos/mencion-honor-2023"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image105.png",
+      "destino": "reconocimientos/incentivo-kennedy-1"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image107.jpg",
+      "destino": "reconocimientos/incentivo-kennedy-2"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image122.jpg",
+      "destino": "reconocimientos/entornos-inspiradores-1"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image123.jpg",
+      "destino": "reconocimientos/entornos-inspiradores-2"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image124.jpg",
+      "destino": "reconocimientos/entornos-inspiradores-3"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image137.jpg",
+      "destino": "reconocimientos/cnmh-museo-virtual"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image135.jpg",
+      "destino": "reconocimientos/mural-memoria-nos-une"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image132.png",
+      "destino": "reconocimientos/readh-carta-1"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image133.png",
+      "destino": "reconocimientos/readh-carta-2"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image138.jpg",
+      "destino": "formacion/diplomado-memoria-verdad-1"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image139.jpg",
+      "destino": "formacion/diplomado-memoria-verdad-2"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image140.jpg",
+      "destino": "formacion/diplomado-memoria-verdad-3"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image142.jpg",
+      "destino": "formacion/diplomado-sistematizacion"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image153.jpg",
+      "destino": "aliados/logo-cnmh"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image148.jpg",
+      "destino": "aliados/logo-cmpr"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image149.png",
+      "destino": "aliados/logo-museo-nacional"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image150.png",
+      "destino": "aliados/logo-sed",
+      "recorte": [
+        130,
+        50,
+        850,
+        205
+      ]
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image151.jpg",
+      "destino": "aliados/logo-etitc"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image144.jpg",
+      "destino": "aliados/etitc-objeto-memoria"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image145.jpg",
+      "destino": "aliados/etitc-pagina-web"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image146.jpg",
+      "destino": "aliados/etitc-museo-virtual"
+    },
+    {
+      "fuente": "presentacion",
+      "miembro": "ppt/media/image147.jpg",
+      "destino": "aliados/etitc-formacion-pares"
+    },
+    {
+      "fuente": "evidencias",
+      "miembro": "word/media/image48.png",
+      "destino": "aliados/etitc-museo-virtual-2"
+    },
+    {
+      "fuente": "evidencias",
+      "miembro": "word/media/image50.png",
+      "destino": "aliados/etitc-cospaces-1"
+    },
+    {
+      "fuente": "evidencias",
+      "miembro": "word/media/image51.png",
+      "destino": "aliados/etitc-cospaces-2"
+    },
+    {
+      "fuente": "evidencias",
+      "miembro": "word/media/image15.jpeg",
+      "destino": "archivo/salida-lugares-memoria-1"
+    },
+    {
+      "fuente": "evidencias",
+      "miembro": "word/media/image16.jpeg",
+      "destino": "archivo/salida-lugares-memoria-2"
+    },
+    {
+      "fuente": "evidencias",
+      "miembro": "word/media/image17.jpeg",
+      "destino": "archivo/salida-lugares-memoria-3"
+    },
+    {
+      "fuente": "evidencias",
+      "miembro": "word/media/image19.jpeg",
+      "destino": "archivo/salida-lugares-memoria-4"
+    },
+    {
+      "fuente": "evidencias",
+      "miembro": "word/media/image23.jpeg",
+      "destino": "archivo/salida-lugares-memoria-5"
+    },
+    {
+      "fuente": "evidencias",
+      "miembro": "word/media/image8.jpeg",
+      "destino": "archivo/trabajo-colectivo-tela-1"
+    },
+    {
+      "fuente": "evidencias",
+      "miembro": "word/media/image9.jpeg",
+      "destino": "archivo/trabajo-colectivo-tela-2"
+    },
+    {
+      "fuente": "evidencias",
+      "miembro": "word/media/image45.jpeg",
+      "destino": "archivo/historieta-1"
+    },
+    {
+      "fuente": "evidencias",
+      "miembro": "word/media/image46.jpeg",
+      "destino": "archivo/historieta-2"
+    },
+    {
+      "fuente": "evidencias",
+      "miembro": "word/media/image47.jpeg",
+      "destino": "archivo/historieta-3"
+    }
+  ]
+}
