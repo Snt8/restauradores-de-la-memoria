@@ -8,6 +8,7 @@ import { GaleriaPage } from '@/pages/GaleriaPage.jsx'
 import { InicioPage } from '@/pages/InicioPage.jsx'
 import { MuseoPage } from '@/pages/MuseoPage.jsx'
 import { NoEncontradaPage } from '@/pages/NoEncontradaPage.jsx'
+import { ObjetoMuseoPage } from '@/pages/ObjetoMuseoPage.jsx'
 import { QueEsPage } from '@/pages/QueEsPage.jsx'
 import { ReconocimientosPage } from '@/pages/ReconocimientosPage.jsx'
 import { SalidasPedagogicasPage } from '@/pages/SalidasPedagogicasPage.jsx'
@@ -30,6 +31,15 @@ export const routes = [
           { index: true, element: <InicioPage /> },
           { path: RUTAS.queEs, element: <QueEsPage /> },
           { path: RUTAS.museo, element: <MuseoPage /> },
+          { path: RUTAS.patronObjeto, element: <ObjetoMuseoPage /> },
+          {
+            // Ruta diferida: la página y A-Frame se descargan solo al entrar al museo.
+            path: RUTAS.museoVirtual,
+            lazy: () =>
+              import('@/pages/MuseoVirtualPage.jsx').then((m) => ({
+                Component: m.MuseoVirtualPage,
+              })),
+          },
           { path: RUTAS.salidas, element: <SalidasPedagogicasPage /> },
           { path: RUTAS.fechas, element: <FechasConmemorativasPage /> },
           { path: RUTAS.eventos, element: <VisitasYEventosPage /> },

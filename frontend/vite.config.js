@@ -9,6 +9,11 @@ export default defineConfig(({ mode }) => {
 
   return {
     plugins: [react(), tailwindcss()],
+    build: {
+      // A-Frame ocupa ~1,3 MB, pero va en su propio fragmento y solo se descarga
+      // al entrar al Museo Virtual o a la ficha de un objeto.
+      chunkSizeWarningLimit: 1400,
+    },
     resolve: {
       alias: {
         '@': fileURLToPath(new URL('./src', import.meta.url)),

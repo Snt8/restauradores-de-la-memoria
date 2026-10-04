@@ -16,6 +16,7 @@ Funcionalidades con lógica propia, una carpeta por dominio. Cada una consulta l
 | `eventos/EventosFiltrables.jsx`           | Visitas, eventos y medios con filtro por tipo guardado en la URL               |
 | `galeria/GaleriaMultimedia.jsx`           | Galería con filtros por sección y tipo, y carga progresiva                     |
 | `visitantes/validacion.js`                | Reglas del formulario (`validarVisitante`) y armado de la carga (`aCargaUtil`) |
+| `museo-virtual/`                          | Museo Virtual en A-Frame: ver [su README](museo-virtual/README.md)             |
 | `visitantes/FormularioVisitante.jsx`      | Formulario de contacto o libro de visitas, según `origen`                      |
 
 ## 🎯 Problema que resuelve

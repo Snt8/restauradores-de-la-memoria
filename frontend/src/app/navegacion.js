@@ -8,6 +8,7 @@ export const RUTAS = Object.freeze({
   queEs: '/que-es',
   museo: '/museo',
   objeto: (slug) => `/museo/objetos/${encodeURIComponent(slug)}`,
+  patronObjeto: '/museo/objetos/:slug',
   museoVirtual: '/museo/virtual',
   salidas: '/salidas-pedagogicas',
   fechas: '/fechas-conmemorativas',
