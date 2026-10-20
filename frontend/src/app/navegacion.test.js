@@ -19,6 +19,7 @@ describe('mapa del sitio', () => {
         RUTAS.alianzas,
         RUTAS.galeria,
         RUTAS.contacto,
+        RUTAS.foro,
       ]),
     )
     expect(rutasDelMenu).toContain(RUTAS.museoVirtual)
@@ -34,6 +35,13 @@ describe('mapa del sitio', () => {
     for (const acceso of ACCESOS_PRINCIPALES) {
       expect(acceso.etiqueta).toBeTruthy()
       expect(acceso.descripcion).toBeTruthy()
+    }
+  })
+
+  it('cada página del menú tiene ícono y nombre corto', () => {
+    for (const pagina of MENU.flatMap((grupo) => grupo.paginas)) {
+      expect(pagina.icono).toBeTruthy()
+      expect(pagina.corta.length).toBeLessThanOrEqual(24)
     }
   })
 

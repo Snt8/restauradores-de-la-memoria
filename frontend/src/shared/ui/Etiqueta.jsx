@@ -3,6 +3,7 @@ const TONOS = {
   memoria: 'bg-memoria/10 text-memoria-hondo',
   vela: 'bg-vela/30 text-tinta',
   rosa: 'bg-rosa/10 text-rosa',
+  cielo: 'bg-cielo/10 text-cielo',
 }
 
 export function Etiqueta({ tono = 'neutro', children }) {

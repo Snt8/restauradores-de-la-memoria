@@ -50,6 +50,17 @@ describe('createHttpClient', () => {
     expect(init.headers['Content-Type']).toBe('application/json')
   })
 
+  it('hace PUT enviando el cuerpo como JSON', async () => {
+    const { client, fetchFn } = setup(jsonResponse({ puntaje: 1 }))
+
+    await client.put('foro/publicaciones/1/voto', { valor: 1 })
+
+    const [url, init] = fetchFn.mock.calls[0]
+    expect(url).toBe('/api/v1/foro/publicaciones/1/voto')
+    expect(init.method).toBe('PUT')
+    expect(init.body).toBe('{"valor":1}')
+  })
+
   it('devuelve null en respuestas 204', async () => {
     const { client } = setup(new Response(null, { status: 204 }))
 

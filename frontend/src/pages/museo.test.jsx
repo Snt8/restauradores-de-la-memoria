@@ -196,3 +196,17 @@ describe('Ficha de un objeto', () => {
     expect(await screen.findByRole('heading', { name: 'Página no encontrada' })).toBeInTheDocument()
   })
 })
+
+describe('Portada de las páginas internas', () => {
+  it('la ficha de un objeto muestra la ruta de navegación hasta el museo', async () => {
+    instalarApiFalsa({ 'objetos/caja': caja })
+    renderRoute(RUTAS.objeto('caja'))
+
+    const migas = await screen.findByRole('navigation', { name: 'Ruta de navegación' })
+    expect(within(migas).getByRole('link', { name: 'Museo Escolar' })).toHaveAttribute(
+      'href',
+      RUTAS.museo,
+    )
+    expect(within(migas).getByText('Caja de archivo')).toHaveAttribute('aria-current', 'page')
+  })
+})

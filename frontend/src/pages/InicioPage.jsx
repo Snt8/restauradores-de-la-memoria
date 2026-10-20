@@ -3,55 +3,86 @@ import { Link } from 'react-router'
 import { ACCESOS_PRINCIPALES, RUTAS } from '@/app/navegacion.js'
 import { PROYECTO, QUE_ES } from '@/content/sitio.js'
 import { Fecha } from '@/entities/contenido/Fecha.jsx'
+import { AccesoAlForo, ForoDestacado } from '@/features/foro/ForoDestacado.jsx'
 import { Exposiciones } from '@/features/museo/Exposiciones.jsx'
+import { AccesoAlMuseoVirtual, AcercaDelProyecto } from '@/features/paneles/PanelesDelPortal.jsx'
+import { miniaturaDeImagen } from '@/shared/api/media.js'
 import { recursos } from '@/shared/api/recursos.js'
-import { Contenedor } from '@/shared/ui/Contenedor.jsx'
 import { EnlaceBoton } from '@/shared/ui/EnlaceBoton.jsx'
+import { CLASE_TARJETA_ENLAZADA } from '@/shared/ui/estilos.js'
 import { EstadoDeConsulta } from '@/shared/ui/EstadoDeConsulta.jsx'
 import { Icono } from '@/shared/ui/Icono.jsx'
-import { ImagenResponsiva } from '@/shared/ui/ImagenResponsiva.jsx'
+import { PlantillaDePagina } from '@/shared/ui/PlantillaDePagina.jsx'
+import { PortadaDePagina } from '@/shared/ui/PortadaDePagina.jsx'
 import { Seccion } from '@/shared/ui/Seccion.jsx'
+import { TarjetaPanel } from '@/shared/ui/TarjetaPanel.jsx'
 
+/**
+ * Portada del portal, como el inicio de Reddit: presentación arriba, lo más vivo del
+ * foro y del museo en el centro, y el proyecto y sus reconocimientos a la derecha.
+ */
 export function InicioPage() {
   return (
-    <>
-      <title>{`${PROYECTO.nombre} · ${PROYECTO.colegio}`}</title>
-      <Portada />
-
+    <PlantillaDePagina
+      etiquetaDelPanel="Sobre el proyecto"
+      portada={
+        <PortadaDePagina
+          tituloDocumento={`${PROYECTO.nombre} · ${PROYECTO.colegio}`}
+          antetitulo={`${PROYECTO.colegio} · ${PROYECTO.localidad}`}
+          titulo={PROYECTO.nombre}
+          subtitulo={`«${PROYECTO.lema}»`}
+          descripcion="El portal del Museo Escolar de la Memoria: objetos, fotografías, voces y evidencias de un colegio que decidió no olvidar."
+          imagen={PROYECTO.imagenPrincipal}
+          escudo={miniaturaDeImagen(PROYECTO.escudo)}
+          acciones={
+            <>
+              <EnlaceBoton hacia={RUTAS.museoVirtual} icono="cubo">
+                Recorrer el Museo Virtual
+              </EnlaceBoton>
+              <EnlaceBoton hacia={RUTAS.museo} variante="secundario" icono="flecha-derecha">
+                Museo Escolar de la Memoria
+              </EnlaceBoton>
+            </>
+          }
+        />
+      }
+      panel={
+        <>
+          <AcercaDelProyecto />
+          <ReconocimientosRecientes />
+          <AccesoAlMuseoVirtual />
+        </>
+      }
+    >
       <Seccion titulo="Un proyecto para no olvidar">
-        <div className="grid gap-8 lg:grid-cols-[1.4fr_1fr]">
-          <div className="space-y-4 text-lg leading-relaxed text-tinta-suave">
-            {QUE_ES.queEs.map((parrafo) => (
-              <p key={parrafo}>{parrafo}</p>
-            ))}
-            <EnlaceBoton hacia={RUTAS.queEs} variante="secundario" icono="flecha-derecha">
-              Conocer el proyecto
-            </EnlaceBoton>
-          </div>
-          <figure className="self-start rounded-tarjeta bg-noche p-8 text-white">
-            <blockquote className="font-display text-2xl leading-snug">
-              «{QUE_ES.cita.texto}»
-            </blockquote>
-            <figcaption className="mt-4 text-sm text-white/60">{QUE_ES.cita.fuente}</figcaption>
-          </figure>
+        <div className="max-w-lectura space-y-4 text-lg leading-relaxed text-tinta-suave">
+          {QUE_ES.queEs.map((parrafo) => (
+            <p key={parrafo}>{parrafo}</p>
+          ))}
         </div>
       </Seccion>
 
-      <Seccion titulo="Explora el portal" className="bg-papel-hondo">
-        <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <Seccion titulo="Desde el foro" variante="abierta" accion={<AccesoAlForo />}>
+        <ForoDestacado />
+      </Seccion>
+
+      <Seccion titulo="Explora el portal" variante="abierta">
+        <ul className="grid gap-3 sm:grid-cols-2">
           {ACCESOS_PRINCIPALES.map((pagina) => (
             <li key={pagina.ruta}>
               <Link
                 to={pagina.ruta}
-                className="group flex h-full flex-col justify-between gap-4 rounded-tarjeta bg-white p-6 shadow-tarjeta hover:ring-2 hover:ring-memoria"
+                className={`${CLASE_TARJETA_ENLAZADA} group flex h-full items-start gap-4 p-5`}
               >
+                <span className="grid size-11 shrink-0 place-items-center rounded-full bg-memoria/10 text-memoria">
+                  <Icono nombre={pagina.icono} className="size-5" />
+                </span>
                 <span>
-                  <span className="block font-display text-xl font-semibold group-hover:text-memoria">
+                  <span className="block font-semibold group-hover:text-memoria">
                     {pagina.etiqueta}
                   </span>
-                  <span className="mt-2 block text-sm text-tinta-suave">{pagina.descripcion}</span>
+                  <span className="mt-1 block text-sm text-tinta-suave">{pagina.descripcion}</span>
                 </span>
-                <Icono nombre="flecha-derecha" className="size-5 text-memoria" />
               </Link>
             </li>
           ))}
@@ -60,7 +91,7 @@ export function InicioPage() {
 
       <Seccion
         titulo="Exposiciones recientes"
-        descripcion="Ediciones del Museo Escolar de la Memoria y exposiciones en otros espacios."
+        variante="abierta"
         accion={
           <EnlaceBoton hacia={RUTAS.museo} variante="secundario" icono="flecha-derecha">
             Ver todas
@@ -69,47 +100,7 @@ export function InicioPage() {
       >
         <Exposiciones limite={2} />
       </Seccion>
-
-      <ReconocimientosRecientes />
-    </>
-  )
-}
-
-function Portada() {
-  return (
-    <section aria-labelledby="titulo-portada" className="relative isolate overflow-hidden bg-noche">
-      <ImagenResponsiva
-        url={PROYECTO.imagenPrincipal}
-        alt=""
-        carga="eager"
-        sizes="100vw"
-        className="absolute inset-0 -z-10 size-full object-cover opacity-45"
-      />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-noche via-noche/80 to-noche/20" />
-      <Contenedor className="py-24 text-white sm:py-32">
-        <p className="mb-4 text-sm font-semibold tracking-widest text-vela uppercase">
-          {PROYECTO.colegio} · {PROYECTO.localidad}
-        </p>
-        <h1 id="titulo-portada" className="max-w-3xl text-5xl font-semibold sm:text-7xl">
-          {PROYECTO.nombre}
-        </h1>
-        <p className="mt-6 max-w-xl font-display text-2xl text-white/90 italic">
-          «{PROYECTO.lema}»
-        </p>
-        <p className="mt-4 max-w-xl text-lg text-white/80">
-          El portal del Museo Escolar de la Memoria: objetos, fotografías, voces y evidencias de un
-          colegio que decidió no olvidar.
-        </p>
-        <div className="mt-10 flex flex-wrap gap-3">
-          <EnlaceBoton hacia={RUTAS.museoVirtual} variante="claro" icono="cubo">
-            Recorrer el Museo Virtual
-          </EnlaceBoton>
-          <EnlaceBoton hacia={RUTAS.museo} variante="secundario" icono="flecha-derecha">
-            Museo Escolar de la Memoria
-          </EnlaceBoton>
-        </div>
-      </Contenedor>
-    </section>
+    </PlantillaDePagina>
   )
 }
 
@@ -117,32 +108,31 @@ function ReconocimientosRecientes() {
   const consulta = useQuery(recursos.reconocimientos.lista())
 
   return (
-    <Seccion
-      titulo="Reconocimientos recientes"
-      className="bg-noche text-white [&_h2]:text-white"
-      accion={
-        <EnlaceBoton hacia={RUTAS.reconocimientos} variante="claro" icono="flecha-derecha">
-          Ver todos
-        </EnlaceBoton>
-      }
-    >
-      <EstadoDeConsulta consulta={consulta}>
+    <TarjetaPanel titulo="Reconocimientos recientes">
+      <EstadoDeConsulta consulta={consulta} cargando={<p className="text-sm">Cargando…</p>}>
         {({ elementos }) => (
-          <ul className="grid gap-6 md:grid-cols-3">
+          <ol className="divide-y divide-linea">
             {elementos.slice(0, 3).map((reconocimiento) => (
-              <li key={reconocimiento.id} className="border-l-2 border-vela pl-5">
-                <p className="text-sm text-vela">
+              <li key={reconocimiento.id} className="py-3 first:pt-0 last:pb-0">
+                <p className="text-xs font-semibold text-memoria">
                   <Fecha fecha={reconocimiento.fecha} />
                 </p>
-                <h3 className="mt-1 text-xl font-semibold">{reconocimiento.nombre}</h3>
+                <p className="mt-0.5 text-sm font-semibold">{reconocimiento.nombre}</p>
                 {reconocimiento.otorgante && (
-                  <p className="mt-2 text-sm text-white/70">{reconocimiento.otorgante}</p>
+                  <p className="mt-0.5 text-sm text-tinta-suave">{reconocimiento.otorgante}</p>
                 )}
               </li>
             ))}
-          </ul>
+          </ol>
         )}
       </EstadoDeConsulta>
-    </Seccion>
+      <Link
+        to={RUTAS.reconocimientos}
+        className="inline-flex items-center gap-1.5 text-sm font-semibold text-memoria hover:underline"
+      >
+        Ver todos los reconocimientos
+        <Icono nombre="flecha-derecha" className="size-4" />
+      </Link>
+    </TarjetaPanel>
   )
 }

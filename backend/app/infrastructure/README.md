@@ -18,6 +18,7 @@ Adaptadores que implementan los puertos del dominio con tecnología concreta: SQ
 | `repositories/contenido.py`         | Configuración de cada colección: filtros, orden y precargas                                         |
 | `repositories/galeria.py`           | `RepositorioGaleriaSqlAlchemy`: evidencias con sección y contexto calculados en SQL                 |
 | `repositories/visitantes.py`        | `RepositorioVisitantesSqlAlchemy`, que implementa `RepositorioVisitantes`                           |
+| `repositories/foro.py`              | `RepositorioForoSqlAlchemy`: muro ordenado (populares, recientes, mejores), voto propio por `LEFT JOIN` y votos con bloqueo de fila |
 
 ## 🗄️ Modelo de datos
 
@@ -46,6 +47,9 @@ erDiagram
 | `aliados`          | slug, nombre, tipo, descripción, logo, sitio web                                                      |
 | `evidencias`       | tipo (foto, video, audio, enlace, documento), url, título, créditos, orden y **una FK por padre**     |
 | `visitantes`       | nombre, correo, institución, rol, mensaje, origen, `consentimiento_datos`                             |
+| `publicaciones_foro` | categoría, título, contenido, autor, `puntaje` y `comentarios` (contadores desnormalizados)          |
+| `comentarios_foro` | publicación, `padre_id` (respuesta a otro comentario), contenido, autor, `puntaje`                    |
+| `votos_publicaciones`, `votos_comentarios` | PK `(objetivo, votante)`: un voto por navegador; `valor` solo −1 o 1          |
 
 ## 🎯 Problema que resuelve
 

@@ -24,19 +24,35 @@
   --color-memoria-claro: #3aa9a9;
   --color-vela: #f2c230;
   --color-rosa: #c92f63;
+  --color-cielo: #2f5d9e;
+
+  /* Superficies del foro: tarjetas blancas sobre un fondo apenas más hondo que el papel. */
+  --color-superficie: #ffffff;
+  --color-fondo-foro: #f4efe5;
 
   --radius-tarjeta: 1rem;
   --shadow-tarjeta: 0 1px 2px rgb(27 25 22 / 0.06), 0 8px 24px -12px rgb(27 25 22 / 0.18);
+
+  /* Ancho de lectura cómodo: entre 60 y 75 caracteres por línea. */
+  --container-lectura: 68ch;
 }
 
 @layer base {
   html {
-    scroll-padding-top: 5rem;
+    /* 17 px de base: todo el portal (texto y espaciados en rem) gana legibilidad por igual. */
+    font-size: 106.25%;
+    scroll-padding-top: 6rem;
   }
 
   body {
-    @apply bg-papel font-sans text-tinta antialiased;
+    @apply bg-papel font-sans leading-relaxed text-tinta antialiased;
     text-rendering: optimizeLegibility;
+  }
+
+  p,
+  li,
+  figcaption {
+    text-wrap: pretty;
   }
 
   h1,

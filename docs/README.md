@@ -10,6 +10,7 @@ Mapa entre lo que pide la primera entrega (`.claude/instructions.md` y la guía 
 | -------------------------------- | -------------------------------------------------------- |
 | `README.md`                      | Cumplimiento de la entrega, pendientes y guía de la demo |
 | [`despliegue.md`](despliegue.md) | Publicación en Render: servicios, variables y pasos      |
+| [`diseno.md`](diseno.md)         | Propuesta de diseño del portal y del foro estilo Reddit  |
 
 ## 🎯 Problema que resuelve
 

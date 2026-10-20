@@ -10,6 +10,7 @@ Casos de uso del sistema: cada clase resuelve **una** acción concreta orquestan
 | --------------- | ------------------------------------------------------------------------------ |
 | `contenido.py`  | `ListarContenido[T, F]` y `ObtenerContenido[T]`: genéricos para todo el contenido |
 | `visitantes.py` | `RegistrarVisitante`: guarda un contacto o una firma del libro de visitas      |
+| `foro.py`        | `ListarPublicaciones`, `ObtenerPublicacion`, `Publicar`, `ListarComentarios`, `Comentar` (las respuestas deben ser de la misma publicación) y `Votar` |
 | `health.py`     | `CheckReadiness`: comprueba si la API puede atender peticiones                 |
 
 ## 🎯 Problema que resuelve

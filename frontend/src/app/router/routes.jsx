@@ -4,11 +4,14 @@ import { AlianzasPage } from '@/pages/AlianzasPage.jsx'
 import { ContactoPage } from '@/pages/ContactoPage.jsx'
 import { ErrorPage } from '@/pages/ErrorPage.jsx'
 import { FechasConmemorativasPage } from '@/pages/FechasConmemorativasPage.jsx'
+import { ForoPage } from '@/pages/ForoPage.jsx'
 import { GaleriaPage } from '@/pages/GaleriaPage.jsx'
 import { InicioPage } from '@/pages/InicioPage.jsx'
 import { MuseoPage } from '@/pages/MuseoPage.jsx'
 import { NoEncontradaPage } from '@/pages/NoEncontradaPage.jsx'
+import { NuevaPublicacionForoPage } from '@/pages/NuevaPublicacionForoPage.jsx'
 import { ObjetoMuseoPage } from '@/pages/ObjetoMuseoPage.jsx'
+import { PublicacionForoPage } from '@/pages/PublicacionForoPage.jsx'
 import { QueEsPage } from '@/pages/QueEsPage.jsx'
 import { ReconocimientosPage } from '@/pages/ReconocimientosPage.jsx'
 import { SalidasPedagogicasPage } from '@/pages/SalidasPedagogicasPage.jsx'
@@ -46,6 +49,9 @@ export const routes = [
           { path: RUTAS.reconocimientos, element: <ReconocimientosPage /> },
           { path: RUTAS.alianzas, element: <AlianzasPage /> },
           { path: RUTAS.galeria, element: <GaleriaPage /> },
+          { path: RUTAS.foro, element: <ForoPage /> },
+          { path: RUTAS.nuevaPublicacionForo, element: <NuevaPublicacionForoPage /> },
+          { path: RUTAS.patronPublicacionForo, element: <PublicacionForoPage /> },
           { path: RUTAS.contacto, element: <ContactoPage /> },
           { path: '*', element: <NoEncontradaPage /> },
         ],

@@ -1,6 +1,6 @@
 /**
- * Mapa del sitio: única fuente de las rutas, sus nombres y descripciones.
- * Lo usan el encabezado, el pie de página y los accesos de la página de inicio.
+ * Mapa del sitio: única fuente de las rutas, sus nombres, descripciones e íconos.
+ * Lo usan la navegación lateral, el menú móvil, el pie de página y la página de inicio.
  */
 
 export const RUTAS = Object.freeze({
@@ -17,79 +17,118 @@ export const RUTAS = Object.freeze({
   alianzas: '/alianzas',
   galeria: '/galeria',
   contacto: '/contacto',
-})
-
-const pagina = (ruta, etiqueta, descripcion) => Object.freeze({ ruta, etiqueta, descripcion })
-
-export const PAGINAS = Object.freeze({
-  queEs: pagina(
-    RUTAS.queEs,
-    '¿Qué es Restauradores de la Memoria?',
-    'El proyecto, su propósito y quiénes lo hacen posible.',
-  ),
-  museo: pagina(
-    RUTAS.museo,
-    'Museo Escolar de la Memoria',
-    'Ediciones, objetos, fotografías y créditos del museo.',
-  ),
-  museoVirtual: pagina(
-    RUTAS.museoVirtual,
-    'Museo Virtual',
-    'Recorre la sala en 3D y descubre cada objeto.',
-  ),
-  salidas: pagina(
-    RUTAS.salidas,
-    'Salidas Pedagógicas',
-    'Recorridos por lugares de memoria de Bogotá.',
-  ),
-  fechas: pagina(
-    RUTAS.fechas,
-    'Fechas Conmemorativas',
-    'Las fechas que el colegio recuerda cada año.',
-  ),
-  eventos: pagina(
-    RUTAS.eventos,
-    'Visitas y Eventos',
-    'Encuentros, conversatorios y el proyecto en los medios.',
-  ),
-  reconocimientos: pagina(
-    RUTAS.reconocimientos,
-    'Reconocimientos',
-    'Premios y distinciones del proyecto y sus participantes.',
-  ),
-  alianzas: pagina(
-    RUTAS.alianzas,
-    'Alianzas Institucionales',
-    'Entidades que acompañan y fortalecen el proyecto.',
-  ),
-  galeria: pagina(
-    RUTAS.galeria,
-    'Galería Multimedia',
-    'Fotografías, videos, audios y evidencias del proyecto.',
-  ),
-  contacto: pagina(RUTAS.contacto, 'Contacto', 'Escríbenos o planea una visita al museo.'),
+  foro: '/foro',
+  publicacionForo: (id) => `/foro/publicaciones/${encodeURIComponent(id)}`,
+  patronPublicacionForo: '/foro/publicaciones/:id',
+  nuevaPublicacionForo: '/foro/publicar',
 })
 
 /**
- * Menú principal. Los grupos agrupan secciones relacionadas para que el menú
- * no pase de siete entradas en pantallas grandes.
+ * @param etiqueta  nombre completo (título de la página)
+ * @param corta     nombre en la navegación, donde el espacio es poco
+ */
+const pagina = ({ ruta, etiqueta, corta = etiqueta, descripcion, icono }) =>
+  Object.freeze({ ruta, etiqueta, corta, descripcion, icono })
+
+export const PAGINAS = Object.freeze({
+  inicio: pagina({
+    ruta: RUTAS.inicio,
+    etiqueta: 'Inicio',
+    descripcion: 'Portada del proyecto y lo más reciente.',
+    icono: 'casa',
+  }),
+  queEs: pagina({
+    ruta: RUTAS.queEs,
+    etiqueta: '¿Qué es Restauradores de la Memoria?',
+    corta: '¿Qué es el proyecto?',
+    descripcion: 'El proyecto, su propósito y quiénes lo hacen posible.',
+    icono: 'info',
+  }),
+  museo: pagina({
+    ruta: RUTAS.museo,
+    etiqueta: 'Museo Escolar de la Memoria',
+    corta: 'Museo Escolar',
+    descripcion: 'Ediciones, objetos, fotografías y créditos del museo.',
+    icono: 'museo',
+  }),
+  museoVirtual: pagina({
+    ruta: RUTAS.museoVirtual,
+    etiqueta: 'Museo Virtual',
+    descripcion: 'Recorre la sala en 3D y descubre cada objeto.',
+    icono: 'cubo',
+  }),
+  salidas: pagina({
+    ruta: RUTAS.salidas,
+    etiqueta: 'Salidas Pedagógicas',
+    corta: 'Salidas pedagógicas',
+    descripcion: 'Recorridos por lugares de memoria de Bogotá.',
+    icono: 'ubicacion',
+  }),
+  fechas: pagina({
+    ruta: RUTAS.fechas,
+    etiqueta: 'Fechas Conmemorativas',
+    corta: 'Fechas conmemorativas',
+    descripcion: 'Las fechas que el colegio recuerda cada año.',
+    icono: 'calendario',
+  }),
+  eventos: pagina({
+    ruta: RUTAS.eventos,
+    etiqueta: 'Visitas y Eventos',
+    corta: 'Visitas y eventos',
+    descripcion: 'Encuentros, conversatorios y el proyecto en los medios.',
+    icono: 'personas',
+  }),
+  reconocimientos: pagina({
+    ruta: RUTAS.reconocimientos,
+    etiqueta: 'Reconocimientos',
+    descripcion: 'Premios y distinciones del proyecto y sus participantes.',
+    icono: 'trofeo',
+  }),
+  alianzas: pagina({
+    ruta: RUTAS.alianzas,
+    etiqueta: 'Alianzas Institucionales',
+    corta: 'Alianzas',
+    descripcion: 'Entidades que acompañan y fortalecen el proyecto.',
+    icono: 'alianza',
+  }),
+  galeria: pagina({
+    ruta: RUTAS.galeria,
+    etiqueta: 'Galería Multimedia',
+    corta: 'Galería',
+    descripcion: 'Fotografías, videos, audios y evidencias del proyecto.',
+    icono: 'imagen',
+  }),
+  foro: pagina({
+    ruta: RUTAS.foro,
+    etiqueta: 'Foro de la Memoria',
+    corta: 'Foro',
+    descripcion: 'Pregunta, comparte recuerdos y conversa con la comunidad.',
+    icono: 'comentario',
+  }),
+  contacto: pagina({
+    ruta: RUTAS.contacto,
+    etiqueta: 'Contacto',
+    descripcion: 'Escríbenos o planea una visita al museo.',
+    icono: 'correo',
+  }),
+})
+
+/**
+ * Navegación principal, en grupos como la barra lateral de Reddit. El primer grupo
+ * no lleva título: son los accesos que más se usan.
  */
 export const MENU = Object.freeze([
-  { etiqueta: 'Inicio', ruta: RUTAS.inicio },
-  { etiqueta: 'El proyecto', ruta: RUTAS.queEs },
+  { titulo: null, paginas: [PAGINAS.inicio, PAGINAS.foro, PAGINAS.galeria] },
+  { titulo: 'Museo', paginas: [PAGINAS.museo, PAGINAS.museoVirtual] },
+  { titulo: 'Actividades', paginas: [PAGINAS.salidas, PAGINAS.fechas, PAGINAS.eventos] },
   {
-    etiqueta: 'Museo',
-    paginas: [PAGINAS.museo, PAGINAS.museoVirtual],
+    titulo: 'El proyecto',
+    paginas: [PAGINAS.queEs, PAGINAS.reconocimientos, PAGINAS.alianzas, PAGINAS.contacto],
   },
-  {
-    etiqueta: 'Actividades',
-    paginas: [PAGINAS.salidas, PAGINAS.fechas, PAGINAS.eventos],
-  },
-  { etiqueta: 'Reconocimientos', ruta: RUTAS.reconocimientos },
-  { etiqueta: 'Alianzas', ruta: RUTAS.alianzas },
-  { etiqueta: 'Galería', ruta: RUTAS.galeria },
-  { etiqueta: 'Contacto', ruta: RUTAS.contacto },
 ])
+
+/** Todas las páginas del menú, en orden. */
+export const PAGINAS_DEL_MENU = Object.freeze(MENU.flatMap((grupo) => grupo.paginas))
 
 /** Accesos de la página de inicio, en orden de lectura. */
 export const ACCESOS_PRINCIPALES = Object.freeze([
@@ -101,5 +140,6 @@ export const ACCESOS_PRINCIPALES = Object.freeze([
   PAGINAS.reconocimientos,
   PAGINAS.alianzas,
   PAGINAS.galeria,
+  PAGINAS.foro,
   PAGINAS.contacto,
 ])

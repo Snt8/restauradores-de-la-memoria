@@ -9,7 +9,7 @@ export function ObjetosDelMuseo() {
   return (
     <EstadoDeConsulta consulta={consulta} vacio="Pronto publicaremos los objetos del museo.">
       {({ elementos }) => (
-        <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="grid gap-4 sm:grid-cols-2">
           {elementos.map((objeto) => (
             <li key={objeto.id}>
               <TarjetaDeObjeto objeto={objeto} />

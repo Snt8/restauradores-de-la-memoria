@@ -15,7 +15,7 @@ Este repositorio contiene el portal que divulga, organiza y presenta la memoria 
 | 📁 [`frontend/`](frontend/README.md) | SPA en React + Tailwind + Vite (portal y museo A-Frame) |
 | 📁 [`backend/`](backend/README.md) | API REST en FastAPI con Clean Architecture, SQLAlchemy y Alembic, y el contenido inicial (`seeds/`) |
 | 📁 [`assets-pipeline/`](assets-pipeline/README.md) | Extrae y optimiza las imágenes de las fuentes y genera modelos 3D provisionales |
-| 📁 [`docs/`](docs/README.md) | Cumplimiento de la primera entrega, pendientes y guion de la demo |
+| 📁 [`docs/`](docs/README.md) | Cumplimiento de la primera entrega, propuesta de diseño ([`diseno.md`](docs/diseno.md)), pendientes y guion de la demo |
 | 📁 [`docker/`](docker/README.md) | Scripts de inicialización de PostgreSQL |
 | 📄 `docker-compose.yml` | Servicio de PostgreSQL 18 para desarrollo |
 | 📄 `render.yaml` | Blueprint de Render (base, API y portal): ver [`docs/despliegue.md`](docs/despliegue.md) |

@@ -26,7 +26,7 @@ export function EventosFiltrables() {
   })
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-5">
       <FiltroDeOpciones
         etiqueta="Filtrar por tipo"
         opciones={OPCIONES}
@@ -36,10 +36,10 @@ export function EventosFiltrables() {
       <EstadoDeConsulta consulta={consulta} vacio="No hay registros de este tipo todavía.">
         {({ elementos, total }) => (
           <>
-            <p aria-live="polite" className="text-sm text-tinta-suave">
+            <p aria-live="polite" className="px-1 text-sm text-tinta-suave">
               {total} {total === 1 ? 'registro' : 'registros'}
             </p>
-            <ul className="grid gap-6 md:grid-cols-2">
+            <ul className="space-y-4">
               {elementos.map((evento) => (
                 <li key={evento.id}>
                   <TarjetaDeContenido

@@ -1,6 +1,7 @@
 import { useMutation } from '@tanstack/react-query'
 import { useId, useRef, useState } from 'react'
 import { registrarVisitante } from '@/shared/api/recursos.js'
+import { CampoDeFormulario } from '@/shared/ui/CampoDeFormulario.jsx'
 import { aCargaUtil, LIMITES, validarVisitante, VISITANTE_VACIO } from './validacion.js'
 
 const TEXTOS = {
@@ -49,6 +50,7 @@ export function FormularioVisitante({ origen = 'contacto' }) {
   const campo = (nombre) => ({
     nombre,
     valor: datos[nombre],
+    maxLength: LIMITES[nombre],
     error: errores[nombre],
     onCambiar: (valor) => actualizar(nombre, valor),
   })
@@ -56,18 +58,22 @@ export function FormularioVisitante({ origen = 'contacto' }) {
   return (
     <form ref={formulario} noValidate onSubmit={alEnviar} className="space-y-5">
       <div className="grid gap-5 sm:grid-cols-2">
-        <Campo etiqueta="Nombre" autoComplete="name" obligatorio {...campo('nombre')} />
-        <Campo
+        <CampoDeFormulario etiqueta="Nombre" autoComplete="name" obligatorio {...campo('nombre')} />
+        <CampoDeFormulario
           etiqueta="Correo electrónico"
           tipo="email"
           autoComplete="email"
           obligatorio
           {...campo('correo')}
         />
-        <Campo etiqueta="Institución" autoComplete="organization" {...campo('institucion')} />
-        <Campo etiqueta="Rol (estudiante, docente, familia…)" {...campo('rol')} />
+        <CampoDeFormulario
+          etiqueta="Institución"
+          autoComplete="organization"
+          {...campo('institucion')}
+        />
+        <CampoDeFormulario etiqueta="Rol (estudiante, docente, familia…)" {...campo('rol')} />
       </div>
-      <Campo
+      <CampoDeFormulario
         etiqueta={exigeMensaje ? 'Mensaje' : 'Mensaje para el libro (opcional)'}
         multilinea
         obligatorio={exigeMensaje}
@@ -101,57 +107,6 @@ export function FormularioVisitante({ origen = 'contacto' }) {
         {envio.isPending ? 'Enviando…' : TEXTOS[origen].enviar}
       </button>
     </form>
-  )
-}
-
-function Campo({
-  etiqueta,
-  nombre,
-  valor,
-  error,
-  onCambiar,
-  tipo = 'text',
-  multilinea,
-  obligatorio,
-  autoComplete,
-}) {
-  const id = useId()
-  const idError = `${id}-error`
-  const Control = multilinea ? 'textarea' : 'input'
-
-  return (
-    <div className={multilinea ? '' : 'space-y-1'}>
-      <label htmlFor={id} className="block text-sm font-semibold">
-        {etiqueta}
-        {obligatorio && (
-          <span aria-hidden="true" className="text-rosa">
-            {' '}
-            *
-          </span>
-        )}
-      </label>
-      <Control
-        id={id}
-        name={nombre}
-        type={multilinea ? undefined : tipo}
-        rows={multilinea ? 5 : undefined}
-        value={valor}
-        maxLength={LIMITES[nombre]}
-        autoComplete={autoComplete}
-        required={obligatorio}
-        aria-invalid={error ? true : undefined}
-        aria-describedby={error ? idError : undefined}
-        onChange={(evento) => onCambiar(evento.target.value)}
-        className={`mt-1 w-full rounded-lg border bg-white px-3 py-2.5 ${
-          error ? 'border-rosa' : 'border-tinta/20'
-        }`}
-      />
-      {error && (
-        <p id={idError} className="mt-1 text-sm text-rosa">
-          {error}
-        </p>
-      )}
-    </div>
   )
 }
 

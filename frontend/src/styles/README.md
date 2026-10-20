@@ -22,6 +22,8 @@ Que colores, tipografías y espaciados no se repitan como valores sueltos en cad
 
 - **Paleta tomada de la presentación del proyecto:** negro (`noche`), verde azulado (`memoria`), amarillo (`vela`) y rosa (`rosa`) sobre un fondo de papel de archivo (`papel`).
 - **Contraste WCAG AA:** el texto `memoria` sobre `papel` supera 6:1 y `tinta-suave` supera 7:1.
+- **Lectura cómoda:** base de 17 px (`html { font-size: 106.25% }`, así texto y espaciados en `rem` crecen juntos), `leading-relaxed` en el cuerpo, `text-wrap: pretty` en párrafos y el ancho `max-w-lectura` (68 caracteres).
+- **Tokens del foro:** `cielo` (categoría «Preguntas» y voto en contra), `superficie` y `fondo-foro` (tarjetas blancas sobre un fondo apenas más hondo, como en Reddit). Ver [`docs/diseno.md`](../../../docs/diseno.md).
 - **Foco visible** en todo elemento interactivo y **`prefers-reduced-motion`** respetado.
 - Prettier ordena las clases con `tailwindStylesheet` apuntando a este archivo, así reconoce los tokens propios.
 

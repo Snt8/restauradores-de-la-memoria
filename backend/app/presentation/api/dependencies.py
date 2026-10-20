@@ -13,6 +13,7 @@ from app.domain.shared import Paginacion
 from app.infrastructure.db.database import Database
 from app.infrastructure.db.health import SqlAlchemyDatabaseProbe
 from app.infrastructure.repositories.base import ConfiguracionLectura, RepositorioSqlAlchemy
+from app.infrastructure.repositories.foro import RepositorioForoSqlAlchemy
 from app.infrastructure.repositories.galeria import RepositorioGaleriaSqlAlchemy
 from app.infrastructure.repositories.visitantes import RepositorioVisitantesSqlAlchemy
 
@@ -67,6 +68,10 @@ def proveedor_de_lectura[M, T, F](
 
 def get_repositorio_galeria(sesion: DbSessionDep) -> RepositorioGaleriaSqlAlchemy:
     return RepositorioGaleriaSqlAlchemy(sesion)
+
+
+def get_repositorio_foro(sesion: DbSessionDep) -> RepositorioForoSqlAlchemy:
+    return RepositorioForoSqlAlchemy(sesion)
 
 
 def get_registrar_visitante(sesion: DbSessionDep) -> RegistrarVisitante:

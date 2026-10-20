@@ -1,7 +1,11 @@
 /** Marcador de carga con la forma aproximada de una cuadrícula de tarjetas. */
 export function Esqueleto({ tarjetas = 3 }) {
   return (
-    <div role="status" aria-live="polite" className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    <div
+      role="status"
+      aria-live="polite"
+      className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8"
+    >
       <span className="sr-only">Cargando contenido…</span>
       {Array.from({ length: tarjetas }, (_, i) => (
         <div key={i} aria-hidden="true" className="animate-pulse rounded-tarjeta bg-white p-4">

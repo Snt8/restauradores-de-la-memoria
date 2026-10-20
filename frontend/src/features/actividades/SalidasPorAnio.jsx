@@ -1,41 +1,44 @@
-import { useQuery } from '@tanstack/react-query'
 import { TarjetaDeContenido } from '@/entities/contenido/TarjetaDeContenido.jsx'
-import { recursos } from '@/shared/api/recursos.js'
-import { agruparPor } from '@/shared/lib/agrupar.js'
-import { TEXTO_FECHA_POR_CONFIRMAR } from '@/shared/lib/fechas.js'
-import { EstadoDeConsulta } from '@/shared/ui/EstadoDeConsulta.jsx'
+import { EnEstaPagina } from '@/shared/ui/EnEstaPagina.jsx'
+import { Seccion } from '@/shared/ui/Seccion.jsx'
+import { idDeAnio, nombreDeAnio } from './salidas.js'
 
-/** Línea de tiempo de salidas pedagógicas agrupadas por año; las que no tienen año, al final. */
-export function SalidasPorAnio() {
-  const consulta = useQuery(recursos.actividades.lista({ tipo: 'salida_pedagogica' }))
+/** Muro de salidas pedagógicas, una sección por año. `grupos` viene de useSalidasPorAnio. */
+export function SalidasPorAnio({ grupos }) {
+  return grupos.map(([anio, salidas]) => (
+    <Seccion
+      key={anio ?? 'sin-fecha'}
+      id={idDeAnio(anio)}
+      titulo={nombreDeAnio(anio)}
+      variante="abierta"
+    >
+      <ul className="space-y-4">
+        {salidas.map((salida) => (
+          <li key={salida.id}>
+            <TarjetaDeContenido
+              titulo={salida.nombre}
+              fecha={salida.fecha}
+              lugar={salida.lugar}
+              descripcion={salida.descripcion}
+              evidencias={salida.evidencias}
+            />
+          </li>
+        ))}
+      </ul>
+    </Seccion>
+  ))
+}
 
+/** Índice del panel: salta a cada año y dice cuántas salidas tiene. */
+export function IndiceDeAnios({ grupos }) {
   return (
-    <EstadoDeConsulta consulta={consulta}>
-      {({ elementos }) => (
-        <div className="space-y-12">
-          {agruparPor(elementos, (salida) => salida.fecha.anio).map(([anio, salidas]) => (
-            <section key={anio ?? 'sin-fecha'}>
-              <h2 className="mb-6 flex items-center gap-4 text-3xl font-semibold text-memoria">
-                {anio ?? TEXTO_FECHA_POR_CONFIRMAR}
-                <span aria-hidden="true" className="h-px flex-1 bg-linea" />
-              </h2>
-              <ul className="grid gap-6 md:grid-cols-2">
-                {salidas.map((salida) => (
-                  <li key={salida.id}>
-                    <TarjetaDeContenido
-                      titulo={salida.nombre}
-                      fecha={salida.fecha}
-                      lugar={salida.lugar}
-                      descripcion={salida.descripcion}
-                      evidencias={salida.evidencias}
-                    />
-                  </li>
-                ))}
-              </ul>
-            </section>
-          ))}
-        </div>
-      )}
-    </EstadoDeConsulta>
+    <EnEstaPagina
+      titulo="Por año"
+      secciones={grupos.map(([anio, salidas]) => ({
+        id: idDeAnio(anio),
+        etiqueta: nombreDeAnio(anio),
+        detalle: salidas.length === 1 ? '1 salida' : `${salidas.length} salidas`,
+      }))}
+    />
   )
 }

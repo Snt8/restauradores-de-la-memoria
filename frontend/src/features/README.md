@@ -18,6 +18,10 @@ Funcionalidades con lógica propia, una carpeta por dominio. Cada una consulta l
 | `visitantes/validacion.js`                | Reglas del formulario (`validarVisitante`) y armado de la carga (`aCargaUtil`) |
 | `museo-virtual/`                          | Museo Virtual en A-Frame: ver [su README](museo-virtual/README.md)             |
 | `visitantes/FormularioVisitante.jsx`      | Formulario de contacto o libro de visitas, según `origen`                      |
+| `actividades/salidas.js`                  | `useSalidasPorAnio()`: consulta y grupos por año (muro e índice del panel)     |
+| `actividades/conmemoraciones.js`          | `proximaConmemoracion()`: la fecha que viene y cuántos días faltan             |
+| `paneles/PanelesDelPortal.jsx`            | Tarjetas de panel reutilizables: acerca del proyecto, Museo Virtual, foro      |
+| `foro/`                                   | Foro de la Memoria estilo Reddit: ver [su README](foro/README.md)              |
 
 ## 🎯 Problema que resuelve
 

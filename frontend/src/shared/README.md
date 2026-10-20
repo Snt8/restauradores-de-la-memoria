@@ -6,29 +6,36 @@ Código reutilizable por cualquier página, feature o entidad. No depende de nin
 
 ## 🗂️ Archivos
 
-| Archivo                      | Qué hace                                                                          |
-| ---------------------------- | --------------------------------------------------------------------------------- |
-| `api/httpClient.js`          | `createHttpClient()` y `ApiError`: cliente JSON sobre `fetch`                     |
-| `api/apiClient.js`           | Instancia única del cliente configurada con la URL de la API                      |
-| `api/recursos.js`            | `crearRecurso(ruta)` y `recursos`: opciones de TanStack Query para cada colección |
-| `api/media.js`               | Rutas de medios propios: `fuentesDeImagen`, `miniaturaDeImagen`, `urlPublica`     |
-| `config/env.js`              | Lectura centralizada de variables de entorno (`VITE_*`, `BASE_URL`)               |
-| `lib/fechas.js`              | `formatearFecha`, `fechaParaAtributo`, `partesDeCalendario` (fechas parciales)    |
-| `lib/embeds.js`              | YouTube (sin cookies), SoundCloud y nombre de la plataforma de un enlace          |
-| `lib/agrupar.js`             | `agruparPor(lista, clave)` conservando el orden                                   |
-| `lib/useFiltroEnUrl.js`      | Hook: un filtro guardado en la URL (`?tipo=medios`)                               |
-| `ui/Contenedor.jsx`          | Ancho máximo y márgenes comunes                                                   |
-| `ui/EncabezadoDePagina.jsx`  | `<h1>`, entradilla y `<title>` de cada página                                     |
-| `ui/Seccion.jsx`             | Región con `<h2>` asociado (`aria-labelledby`)                                    |
-| `ui/EstadoDeConsulta.jsx`    | Cargando, error con «Reintentar», vacío y datos, para cualquier consulta          |
-| `ui/Esqueleto.jsx`           | Marcador de carga                                                                 |
-| `ui/ImagenResponsiva.jsx`    | `<img>` con `srcset`, `sizes`, carga diferida y decodificación asíncrona          |
-| `ui/Visor.jsx`               | Visor modal sobre `<dialog>` con navegación por teclado                           |
-| `ui/useNavegacionEnLista.js` | Estado del visor: elemento abierto, anterior y siguiente                          |
-| `ui/FiltroDeOpciones.jsx`    | Botones de filtro con `aria-pressed`                                              |
-| `ui/EnlaceBoton.jsx`         | Enlace interno o externo con aspecto de botón                                     |
-| `ui/Etiqueta.jsx`            | Etiqueta de color                                                                 |
-| `ui/Icono.jsx`               | Íconos de línea en SVG                                                            |
+| Archivo                      | Qué hace                                                                                                                    |
+| ---------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `api/httpClient.js`          | `createHttpClient()` y `ApiError`: cliente JSON sobre `fetch`                                                               |
+| `api/apiClient.js`           | Instancia única del cliente configurada con la URL de la API                                                                |
+| `api/recursos.js`            | `crearRecurso(ruta)` y `recursos`: opciones de TanStack Query para cada colección                                           |
+| `api/foro.js`                | `crearApiForo()` y `foro`: consultas y escrituras del foro (publicar, comentar, votar)                                      |
+| `api/media.js`               | Rutas de medios propios: `fuentesDeImagen`, `miniaturaDeImagen`, `urlPublica`                                               |
+| `config/env.js`              | Lectura centralizada de variables de entorno (`VITE_*`, `BASE_URL`)                                                         |
+| `lib/fechas.js`              | Fechas parciales (`formatearFecha`, `fechaParaAtributo`, `partesDeCalendario`) e instantes (`tiempoRelativo`, `fechaYHora`) |
+| `lib/embeds.js`              | YouTube (sin cookies), SoundCloud y nombre de la plataforma de un enlace                                                    |
+| `lib/agrupar.js`             | `agruparPor(lista, clave)` conservando el orden                                                                             |
+| `lib/useSeccionActiva.js`    | Sección visible en pantalla (IntersectionObserver), para el índice                                                          |
+| `lib/useFiltroEnUrl.js`      | Hook: un filtro guardado en la URL (`?tipo=medios`)                                                                         |
+| `ui/Contenedor.jsx`          | Ancho máximo y márgenes de la estructura del portal                                                                         |
+| `ui/estilos.js`              | `CLASE_TARJETA`, `CLASE_TARJETA_ENLAZADA` y `CLASE_ACCION`: el sistema de tarjetas estilo Reddit                            |
+| `ui/PlantillaDePagina.jsx`   | Portada + contenido + panel derecho (columna desde `xl`, debajo en pantallas menores)                                       |
+| `ui/PortadaDePagina.jsx`     | Banda de color o imagen, ícono redondo, ruta de navegación, `<h1>`, `<title>`, descripción y acciones                       |
+| `ui/TarjetaPanel.jsx`        | Tarjeta del panel derecho (`destacada`, `fija`, `soloEnColumna`)                                                            |
+| `ui/EnEstaPagina.jsx`        | Índice de la página que resalta la sección que se está leyendo                                                              |
+| `ui/Seccion.jsx`             | Bloque con `<h2>` asociado: variante `tarjeta` (texto) o `abierta` (lista de tarjetas)                                      |
+| `ui/EstadoDeConsulta.jsx`    | Cargando, error con «Reintentar», vacío y datos, para cualquier consulta                                                    |
+| `ui/Esqueleto.jsx`           | Marcador de carga                                                                                                           |
+| `ui/ImagenResponsiva.jsx`    | `<img>` con `srcset`, `sizes`, carga diferida y decodificación asíncrona                                                    |
+| `ui/Visor.jsx`               | Visor modal sobre `<dialog>` con navegación por teclado                                                                     |
+| `ui/useNavegacionEnLista.js` | Estado del visor: elemento abierto, anterior y siguiente                                                                    |
+| `ui/FiltroDeOpciones.jsx`    | Botones de filtro con `aria-pressed`                                                                                        |
+| `ui/CampoDeFormulario.jsx`   | Campo accesible (etiqueta, error, ayuda y contador) que comparten todos los formularios                                     |
+| `ui/EnlaceBoton.jsx`         | Enlace interno o externo con aspecto de botón                                                                               |
+| `ui/Etiqueta.jsx`            | Etiqueta de color                                                                                                           |
+| `ui/Icono.jsx`               | Íconos de línea en SVG                                                                                                      |
 
 ## 🎯 Problema que resuelve
 

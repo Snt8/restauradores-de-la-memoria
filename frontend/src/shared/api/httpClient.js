@@ -67,5 +67,6 @@ export function createHttpClient({ baseUrl, fetchFn = (...args) => globalThis.fe
   return {
     get: (path, options) => request(path, { ...options, method: 'GET' }),
     post: (path, body, options) => request(path, { ...options, method: 'POST', body }),
+    put: (path, body, options) => request(path, { ...options, method: 'PUT', body }),
   }
 }
