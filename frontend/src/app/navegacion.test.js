@@ -19,6 +19,7 @@ describe('mapa del sitio', () => {
         RUTAS.alianzas,
         RUTAS.galeria,
         RUTAS.contacto,
+        RUTAS.foro,
       ]),
     )
     expect(rutasDelMenu).toContain(RUTAS.museoVirtual)
@@ -35,6 +36,10 @@ describe('mapa del sitio', () => {
       expect(acceso.etiqueta).toBeTruthy()
       expect(acceso.descripcion).toBeTruthy()
     }
+  })
+
+  it('el menú principal no pasa de siete entradas', () => {
+    expect(MENU.length).toBeLessThanOrEqual(7)
   })
 
   it('codifica el slug en la ruta de un objeto', () => {

@@ -6,14 +6,14 @@ export function Seccion({ titulo, descripcion, accion, className = '', children 
   const idTitulo = useId()
 
   return (
-    <section aria-labelledby={idTitulo} className={`py-12 sm:py-16 ${className}`}>
+    <section aria-labelledby={idTitulo} className={`py-16 sm:py-20 lg:py-24 ${className}`}>
       <Contenedor>
-        <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
+        <div className="mb-10 flex flex-wrap items-end justify-between gap-x-8 gap-y-5 sm:mb-12">
           <div className="max-w-2xl">
-            <h2 id={idTitulo} className="text-3xl font-semibold">
+            <h2 id={idTitulo} className="text-3xl font-semibold sm:text-4xl">
               {titulo}
             </h2>
-            {descripcion && <p className="mt-3 text-tinta-suave">{descripcion}</p>}
+            {descripcion && <p className="mt-4 text-lg text-tinta-suave">{descripcion}</p>}
           </div>
           {accion}
         </div>

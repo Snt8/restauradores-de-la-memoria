@@ -11,7 +11,7 @@ export function FechasConmemorativasPage() {
         titulo={PAGINAS.fechas.etiqueta}
         entradilla="Fechas que el colegio recuerda cada año con performances, carteles e intervenciones de los estudiantes, en el orden del calendario."
       />
-      <Contenedor className="py-12">
+      <Contenedor className="py-14 sm:py-20">
         <CalendarioConmemorativo />
       </Contenedor>
     </>

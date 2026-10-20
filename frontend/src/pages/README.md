@@ -6,24 +6,28 @@ Una página por cada sección del portal. Las páginas **componen**: arman la pa
 
 ## 🗂️ Archivos
 
-| Archivo                        | Ruta                     | Qué muestra                                                                    |
-| ------------------------------ | ------------------------ | ------------------------------------------------------------------------------ |
-| `InicioPage.jsx`               | `/`                      | Portada, presentación, accesos, exposiciones y reconocimientos                 |
-| `QueEsPage.jsx`                | `/que-es`                | Qué es, propósito, importancia, actividades, participantes y formación docente |
-| `MuseoVirtualPage.jsx`         | `/museo/virtual`         | Sala 3D, visita guiada, lista de objetos y libro de visitas (ruta diferida)    |
-| `ObjetoMuseoPage.jsx`          | `/museo/objetos/:slug`   | Ficha: modelo 3D, foto, descripción, importancia, créditos y evidencias        |
-| `MuseoPage.jsx`                | `/museo`                 | Presentación, objetos, ediciones con evidencias y créditos                     |
-| `SalidasPedagogicasPage.jsx`   | `/salidas-pedagogicas`   | Salidas agrupadas por año                                                      |
-| `FechasConmemorativasPage.jsx` | `/fechas-conmemorativas` | Calendario de conmemoraciones                                                  |
-| `VisitasYEventosPage.jsx`      | `/visitas-y-eventos`     | Visitas, eventos y medios con filtro                                           |
-| `ReconocimientosPage.jsx`      | `/reconocimientos`       | Reconocimientos con otorgante y evidencias                                     |
-| `AlianzasPage.jsx`             | `/alianzas`              | Aliados con logo, sitio web y evidencias                                       |
-| `GaleriaPage.jsx`              | `/galeria`               | Galería multimedia filtrable                                                   |
-| `ContactoPage.jsx`             | `/contacto`              | Información institucional y formulario                                         |
-| `NoEncontradaPage.jsx`         | `*`                      | Página 404                                                                     |
-| `ErrorPage.jsx`                | —                        | Error inesperado al cargar o dibujar una página                                |
-| `museo.test.jsx`               | —                        | Integración del Museo Virtual y de la ficha (A-Frame simulado)                 |
-| `secciones.test.jsx`           | —                        | Pruebas de integración de cada sección con la API simulada                     |
+| Archivo                        | Ruta                      | Qué muestra                                                                    |
+| ------------------------------ | ------------------------- | ------------------------------------------------------------------------------ |
+| `InicioPage.jsx`               | `/`                       | Portada, presentación, accesos, exposiciones y reconocimientos                 |
+| `QueEsPage.jsx`                | `/que-es`                 | Qué es, propósito, importancia, actividades, participantes y formación docente |
+| `MuseoVirtualPage.jsx`         | `/museo/virtual`          | Sala 3D, visita guiada, lista de objetos y libro de visitas (ruta diferida)    |
+| `ObjetoMuseoPage.jsx`          | `/museo/objetos/:slug`    | Ficha: modelo 3D, foto, descripción, importancia, créditos y evidencias        |
+| `MuseoPage.jsx`                | `/museo`                  | Presentación, objetos, ediciones con evidencias y créditos                     |
+| `SalidasPedagogicasPage.jsx`   | `/salidas-pedagogicas`    | Salidas agrupadas por año                                                      |
+| `FechasConmemorativasPage.jsx` | `/fechas-conmemorativas`  | Calendario de conmemoraciones                                                  |
+| `VisitasYEventosPage.jsx`      | `/visitas-y-eventos`      | Visitas, eventos y medios con filtro                                           |
+| `ReconocimientosPage.jsx`      | `/reconocimientos`        | Reconocimientos con otorgante y evidencias                                     |
+| `AlianzasPage.jsx`             | `/alianzas`               | Aliados con logo, sitio web y evidencias                                       |
+| `GaleriaPage.jsx`              | `/galeria`                | Galería multimedia filtrable                                                   |
+| `ContactoPage.jsx`             | `/contacto`               | Información institucional y formulario                                         |
+| `ForoPage.jsx`                 | `/foro`                   | Foro estilo Reddit: categorías, muro con votos y órdenes, panel con normas     |
+| `PublicacionForoPage.jsx`      | `/foro/publicaciones/:id` | Publicación completa con comentarios en hilo                                   |
+| `NuevaPublicacionForoPage.jsx` | `/foro/publicar`          | Formulario para crear una publicación                                          |
+| `NoEncontradaPage.jsx`         | `*`                       | Página 404                                                                     |
+| `ErrorPage.jsx`                | —                         | Error inesperado al cargar o dibujar una página                                |
+| `museo.test.jsx`               | —                         | Integración del Museo Virtual y de la ficha (A-Frame simulado)                 |
+| `secciones.test.jsx`           | —                         | Pruebas de integración de cada sección con la API simulada                     |
+| `foro.test.jsx`                | —                         | Integración del foro: muro, filtros, votos, hilos, publicar e inicio           |
 
 ## 🎯 Problema que resuelve
 

@@ -39,8 +39,8 @@ export function MenuDesplegable({ etiqueta, paginas }) {
         aria-expanded={abierto}
         aria-controls={idLista}
         onClick={() => setAbierto(!abierto)}
-        className={`inline-flex items-center gap-1 rounded-full px-3 py-2 text-sm font-semibold hover:text-memoria ${
-          contieneRutaActual ? 'text-memoria' : ''
+        className={`inline-flex items-center gap-1 rounded-full px-3.5 py-2 text-[0.95rem] font-semibold transition-colors hover:bg-tinta/5 hover:text-memoria ${
+          contieneRutaActual ? 'bg-memoria/10 text-memoria-hondo' : ''
         }`}
       >
         {etiqueta}
@@ -52,7 +52,7 @@ export function MenuDesplegable({ etiqueta, paginas }) {
       <ul
         id={idLista}
         hidden={!abierto}
-        className="absolute top-full left-0 z-20 mt-2 w-72 rounded-tarjeta border border-linea bg-white p-2 shadow-tarjeta"
+        className="absolute top-full left-0 z-20 mt-2 w-80 rounded-tarjeta border border-linea bg-white p-2 shadow-tarjeta"
       >
         {paginas.map((pagina) => (
           <li key={pagina.ruta}>
@@ -60,11 +60,11 @@ export function MenuDesplegable({ etiqueta, paginas }) {
               to={pagina.ruta}
               end
               className={({ isActive }) =>
-                `block rounded-lg px-3 py-2 hover:bg-papel-hondo ${isActive ? 'bg-papel-hondo' : ''}`
+                `block rounded-lg px-3.5 py-3 hover:bg-papel-hondo ${isActive ? 'bg-papel-hondo' : ''}`
               }
             >
               <span className="block text-sm font-semibold">{pagina.etiqueta}</span>
-              <span className="block text-xs text-tinta-suave">{pagina.descripcion}</span>
+              <span className="mt-0.5 block text-sm text-tinta-suave">{pagina.descripcion}</span>
             </NavLink>
           </li>
         ))}

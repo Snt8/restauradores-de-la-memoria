@@ -29,7 +29,7 @@ describe('encabezado', () => {
 
     await userEvent.click(boton)
     const menuMovil = screen.getByRole('navigation', { name: 'Principal (móvil)' })
-    expect(within(menuMovil).getAllByRole('link')).toHaveLength(11)
+    expect(within(menuMovil).getAllByRole('link')).toHaveLength(12)
 
     await userEvent.click(within(menuMovil).getByRole('link', { name: 'Galería' }))
 

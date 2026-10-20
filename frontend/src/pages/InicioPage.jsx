@@ -3,6 +3,7 @@ import { Link } from 'react-router'
 import { ACCESOS_PRINCIPALES, RUTAS } from '@/app/navegacion.js'
 import { PROYECTO, QUE_ES } from '@/content/sitio.js'
 import { Fecha } from '@/entities/contenido/Fecha.jsx'
+import { AccesoAlForo, ForoDestacado } from '@/features/foro/ForoDestacado.jsx'
 import { Exposiciones } from '@/features/museo/Exposiciones.jsx'
 import { recursos } from '@/shared/api/recursos.js'
 import { Contenedor } from '@/shared/ui/Contenedor.jsx'
@@ -19,8 +20,8 @@ export function InicioPage() {
       <Portada />
 
       <Seccion titulo="Un proyecto para no olvidar">
-        <div className="grid gap-8 lg:grid-cols-[1.4fr_1fr]">
-          <div className="space-y-4 text-lg leading-relaxed text-tinta-suave">
+        <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr] lg:gap-16">
+          <div className="max-w-lectura space-y-5 text-lg leading-relaxed text-tinta-suave">
             {QUE_ES.queEs.map((parrafo) => (
               <p key={parrafo}>{parrafo}</p>
             ))}
@@ -38,18 +39,18 @@ export function InicioPage() {
       </Seccion>
 
       <Seccion titulo="Explora el portal" className="bg-papel-hondo">
-        <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
           {ACCESOS_PRINCIPALES.map((pagina) => (
             <li key={pagina.ruta}>
               <Link
                 to={pagina.ruta}
-                className="group flex h-full flex-col justify-between gap-4 rounded-tarjeta bg-white p-6 shadow-tarjeta hover:ring-2 hover:ring-memoria"
+                className="group flex h-full flex-col justify-between gap-6 rounded-tarjeta bg-white p-6 shadow-tarjeta transition hover:-translate-y-0.5 hover:ring-2 hover:ring-memoria sm:p-7"
               >
                 <span>
                   <span className="block font-display text-xl font-semibold group-hover:text-memoria">
                     {pagina.etiqueta}
                   </span>
-                  <span className="mt-2 block text-sm text-tinta-suave">{pagina.descripcion}</span>
+                  <span className="mt-2 block text-tinta-suave">{pagina.descripcion}</span>
                 </span>
                 <Icono nombre="flecha-derecha" className="size-5 text-memoria" />
               </Link>
@@ -70,6 +71,15 @@ export function InicioPage() {
         <Exposiciones limite={2} />
       </Seccion>
 
+      <Seccion
+        titulo="Desde el foro"
+        descripcion="Preguntas, recuerdos y reflexiones de la comunidad. Súmate a la conversación."
+        className="bg-papel-hondo"
+        accion={<AccesoAlForo />}
+      >
+        <ForoDestacado />
+      </Seccion>
+
       <ReconocimientosRecientes />
     </>
   )
@@ -86,7 +96,7 @@ function Portada() {
         className="absolute inset-0 -z-10 size-full object-cover opacity-45"
       />
       <div className="absolute inset-0 -z-10 bg-gradient-to-r from-noche via-noche/80 to-noche/20" />
-      <Contenedor className="py-24 text-white sm:py-32">
+      <Contenedor className="py-24 text-white sm:py-32 lg:py-40">
         <p className="mb-4 text-sm font-semibold tracking-widest text-vela uppercase">
           {PROYECTO.colegio} · {PROYECTO.localidad}
         </p>
@@ -128,7 +138,7 @@ function ReconocimientosRecientes() {
     >
       <EstadoDeConsulta consulta={consulta}>
         {({ elementos }) => (
-          <ul className="grid gap-6 md:grid-cols-3">
+          <ul className="grid gap-6 md:grid-cols-3 lg:gap-8">
             {elementos.slice(0, 3).map((reconocimiento) => (
               <li key={reconocimiento.id} className="border-l-2 border-vela pl-5">
                 <p className="text-sm text-vela">

@@ -13,7 +13,7 @@ export function ContactoPage() {
         titulo={PAGINAS.contacto.etiqueta}
         entradilla="¿Quieres visitar el museo, proponer una alianza o compartir una historia? Escríbenos."
       />
-      <Contenedor className="grid gap-10 py-12 lg:grid-cols-[1fr_2fr]">
+      <Contenedor className="grid gap-12 py-14 sm:py-20 lg:grid-cols-[1fr_2fr]">
         <aside aria-labelledby="titulo-informacion" className="space-y-6">
           <h2 id="titulo-informacion" className="text-2xl font-semibold">
             Información institucional

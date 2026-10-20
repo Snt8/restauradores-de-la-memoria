@@ -20,4 +20,6 @@ window.scrollTo = vi.fn()
 afterEach(() => {
   cleanup()
   vi.unstubAllGlobals()
+  // El foro recuerda la firma y el id de votante: cada prueba empieza sin nada guardado.
+  localStorage.clear()
 })

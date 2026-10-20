@@ -9,6 +9,7 @@ Textos institucionales fijos del portal: nombre, lema, datos de contacto, la pre
 | Archivo    | Qué contiene                                                                                                                                 |
 | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
 | `sitio.js` | `PROYECTO` (identidad y contacto), `QUE_ES` (qué es, propósito, importancia, actividades, participantes) y `MUSEO` (presentación y créditos) |
+| `foro.js`  | `CATEGORIAS_FORO`, `ORDENES_FORO` y `FORO` (presentación y normas de convivencia del foro)                                                   |
 
 ## 🎯 Problema que resuelve
 

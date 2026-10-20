@@ -14,10 +14,12 @@ Capa de entrada HTTP: traduce peticiones a casos de uso y resultados de dominio 
 | `api/v1/routers/contenido.py`   | `crear_router_de_contenido()`: fábrica de routers de lectura                        |
 | `api/v1/routers/colecciones.py` | Las siete colecciones construidas con la fábrica, con sus filtros                   |
 | `api/v1/routers/visitantes.py`  | `POST /visitantes`                                                                  |
+| `api/v1/routers/foro.py`        | Publicaciones, comentarios y votos del foro (`/foro/...`)                           |
 | `api/v1/routers/health.py`      | `/health` y `/health/ready`                                                         |
 | `api/v1/schemas/comunes.py`     | `EsquemaDeDominio`, `FechaParcialSchema`, `EvidenciaSchema`, `PaginaSchema[T]`      |
 | `api/v1/schemas/contenido.py`   | Respuesta de cada colección                                                         |
 | `api/v1/schemas/visitantes.py`  | `VisitanteEntrada` (validación) y `VisitanteRegistradoSchema`                       |
+| `api/v1/schemas/foro.py`        | Entradas validadas del foro y sus respuestas (`mi_voto` incluido)                   |
 
 ## 🎯 Problema que resuelve
 
@@ -46,6 +48,11 @@ Mantiene FastAPI fuera del dominio y de los casos de uso. Si mañana cambia el p
 | GET    | `/aliados[/slug]`      | —                                       | Alianzas institucionales                      |
 | GET    | `/galeria`             | `tipo` (foto, video, audio…), `seccion` | Todas las evidencias con su sección           |
 | POST   | `/visitantes`          | —                                       | Contacto o firma del libro de visitas         |
+| GET    | `/foro/publicaciones`  | `categoria`, `orden`, `votante`         | Muro del foro, paginado                       |
+| POST   | `/foro/publicaciones`  | —                                       | Crea una publicación                          |
+| GET    | `/foro/publicaciones/{id}[/comentarios]` | `votante`             | Publicación o sus comentarios (planos)        |
+| POST   | `/foro/publicaciones/{id}/comentarios` | —                       | Comenta o responde (`padre_id`)               |
+| PUT    | `/foro/{publicaciones\|comentarios}/{id}/voto` | —               | Fija el voto (−1, 1) o lo retira (0)          |
 | GET    | `/health[/ready]`      | —                                       | Estado del servicio                           |
 
 Todas las listas aceptan `limite` (1 a 100, por defecto 50) y `desplazamiento`, y responden `{elementos, total, limite, desplazamiento}`.

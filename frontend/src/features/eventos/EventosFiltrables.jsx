@@ -39,7 +39,7 @@ export function EventosFiltrables() {
             <p aria-live="polite" className="text-sm text-tinta-suave">
               {total} {total === 1 ? 'registro' : 'registros'}
             </p>
-            <ul className="grid gap-6 md:grid-cols-2">
+            <ul className="grid gap-6 md:grid-cols-2 lg:gap-8">
               {elementos.map((evento) => (
                 <li key={evento.id}>
                   <TarjetaDeContenido

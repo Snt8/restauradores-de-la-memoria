@@ -41,10 +41,8 @@ describe('enrutamiento de la aplicación', () => {
   it.each(
     MENU.flatMap((entrada) => entrada.paginas ?? [])
       .concat(
-        { ruta: RUTAS.queEs, etiqueta: '¿Qué es Restauradores de la Memoria?' },
-        { ruta: RUTAS.reconocimientos, etiqueta: 'Reconocimientos' },
-        { ruta: RUTAS.alianzas, etiqueta: 'Alianzas Institucionales' },
         { ruta: RUTAS.galeria, etiqueta: 'Galería Multimedia' },
+        { ruta: RUTAS.foro, etiqueta: 'Foro de la Memoria' },
         { ruta: RUTAS.contacto, etiqueta: 'Contacto' },
       )
       .filter((p) => p.ruta !== RUTAS.museoVirtual),

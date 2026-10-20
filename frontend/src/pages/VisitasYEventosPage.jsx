@@ -11,7 +11,7 @@ export function VisitasYEventosPage() {
         titulo={PAGINAS.eventos.etiqueta}
         entradilla="Visitas de víctimas, organizaciones y testigos; eventos en el colegio y en la ciudad; y las entrevistas en radio y televisión donde el proyecto ha contado su historia."
       />
-      <Contenedor className="py-12">
+      <Contenedor className="py-14 sm:py-20">
         <EventosFiltrables />
       </Contenedor>
     </>

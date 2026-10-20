@@ -43,7 +43,7 @@ function Ficha({ objeto }) {
         </nav>
       </EncabezadoDePagina>
 
-      <Contenedor className="grid gap-10 py-12 lg:grid-cols-2">
+      <Contenedor className="grid gap-12 py-14 sm:py-20 lg:grid-cols-2">
         <div className="space-y-6">
           {objeto.modelo_3d_url ? (
             <Suspense fallback={<p role="status">Cargando el visor 3D…</p>}>

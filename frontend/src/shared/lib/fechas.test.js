@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { fechaParaAtributo, formatearFecha, partesDeCalendario } from './fechas.js'
+import { fechaParaAtributo, formatearFecha, partesDeCalendario, tiempoRelativo } from './fechas.js'
 
 describe('formatearFecha', () => {
   it.each([
@@ -33,5 +33,22 @@ describe('partesDeCalendario', () => {
 
   it('devuelve null si falta el día o el mes', () => {
     expect(partesDeCalendario({ anio: 2024, mes: 8 })).toBeNull()
+  })
+})
+
+describe('tiempoRelativo', () => {
+  const ahora = new Date('2026-10-20T12:00:00Z')
+  const antes = (segundos) => new Date(ahora.getTime() - segundos * 1000).toISOString()
+
+  it.each([
+    [10, 'hace un momento'],
+    [5 * 60, 'hace 5 minutos'],
+    [3 * 60 * 60, 'hace 3 horas'],
+    [24 * 60 * 60, 'ayer'],
+    [3 * 24 * 60 * 60, 'hace 3 días'],
+    [14 * 24 * 60 * 60, 'hace 2 semanas'],
+    [400 * 24 * 60 * 60, 'el año pasado'],
+  ])('%i segundos atrás se lee «%s»', (segundos, esperado) => {
+    expect(tiempoRelativo(antes(segundos), ahora)).toBe(esperado)
   })
 })

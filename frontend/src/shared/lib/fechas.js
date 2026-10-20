@@ -49,3 +49,34 @@ export function partesDeCalendario(fecha) {
   if (!mes || !dia) return null
   return { dia: String(dia), mes: MESES[mes - 1] }
 }
+
+const UNIDADES_RELATIVAS = [
+  ['year', 365 * 24 * 60 * 60],
+  ['month', 30 * 24 * 60 * 60],
+  ['week', 7 * 24 * 60 * 60],
+  ['day', 24 * 60 * 60],
+  ['hour', 60 * 60],
+  ['minute', 60],
+]
+const relativo = new Intl.RelativeTimeFormat('es', { numeric: 'auto' })
+
+/**
+ * Antigüedad legible de un instante («hace 5 minutos», «ayer», «hace 3 semanas»),
+ * como en los foros. Menos de un minuto es «hace un momento».
+ */
+export function tiempoRelativo(instante, ahora = new Date()) {
+  const segundos = Math.round((new Date(instante).getTime() - ahora.getTime()) / 1000)
+  for (const [unidad, duracion] of UNIDADES_RELATIVAS) {
+    if (Math.abs(segundos) >= duracion) {
+      return relativo.format(Math.trunc(segundos / duracion), unidad)
+    }
+  }
+  return 'hace un momento'
+}
+
+/** Fecha y hora completas para el atributo `title` y lectores de pantalla. */
+export function fechaYHora(instante) {
+  return new Intl.DateTimeFormat('es-CO', { dateStyle: 'long', timeStyle: 'short' }).format(
+    new Date(instante),
+  )
+}

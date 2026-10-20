@@ -75,6 +75,34 @@ export const reconocimiento = (cambios = {}) =>
 export const aliado = (cambios = {}) =>
   contenido({ tipo: null, descripcion: null, logo_url: null, sitio_web: null, ...cambios })
 
+let minuto = 0
+const instante = () => new Date(Date.UTC(2026, 9, 20, 12, minuto++)).toISOString()
+
+export const publicacionForo = (cambios = {}) => ({
+  id: nuevoId(),
+  categoria: 'museo',
+  titulo: '¿Qué objeto del museo les impactó más?',
+  contenido: 'Yo elijo el altar de la sanación.',
+  autor: 'Ana',
+  creado_en: instante(),
+  puntaje: 0,
+  comentarios: 0,
+  mi_voto: 0,
+  ...cambios,
+})
+
+export const comentarioForo = (cambios = {}) => ({
+  id: nuevoId(),
+  publicacion_id: 1,
+  padre_id: null,
+  contenido: 'Muy buen aporte.',
+  autor: 'Luis',
+  creado_en: instante(),
+  puntaje: 0,
+  mi_voto: 0,
+  ...cambios,
+})
+
 export const elementoDeGaleria = (cambios = {}) => ({
   evidencia: evidencia(),
   seccion: 'museo',

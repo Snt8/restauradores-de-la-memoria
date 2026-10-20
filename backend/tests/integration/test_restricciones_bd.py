@@ -77,3 +77,24 @@ async def test_el_slug_es_unico(sesion):
         "INSERT INTO eventos (slug, nombre, tipo) VALUES ('e', 'Otro', 'evento')",
         "uq_eventos_slug",
     )
+
+
+async def test_el_foro_no_guarda_titulos_en_blanco_ni_votos_nulos(sesion):
+    await ejecutar_y_esperar_rechazo(
+        sesion,
+        "INSERT INTO publicaciones_foro (categoria, titulo, contenido, autor) "
+        "VALUES ('general', '   ', 'Texto', 'Ana')",
+        "ck_publicaciones_foro_titulo_no_vacio",
+    )
+    await sesion.execute(
+        text(
+            "INSERT INTO publicaciones_foro (categoria, titulo, contenido, autor) "
+            "VALUES ('general', 'Título', 'Texto', 'Ana')"
+        )
+    )
+    await ejecutar_y_esperar_rechazo(
+        sesion,
+        "INSERT INTO votos_publicaciones (publicacion_id, votante, valor) "
+        "VALUES (1, gen_random_uuid(), 0)",
+        "ck_votos_publicaciones_valor_valido",
+    )

@@ -82,7 +82,7 @@ export function MuseoInteractivo({ objetos, exposiciones }) {
         {objeto && <PanelDeObjeto objeto={objeto} onCerrar={() => seleccionar(null)} />}
       </div>
 
-      <div className="grid gap-6 lg:grid-cols-[1fr_20rem]">
+      <div className="grid gap-6 lg:grid-cols-[1fr_20rem] lg:gap-8">
         <section
           aria-labelledby="titulo-visita"
           className="rounded-tarjeta bg-white p-5 shadow-tarjeta"

@@ -16,10 +16,10 @@ export function ReconocimientosPage() {
         titulo={PAGINAS.reconocimientos.etiqueta}
         entradilla="Premios, menciones y registros que distintas entidades han otorgado al proyecto y a sus participantes."
       />
-      <Contenedor className="py-12">
+      <Contenedor className="py-14 sm:py-20">
         <EstadoDeConsulta consulta={consulta}>
           {({ elementos }) => (
-            <ol className="grid gap-6 md:grid-cols-2">
+            <ol className="grid gap-6 md:grid-cols-2 lg:gap-8">
               {elementos.map((reconocimiento) => (
                 <li key={reconocimiento.id}>
                   <TarjetaDeContenido

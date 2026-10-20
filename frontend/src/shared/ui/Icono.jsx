@@ -16,6 +16,18 @@ const TRAZOS = {
   correo: 'M4 6h16v12H4zM4 7l8 6 8-6',
   calendario: 'M5 5h14v15H5zM5 10h14M9 3v4M15 3v4',
   visor: 'M4 9V5h4M20 9V5h-4M4 15v4h4M20 15v4h-4',
+  'voto-arriba': 'M12 4l7.5 8.5H15V20H9v-7.5H4.5z',
+  'voto-abajo': 'M12 20l7.5-8.5H15V4H9v7.5H4.5z',
+  comentario: 'M4 5h16v11H10l-4.5 4v-4H4z',
+  compartir: 'M12 15V4M8 8l4-4 4 4M5 13v6h14v-6',
+  mas: 'M12 5v14M5 12h14',
+  menos: 'M5 12h14',
+  llama:
+    'M12 21a6 6 0 0 0 6-6c0-3.5-2.5-5.5-3.5-9-1.5 1.5-2.5 3.5-2.5 5.5-1-.8-1.8-2-2-3.5C8 10 6 12.5 6 15a6 6 0 0 0 6 6z',
+  reloj: 'M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18zM12 7v5l3 2',
+  trofeo:
+    'M8 4h8v5a4 4 0 0 1-8 0zM8 6H5a3 3 0 0 0 3 4M16 6h3a3 3 0 0 1-3 4M12 13v4M8 20h8M10 17h4v3',
+  normas: 'M6 3h12v18H6zM9 8h6M9 12h6M9 16h4',
 }
 
 export function Icono({ nombre, className = 'size-5', titulo }) {

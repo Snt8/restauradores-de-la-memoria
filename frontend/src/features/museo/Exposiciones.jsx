@@ -10,7 +10,7 @@ export function Exposiciones({ limite }) {
   return (
     <EstadoDeConsulta consulta={consulta}>
       {({ elementos }) => (
-        <ol className="grid gap-6 lg:grid-cols-2">
+        <ol className="grid gap-6 lg:grid-cols-2 lg:gap-8">
           {elementos.slice(0, limite).map((exposicion) => (
             <li key={exposicion.id}>
               <TarjetaDeContenido

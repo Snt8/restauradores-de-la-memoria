@@ -11,7 +11,7 @@ export function GaleriaPage() {
         titulo={PAGINAS.galeria.etiqueta}
         entradilla="Fotografías, videos, audios y enlaces del proyecto: actividades, eventos, salidas pedagógicas, ediciones del museo y evidencias históricas. Filtra por sección o por tipo de medio."
       />
-      <Contenedor className="py-12">
+      <Contenedor className="py-14 sm:py-20">
         <GaleriaMultimedia />
       </Contenedor>
     </>

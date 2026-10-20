@@ -27,7 +27,7 @@ function Conmemoracion({ conmemoracion }) {
   const partes = partesDeCalendario(conmemoracion.fecha)
 
   return (
-    <article className="grid gap-6 rounded-tarjeta bg-white p-5 shadow-tarjeta sm:grid-cols-[8rem_1fr] sm:p-6">
+    <article className="grid gap-6 rounded-tarjeta bg-white p-6 shadow-tarjeta sm:grid-cols-[8rem_1fr] sm:p-8">
       {partes && (
         <time
           dateTime={fechaParaAtributo(conmemoracion.fecha)}

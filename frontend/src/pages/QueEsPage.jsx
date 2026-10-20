@@ -19,7 +19,7 @@ export function QueEsPage() {
       />
 
       <Seccion titulo="Qué es">
-        <div className="max-w-3xl space-y-4 text-lg leading-relaxed text-tinta-suave">
+        <div className="max-w-lectura space-y-5 text-lg leading-relaxed text-tinta-suave">
           {QUE_ES.queEs.slice(1).map((parrafo) => (
             <p key={parrafo}>{parrafo}</p>
           ))}
@@ -33,8 +33,8 @@ export function QueEsPage() {
       </Seccion>
 
       <Seccion titulo="¿Por qué conservar la memoria?">
-        <div className="grid gap-8 lg:grid-cols-[1.4fr_1fr]">
-          <div className="space-y-4 text-lg leading-relaxed text-tinta-suave">
+        <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr] lg:gap-16">
+          <div className="max-w-lectura space-y-5 text-lg leading-relaxed text-tinta-suave">
             {QUE_ES.importancia.map((parrafo) => (
               <p key={parrafo}>{parrafo}</p>
             ))}
@@ -47,7 +47,7 @@ export function QueEsPage() {
       </Seccion>
 
       <Seccion titulo="Qué actividades desarrolla" className="bg-papel-hondo">
-        <ul className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <ul className="grid gap-5 md:grid-cols-2 lg:grid-cols-3 lg:gap-6">
           {QUE_ES.actividades.map((actividad) => (
             <li key={actividad.titulo}>
               <TarjetaEnlazada {...actividad} />
@@ -57,7 +57,7 @@ export function QueEsPage() {
       </Seccion>
 
       <Seccion titulo="Quiénes participan">
-        <ul className="grid gap-4 md:grid-cols-2">
+        <ul className="grid gap-5 md:grid-cols-2 lg:gap-6">
           {QUE_ES.participantes.map((participante) => (
             <li key={participante.titulo}>
               <TarjetaEnlazada {...participante} />
@@ -73,9 +73,9 @@ export function QueEsPage() {
 
 function TarjetaEnlazada({ titulo, descripcion, ruta }) {
   return (
-    <article className="h-full rounded-tarjeta bg-white p-6 shadow-tarjeta">
+    <article className="h-full rounded-tarjeta bg-white p-6 shadow-tarjeta sm:p-8">
       <h3 className="text-xl font-semibold">{titulo}</h3>
-      <p className="mt-2 text-tinta-suave">{descripcion}</p>
+      <p className="mt-3 leading-relaxed text-tinta-suave">{descripcion}</p>
       {ruta && (
         <Link
           to={ruta}
@@ -100,7 +100,7 @@ function FormacionDocente() {
     >
       <EstadoDeConsulta consulta={consulta}>
         {({ elementos }) => (
-          <ul className="grid gap-6 md:grid-cols-2">
+          <ul className="grid gap-6 md:grid-cols-2 lg:gap-8">
             {elementos.map((formacion) => (
               <li key={formacion.id}>
                 <TarjetaDeContenido

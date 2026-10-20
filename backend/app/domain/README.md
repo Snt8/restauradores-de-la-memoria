@@ -16,6 +16,7 @@ Capa más interna de la arquitectura: entidades, reglas y **puertos** (interface
 | `reconocimientos.py` | `Reconocimiento`                                                                                                |
 | `aliados.py`         | `Aliado`                                                                                                        |
 | `visitantes.py`      | `NuevoVisitante` (con sus reglas), `VisitanteRegistrado`, `OrigenVisitante` y el puerto `RepositorioVisitantes` |
+| `foro.py`            | `NuevaPublicacion`, `NuevoComentario` (sin textos vacíos), `Publicacion`, `Comentario`, `Voto`, `CategoriaForo`, `OrdenForo`, `ValorVoto` y el puerto `RepositorioForo` |
 | `repositorios.py`    | Puertos genéricos de lectura: `RepositorioListado[T, F]` y `RepositorioLectura[T, F]`                           |
 | `health.py`          | `ComponentStatus`, `ReadinessReport` y el puerto `DatabaseProbe`                                                |
 

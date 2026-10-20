@@ -20,11 +20,11 @@ export function TarjetaDeContenido({
   const Titulo = `h${nivelDeTitulo}`
 
   return (
-    <article className="flex flex-col gap-4 rounded-tarjeta bg-white p-5 shadow-tarjeta sm:p-6">
-      <header className="space-y-2">
+    <article className="flex flex-col gap-5 rounded-tarjeta bg-white p-6 shadow-tarjeta sm:p-8">
+      <header className="space-y-3">
         {etiquetas && <div className="flex flex-wrap gap-2">{etiquetas}</div>}
         <Titulo className="text-xl leading-snug font-semibold">{titulo}</Titulo>
-        <p className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-tinta-suave">
+        <p className="flex flex-wrap gap-x-5 gap-y-1.5 text-sm text-tinta-suave">
           {fecha !== undefined && (
             <span className="inline-flex items-center gap-1.5">
               <Icono nombre="calendario" className="size-4" />

@@ -10,7 +10,7 @@ export function EncabezadoDePagina({ titulo, antetitulo, entradilla, children })
   return (
     <div className="border-b border-linea bg-papel-hondo">
       <title>{`${titulo} · ${NOMBRE_DEL_SITIO}`}</title>
-      <Contenedor className="py-12 sm:py-16">
+      <Contenedor className="py-14 sm:py-20 lg:py-24">
         {antetitulo && (
           <p className="mb-3 text-sm font-semibold tracking-widest text-memoria uppercase">
             {antetitulo}
@@ -18,7 +18,9 @@ export function EncabezadoDePagina({ titulo, antetitulo, entradilla, children })
         )}
         <h1 className="max-w-3xl text-4xl font-semibold sm:text-5xl">{titulo}</h1>
         {entradilla && (
-          <p className="mt-5 max-w-2xl text-lg leading-relaxed text-tinta-suave">{entradilla}</p>
+          <p className="mt-6 max-w-lectura text-lg leading-relaxed text-tinta-suave sm:text-xl">
+            {entradilla}
+          </p>
         )}
         {children}
       </Contenedor>

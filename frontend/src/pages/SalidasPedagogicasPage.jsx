@@ -11,7 +11,7 @@ export function SalidasPedagogicasPage() {
         titulo={PAGINAS.salidas.etiqueta}
         entradilla="Los estudiantes recorren lugares de memoria de Bogotá para escuchar a quienes vivieron el conflicto y conocer cómo la ciudad recuerda. Cada salida incluye su lugar, fecha y fotografías."
       />
-      <Contenedor className="py-12">
+      <Contenedor className="py-14 sm:py-20">
         <SalidasPorAnio />
       </Contenedor>
     </>

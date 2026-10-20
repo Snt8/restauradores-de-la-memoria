@@ -17,6 +17,10 @@ export const RUTAS = Object.freeze({
   alianzas: '/alianzas',
   galeria: '/galeria',
   contacto: '/contacto',
+  foro: '/foro',
+  publicacionForo: (id) => `/foro/publicaciones/${encodeURIComponent(id)}`,
+  patronPublicacionForo: '/foro/publicaciones/:id',
+  nuevaPublicacionForo: '/foro/publicar',
 })
 
 const pagina = (ruta, etiqueta, descripcion) => Object.freeze({ ruta, etiqueta, descripcion })
@@ -67,6 +71,11 @@ export const PAGINAS = Object.freeze({
     'Galería Multimedia',
     'Fotografías, videos, audios y evidencias del proyecto.',
   ),
+  foro: pagina(
+    RUTAS.foro,
+    'Foro de la Memoria',
+    'Pregunta, comparte recuerdos y conversa con la comunidad.',
+  ),
   contacto: pagina(RUTAS.contacto, 'Contacto', 'Escríbenos o planea una visita al museo.'),
 })
 
@@ -76,7 +85,10 @@ export const PAGINAS = Object.freeze({
  */
 export const MENU = Object.freeze([
   { etiqueta: 'Inicio', ruta: RUTAS.inicio },
-  { etiqueta: 'El proyecto', ruta: RUTAS.queEs },
+  {
+    etiqueta: 'El proyecto',
+    paginas: [PAGINAS.queEs, PAGINAS.reconocimientos, PAGINAS.alianzas],
+  },
   {
     etiqueta: 'Museo',
     paginas: [PAGINAS.museo, PAGINAS.museoVirtual],
@@ -85,9 +97,8 @@ export const MENU = Object.freeze([
     etiqueta: 'Actividades',
     paginas: [PAGINAS.salidas, PAGINAS.fechas, PAGINAS.eventos],
   },
-  { etiqueta: 'Reconocimientos', ruta: RUTAS.reconocimientos },
-  { etiqueta: 'Alianzas', ruta: RUTAS.alianzas },
   { etiqueta: 'Galería', ruta: RUTAS.galeria },
+  { etiqueta: 'Foro', ruta: RUTAS.foro },
   { etiqueta: 'Contacto', ruta: RUTAS.contacto },
 ])
 
@@ -101,5 +112,6 @@ export const ACCESOS_PRINCIPALES = Object.freeze([
   PAGINAS.reconocimientos,
   PAGINAS.alianzas,
   PAGINAS.galeria,
+  PAGINAS.foro,
   PAGINAS.contacto,
 ])

@@ -9,7 +9,9 @@ import { Icono } from '@/shared/ui/Icono.jsx'
 import { MenuDesplegable } from './MenuDesplegable.jsx'
 
 const claseEnlace = ({ isActive }) =>
-  `rounded-full px-3 py-2 text-sm font-semibold hover:text-memoria ${isActive ? 'text-memoria' : ''}`
+  `rounded-full px-3.5 py-2 text-[0.95rem] font-semibold transition-colors hover:bg-tinta/5 hover:text-memoria ${
+    isActive ? 'bg-memoria/10 text-memoria-hondo' : ''
+  }`
 
 export function Encabezado() {
   // Se guarda la ruta en la que se abrió el menú: al navegar deja de coincidir y se cierra solo.
@@ -20,7 +22,7 @@ export function Encabezado() {
 
   return (
     <header className="sticky top-0 z-30 border-b border-linea bg-papel/95 backdrop-blur">
-      <Contenedor className="flex items-center justify-between gap-4 py-3">
+      <Contenedor ancho="amplio" className="flex items-center justify-between gap-4 py-3.5">
         <Link to={RUTAS.inicio} className="flex items-center gap-3">
           <img
             src={miniaturaDeImagen(PROYECTO.escudo)}
@@ -76,14 +78,14 @@ export function Encabezado() {
         hidden={!menuMovilAbierto}
         className="max-h-[calc(100dvh-4rem)] overflow-y-auto border-t border-linea bg-papel xl:hidden"
       >
-        <Contenedor as="ul" className="grid gap-1 py-4 sm:grid-cols-2">
+        <Contenedor as="ul" ancho="amplio" className="grid gap-1 py-5 sm:grid-cols-2">
           {MENU.flatMap((entrada) => entrada.paginas ?? [entrada]).map((pagina) => (
             <li key={pagina.ruta}>
               <NavLink
                 to={pagina.ruta}
                 end
                 className={({ isActive }) =>
-                  `block rounded-lg px-3 py-3 font-semibold hover:bg-papel-hondo ${
+                  `block rounded-lg px-4 py-3.5 font-semibold hover:bg-papel-hondo ${
                     isActive ? 'bg-papel-hondo text-memoria' : ''
                   }`
                 }

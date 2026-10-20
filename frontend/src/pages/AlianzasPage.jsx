@@ -18,7 +18,7 @@ export function AlianzasPage() {
         titulo={PAGINAS.alianzas.etiqueta}
         entradilla="Entidades públicas, museos e instituciones educativas que acompañan, forman y reconocen el trabajo de Restauradores de la Memoria."
       />
-      <Contenedor className="py-12">
+      <Contenedor className="py-14 sm:py-20">
         <EstadoDeConsulta consulta={consulta}>
           {({ elementos }) => (
             <ul className="space-y-6">
@@ -37,7 +37,7 @@ export function AlianzasPage() {
 
 function Aliado({ aliado }) {
   return (
-    <article className="grid gap-6 rounded-tarjeta bg-white p-6 shadow-tarjeta md:grid-cols-[12rem_1fr]">
+    <article className="grid gap-6 rounded-tarjeta bg-white p-6 shadow-tarjeta sm:p-8 md:grid-cols-[12rem_1fr]">
       <div className="flex h-32 items-center justify-center rounded-lg border border-linea bg-white p-4">
         {aliado.logo_url ? (
           <ImagenResponsiva

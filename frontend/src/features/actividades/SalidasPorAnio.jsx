@@ -19,7 +19,7 @@ export function SalidasPorAnio() {
                 {anio ?? TEXTO_FECHA_POR_CONFIRMAR}
                 <span aria-hidden="true" className="h-px flex-1 bg-linea" />
               </h2>
-              <ul className="grid gap-6 md:grid-cols-2">
+              <ul className="grid gap-6 md:grid-cols-2 lg:gap-8">
                 {salidas.map((salida) => (
                   <li key={salida.id}>
                     <TarjetaDeContenido
