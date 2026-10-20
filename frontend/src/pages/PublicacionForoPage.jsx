@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query'
-import { Link, useParams } from 'react-router'
+import { useParams } from 'react-router'
 import { RUTAS } from '@/app/navegacion.js'
 import { PROYECTO } from '@/content/sitio.js'
 import { armarHilo, ORDENES_DE_COMENTARIOS } from '@/features/foro/arbol.js'
@@ -12,12 +12,13 @@ import { idDeVotante } from '@/features/foro/identidad.js'
 import { MetadatosDePublicacion } from '@/features/foro/MetadatosDePublicacion.jsx'
 import { PanelDelForo } from '@/features/foro/PanelDelForo.jsx'
 import { useVoto } from '@/features/foro/useVoto.js'
+import { VolverAlForo } from '@/features/foro/VolverAlForo.jsx'
 import { foro } from '@/shared/api/foro.js'
 import { useFiltroEnUrl } from '@/shared/lib/useFiltroEnUrl.js'
-import { Contenedor } from '@/shared/ui/Contenedor.jsx'
 import { EstadoDeConsulta } from '@/shared/ui/EstadoDeConsulta.jsx'
 import { FiltroDeOpciones } from '@/shared/ui/FiltroDeOpciones.jsx'
 import { Icono } from '@/shared/ui/Icono.jsx'
+import { PlantillaDePagina } from '@/shared/ui/PlantillaDePagina.jsx'
 import { NoEncontradaPage } from './NoEncontradaPage.jsx'
 
 /** Una publicación del foro completa, con su conversación en hilo. */
@@ -28,31 +29,17 @@ export function PublicacionForoPage() {
   if (consulta.error?.status === 404) return <NoEncontradaPage />
 
   return (
-    <div className="bg-fondo-foro">
-      <Contenedor
-        ancho="amplio"
-        className="grid grid-cols-[minmax(0,1fr)] gap-8 py-8 sm:py-10 lg:grid-cols-[minmax(0,1fr)_20rem] lg:gap-10"
-      >
-        <div className="min-w-0 space-y-6">
-          <Link
-            to={RUTAS.foro}
-            className="inline-flex items-center gap-2 rounded-full px-1 text-sm font-semibold text-tinta-suave hover:text-memoria"
-          >
-            <Icono nombre="flecha-izquierda" className="size-4" />
-            Volver al foro
-          </Link>
-          <EstadoDeConsulta consulta={consulta} esVacio={() => false}>
-            {(publicacion) => (
-              <>
-                <PublicacionCompleta publicacion={publicacion} />
-                <Conversacion publicacion={publicacion} />
-              </>
-            )}
-          </EstadoDeConsulta>
-        </div>
-        <PanelDelForo />
-      </Contenedor>
-    </div>
+    <PlantillaDePagina etiquetaDelPanel="Sobre el foro" panel={<PanelDelForo />}>
+      <VolverAlForo />
+      <EstadoDeConsulta consulta={consulta} esVacio={() => false}>
+        {(publicacion) => (
+          <>
+            <PublicacionCompleta publicacion={publicacion} />
+            <Conversacion publicacion={publicacion} />
+          </>
+        )}
+      </EstadoDeConsulta>
+    </PlantillaDePagina>
   )
 }
 

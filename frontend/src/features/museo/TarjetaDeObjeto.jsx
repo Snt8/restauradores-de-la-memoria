@@ -1,17 +1,19 @@
 import { Link } from 'react-router'
 import { RUTAS } from '@/app/navegacion.js'
+import { CLASE_TARJETA_ENLAZADA } from '@/shared/ui/estilos.js'
 import { Icono } from '@/shared/ui/Icono.jsx'
 import { ImagenResponsiva } from '@/shared/ui/ImagenResponsiva.jsx'
 
 /** Objeto del museo en una cuadrícula: foto (o aviso de que solo hay modelo 3D) y enlace a su ficha. */
 export function TarjetaDeObjeto({ objeto }) {
   return (
-    <article className="group relative overflow-hidden rounded-tarjeta bg-white shadow-tarjeta">
+    <article className={`${CLASE_TARJETA_ENLAZADA} group relative h-full overflow-hidden`}>
       <div className="aspect-[4/3] bg-noche-suave">
         {objeto.foto_url ? (
           <ImagenResponsiva
             url={objeto.foto_url}
             alt={`Fotografía de ${objeto.nombre}`}
+            sizes="(min-width: 640px) 22rem, 100vw"
             className="size-full object-cover"
           />
         ) : (
@@ -22,7 +24,7 @@ export function TarjetaDeObjeto({ objeto }) {
         )}
       </div>
       <div className="space-y-2 p-5">
-        <h3 className="text-xl font-semibold">
+        <h3 className="font-sans text-lg font-semibold">
           <Link
             to={RUTAS.objeto(objeto.slug)}
             className="group-hover:text-memoria after:absolute after:inset-0"
@@ -30,7 +32,9 @@ export function TarjetaDeObjeto({ objeto }) {
             {objeto.nombre}
           </Link>
         </h3>
-        <p className="line-clamp-3 text-sm text-tinta-suave">{objeto.descripcion}</p>
+        <p className="line-clamp-3 text-sm leading-relaxed text-tinta-suave">
+          {objeto.descripcion}
+        </p>
         <p className="inline-flex items-center gap-1 text-sm font-semibold text-memoria">
           Ver ficha y modelo 3D <Icono nombre="flecha-derecha" className="size-4" />
         </p>

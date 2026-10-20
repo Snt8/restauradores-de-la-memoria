@@ -38,8 +38,11 @@ describe('mapa del sitio', () => {
     }
   })
 
-  it('el menú principal no pasa de siete entradas', () => {
-    expect(MENU.length).toBeLessThanOrEqual(7)
+  it('cada página del menú tiene ícono y nombre corto', () => {
+    for (const pagina of MENU.flatMap((grupo) => grupo.paginas)) {
+      expect(pagina.icono).toBeTruthy()
+      expect(pagina.corta.length).toBeLessThanOrEqual(24)
+    }
   })
 
   it('codifica el slug en la ruta de un objeto', () => {

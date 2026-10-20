@@ -1,24 +1,49 @@
 import { useId } from 'react'
-import { Contenedor } from './Contenedor.jsx'
+import { CLASE_TARJETA } from './estilos.js'
 
-/** Bloque temático con su título (h2) asociado como nombre accesible de la región. */
-export function Seccion({ titulo, descripcion, accion, className = '', children }) {
+const VARIANTES = {
+  // Texto y datos sueltos: la sección es una tarjeta.
+  tarjeta: `${CLASE_TARJETA} p-6 sm:p-8`,
+  // Listas de tarjetas (publicaciones, eventos…): solo el título, sin tarjeta alrededor.
+  abierta: '',
+}
+
+/**
+ * Bloque temático de la columna central con su título (h2) como nombre accesible.
+ * `id` permite enlazarlo desde el índice «En esta página».
+ */
+export function Seccion({
+  id,
+  titulo,
+  descripcion,
+  accion,
+  variante = 'tarjeta',
+  className = '',
+  children,
+}) {
   const idTitulo = useId()
+  const abierta = variante === 'abierta'
 
   return (
-    <section aria-labelledby={idTitulo} className={`py-16 sm:py-20 lg:py-24 ${className}`}>
-      <Contenedor>
-        <div className="mb-10 flex flex-wrap items-end justify-between gap-x-8 gap-y-5 sm:mb-12">
-          <div className="max-w-2xl">
-            <h2 id={idTitulo} className="text-3xl font-semibold sm:text-4xl">
-              {titulo}
-            </h2>
-            {descripcion && <p className="mt-4 text-lg text-tinta-suave">{descripcion}</p>}
-          </div>
-          {accion}
+    <section
+      id={id}
+      aria-labelledby={idTitulo}
+      className={`scroll-mt-24 ${VARIANTES[variante]} ${className}`}
+    >
+      <div
+        className={`flex flex-wrap items-end justify-between gap-x-6 gap-y-4 ${
+          abierta ? 'mb-4 px-1' : 'mb-6'
+        }`}
+      >
+        <div className="max-w-2xl">
+          <h2 id={idTitulo} className="text-2xl font-semibold sm:text-3xl">
+            {titulo}
+          </h2>
+          {descripcion && <p className="mt-2 text-tinta-suave">{descripcion}</p>}
         </div>
-        {children}
-      </Contenedor>
+        {accion}
+      </div>
+      {children}
     </section>
   )
 }

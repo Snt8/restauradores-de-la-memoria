@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import { useSearchParams } from 'react-router'
 import { VistaDeEvidencia } from '@/entities/evidencia/VistaDeEvidencia.jsx'
+import { CLASE_TARJETA } from '@/shared/ui/estilos.js'
 import { Icono } from '@/shared/ui/Icono.jsx'
 import { useNavegacionEnLista } from '@/shared/ui/useNavegacionEnLista.js'
 import { Visor } from '@/shared/ui/Visor.jsx'
@@ -63,7 +64,7 @@ export function MuseoInteractivo({ objetos, exposiciones }) {
 
   return (
     <div className="space-y-6">
-      <div className="relative h-[70dvh] min-h-96 overflow-hidden rounded-tarjeta bg-noche shadow-tarjeta">
+      <div className="relative h-[70dvh] min-h-96 overflow-hidden rounded-tarjeta border border-linea bg-noche">
         <EscenaMuseo
           objetos={objetos}
           cuadros={cuadros}
@@ -82,12 +83,9 @@ export function MuseoInteractivo({ objetos, exposiciones }) {
         {objeto && <PanelDeObjeto objeto={objeto} onCerrar={() => seleccionar(null)} />}
       </div>
 
-      <div className="grid gap-6 lg:grid-cols-[1fr_20rem] lg:gap-8">
-        <section
-          aria-labelledby="titulo-visita"
-          className="rounded-tarjeta bg-white p-5 shadow-tarjeta"
-        >
-          <h2 id="titulo-visita" className="text-xl font-semibold">
+      <div className="grid gap-6 xl:grid-cols-[1fr_20rem]">
+        <section aria-labelledby="titulo-visita" className={`${CLASE_TARJETA} p-6`}>
+          <h2 id="titulo-visita" className="font-sans text-base font-bold">
             Visita guiada
           </h2>
           <p aria-live="polite" className="mt-1 text-sm text-tinta-suave">
@@ -114,11 +112,8 @@ export function MuseoInteractivo({ objetos, exposiciones }) {
           </div>
         </section>
 
-        <nav
-          aria-label="Objetos de la sala"
-          className="rounded-tarjeta bg-white p-5 shadow-tarjeta"
-        >
-          <h2 className="text-xl font-semibold">Objetos de la sala</h2>
+        <nav aria-label="Objetos de la sala" className={`${CLASE_TARJETA} p-6`}>
+          <h2 className="font-sans text-base font-bold">Objetos de la sala</h2>
           <ul className="mt-3 space-y-1">
             {paradas.map((destino, indice) => (
               <li key={destino.slug}>

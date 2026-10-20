@@ -92,10 +92,18 @@ describe('Salidas pedagógicas', () => {
     })
     renderRoute(RUTAS.salidas)
 
-    const anios = await screen.findAllByRole('heading', { level: 2 })
+    const anios = await screen.findAllByRole('heading', {
+      level: 2,
+      name: /^(\d{4}|Fecha por confirmar)$/,
+    })
     expect(anios.map((h) => h.textContent)).toEqual(['2025', '2024', 'Fecha por confirmar'])
     expect(screen.getByRole('heading', { level: 3, name: 'Olla comunitaria' })).toBeInTheDocument()
     expect(peticiones[0].params).toMatchObject({ tipo: 'salida_pedagogica', limite: '100' })
+    const porAnio = screen.getByRole('navigation', { name: 'Por año' })
+    expect(within(porAnio).getByRole('link', { name: /2025.*1 salida/ })).toHaveAttribute(
+      'href',
+      '#anio-2025',
+    )
   })
 })
 
@@ -113,6 +121,8 @@ describe('Fechas conmemorativas', () => {
     renderRoute(RUTAS.fechas)
 
     const hoja = await screen.findByText('abril')
+    expect(screen.getByRole('heading', { name: 'Próxima conmemoración' })).toBeInTheDocument()
+    expect(screen.getByText(/^9 de abril · (Es hoy|Es mañana|Faltan \d+ días)$/)).toBeVisible()
     expect(hoja.closest('time')).toHaveAttribute('datetime', '--04-09')
     expect(hoja.closest('time')).toHaveTextContent('9')
   })

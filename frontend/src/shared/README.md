@@ -17,10 +17,15 @@ Código reutilizable por cualquier página, feature o entidad. No depende de nin
 | `lib/fechas.js`              | Fechas parciales (`formatearFecha`, `fechaParaAtributo`, `partesDeCalendario`) e instantes (`tiempoRelativo`, `fechaYHora`) |
 | `lib/embeds.js`              | YouTube (sin cookies), SoundCloud y nombre de la plataforma de un enlace                                                    |
 | `lib/agrupar.js`             | `agruparPor(lista, clave)` conservando el orden                                                                             |
+| `lib/useSeccionActiva.js`    | Sección visible en pantalla (IntersectionObserver), para el índice                                                          |
 | `lib/useFiltroEnUrl.js`      | Hook: un filtro guardado en la URL (`?tipo=medios`)                                                                         |
-| `ui/Contenedor.jsx`          | Ancho máximo y márgenes comunes; `ancho="amplio"` para diseños de varias columnas                                           |
-| `ui/EncabezadoDePagina.jsx`  | `<h1>`, entradilla y `<title>` de cada página                                                                               |
-| `ui/Seccion.jsx`             | Región con `<h2>` asociado (`aria-labelledby`)                                                                              |
+| `ui/Contenedor.jsx`          | Ancho máximo y márgenes de la estructura del portal                                                                         |
+| `ui/estilos.js`              | `CLASE_TARJETA`, `CLASE_TARJETA_ENLAZADA` y `CLASE_ACCION`: el sistema de tarjetas estilo Reddit                            |
+| `ui/PlantillaDePagina.jsx`   | Portada + contenido + panel derecho (columna desde `xl`, debajo en pantallas menores)                                       |
+| `ui/PortadaDePagina.jsx`     | Banda de color o imagen, ícono redondo, ruta de navegación, `<h1>`, `<title>`, descripción y acciones                       |
+| `ui/TarjetaPanel.jsx`        | Tarjeta del panel derecho (`destacada`, `fija`, `soloEnColumna`)                                                            |
+| `ui/EnEstaPagina.jsx`        | Índice de la página que resalta la sección que se está leyendo                                                              |
+| `ui/Seccion.jsx`             | Bloque con `<h2>` asociado: variante `tarjeta` (texto) o `abierta` (lista de tarjetas)                                      |
 | `ui/EstadoDeConsulta.jsx`    | Cargando, error con «Reintentar», vacío y datos, para cualquier consulta                                                    |
 | `ui/Esqueleto.jsx`           | Marcador de carga                                                                                                           |
 | `ui/ImagenResponsiva.jsx`    | `<img>` con `srcset`, `sizes`, carga diferida y decodificación asíncrona                                                    |

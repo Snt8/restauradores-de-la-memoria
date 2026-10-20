@@ -1,97 +1,115 @@
-# 🎨 Propuesta de diseño: portal y Foro de la Memoria
+# 🎨 Propuesta de diseño: el portal con la estructura de Reddit
 
 ## 📖 Introducción
 
-Este documento describe el rediseño del portal y el nuevo **Foro de la Memoria**, inspirado en Reddit. Los objetivos fueron tres: que **todo sea adaptable** a cualquier pantalla, que haya **espacio suficiente** entre los bloques y que la información sea **fácil de leer**.
+Todo el portal sigue la estructura del **Foro de la Memoria**, inspirada en Reddit: una barra superior, la navegación fija a la izquierda, el contenido en tarjetas blancas en el centro y un panel de contexto a la derecha. Los objetivos son tres: que **todo sea adaptable**, que haya **espacio suficiente** entre los bloques y que la información sea **fácil de leer y de encontrar**.
 
 ---
 
 ## 🧭 Principios
 
-| Principio              | Cómo se aplica                                                                                                               |
-| ---------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| 📱 Primero el móvil    | Cada vista se diseña a 375 px y se amplía en `sm` (640), `md` (768), `lg` (1024) y `xl` (1280). Nunca hay scroll horizontal. |
-| 🔤 Lectura cómoda      | Base de 17 px, interlineado amplio (`leading-relaxed`) y párrafos limitados a ~68 caracteres (`max-w-lectura`).              |
-| 🌬️ Espacio que respira | Secciones de 64–96 px de alto margen, tarjetas con 24–32 px de relleno y cuadrículas con 24–32 px de separación.             |
-| 🧩 Jerarquía clara     | Fraunces para los títulos de página, Inter para el texto y los elementos del foro; una sola acción principal por bloque.     |
-| ♿ Accesible           | Contraste AA, foco visible, objetivos táctiles de 36–44 px y estados anunciados a lectores de pantalla.                      |
+| Principio              | Cómo se aplica                                                                                                         |
+| ---------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| 🧱 Una sola estructura | Todas las páginas usan `PlantillaDePagina`: portada, contenido y panel. Quien aprende una sección ya sabe usar todas.  |
+| 📱 Primero el móvil    | Cada vista se diseña a 375 px y se amplía en `sm` (640), `md` (768), `lg` (1024) y `xl` (1280). Sin scroll horizontal. |
+| 🔤 Lectura cómoda      | Base de 17 px, interlineado amplio y párrafos limitados a ~68 caracteres (`max-w-lectura`).                            |
+| 🌬️ Espacio que respira | Tarjetas con 20–32 px de relleno y 16–24 px entre ellas; listados en una columna, como un muro.                        |
+| 🧭 Saber dónde estoy   | Menú con la página actual marcada, ruta de navegación en las subpáginas e índice «En esta página».                     |
+| ♿ Accesible           | Contraste AA, foco visible, objetivos táctiles de 36–44 px y estados anunciados a lectores de pantalla.                |
+
+---
+
+## 🗺️ Estructura general
+
+```
+Escritorio (≥ 1280 px)
+┌─────────────────── barra superior: ☰(móvil) · escudo + nombre · [Publicar en el foro] [Museo Virtual] ───────────────────┐
+├────────────────┬─────────────────────────────────────────────────────────────────┬──────────────────────────┤
+│ 🏠 Inicio      │ ┌── portada ─────────────────────────────────────────────┐      │                          │
+│ 💬 Foro        │ │ banda de color (o foto en Inicio)                       │      │                          │
+│ 🖼 Galería     │ │ (◎) ANTETÍTULO   Museo Escolar / Objeto                 │      │                          │
+│ ── MUSEO ──    │ │ Título de la página (h1)                                │      │                          │
+│ 🏛 Escolar     │ │ Descripción a ancho de lectura    [Acción] [Acción]     │      │                          │
+│ ⬡ Virtual      │ └─────────────────────────────────────────────────────────┘      │                          │
+│ ─ ACTIVIDADES ─│ ┌── contenido ──────────────────────┐   ┌── panel ──────────┐   │                          │
+│ 📍 Salidas     │ │ tarjetas en una columna (muro)     │   │ Invitación al foro │   │                          │
+│ 📅 Fechas      │ │ …                                  │   │ En esta página ▸   │   │  (fijo al desplazarse)   │
+│ 👥 Visitas     │ └────────────────────────────────────┘   └────────────────────┘   │                          │
+│ ─ EL PROYECTO ─│                                                                   │                          │
+│ (fija)         │                                                                   │                          │
+└────────────────┴─────────────────────────────────────────────────────────────────┴──────────────────────────┘
+
+lg (1024–1279 px): navegación lateral + contenido; el panel pasa debajo del contenido.
+Móvil y tablet: una sola columna; el menú se abre desde ☰ con los mismos grupos e íconos.
+```
 
 ---
 
 ## 🎨 Sistema visual
 
-Los tokens viven en `frontend/src/styles/index.css`:
+Tokens en `frontend/src/styles/index.css` y clases en `frontend/src/shared/ui/estilos.js`:
 
-| Token                               | Uso                                                       |
-| ----------------------------------- | --------------------------------------------------------- |
-| `papel`, `papel-hondo`, `linea`     | Fondos y bordes cálidos de archivo                        |
-| `tinta`, `tinta-suave`              | Texto principal y secundario                              |
-| `memoria`, `vela`, `rosa`           | Colores de la identidad del proyecto                      |
-| `cielo` (nuevo)                     | Categoría «Preguntas» y voto en contra                    |
-| `superficie`, `fondo-foro` (nuevos) | Tarjetas blancas del foro sobre un fondo apenas más hondo |
-| `container-lectura` (nuevo, `68ch`) | Ancho máximo de los párrafos largos                       |
+| Pieza                              | Uso                                                          |
+| ---------------------------------- | ------------------------------------------------------------ |
+| `fondo-foro` + `superficie`        | Fondo de todas las páginas y tarjetas blancas con borde fino |
+| `CLASE_TARJETA`                    | La tarjeta base de todo el portal                            |
+| `CLASE_TARJETA_ENLAZADA`           | Tarjeta que es un enlace: se realza al pasar el mouse        |
+| `memoria`, `vela`, `rosa`, `cielo` | Bandas de la portada por sección y etiquetas de categoría    |
+| `container-lectura` (`68ch`)       | Ancho máximo de los párrafos largos                          |
 
-Componentes compartidos ajustados:
+Componentes:
 
-- **`Contenedor`** admite `ancho="amplio"` (`max-w-7xl`) para diseños de varias columnas (foro, encabezado, pie).
-- **`Seccion`** y **`EncabezadoDePagina`** ganan altura y títulos más grandes en pantallas medianas.
-- **`TarjetaDeContenido`** y las cuadrículas de todas las secciones aumentan relleno y separación.
-- **Menú principal**: 7 entradas (Inicio · El proyecto ▾ · Museo ▾ · Actividades ▾ · Galería · Foro · Contacto). «El proyecto» agrupa ¿Qué es?, Reconocimientos y Alianzas.
-
----
-
-## 💬 Foro de la Memoria (estilo Reddit)
-
-### Muro (`/foro`)
-
-```
-Escritorio (≥ 1024 px)
-┌────────────────────────── portada: banda de color, escudo, título, «Crear publicación» ──────────────────────────┐
-├──────────────┬──────────────────────────────────────────────┬──────────────────────┤
-│ Categorías   │ [T] Crea una publicación…                 [+] │ Acerca del foro      │
-│ ● Todas      │ (Populares) (Recientes) (Más votadas)         │ [Crear publicación]  │
-│ ● General    │ ┌──┬──────────────────────────────────────┐   │                      │
-│ ● Museo      │ │▲ │ Museo · Publicado por Ana · hace 2 h │   │ Normas de convivencia│
-│ ● Salidas    │ │12│ Título de la publicación             │   │ 1. …                 │
-│ ● Historias  │ │▼ │ Extracto de tres líneas…             │   │ 2. …                 │
-│ ● Preguntas  │ │  │ 💬 4 comentarios   ⇪ Compartir        │   │                      │
-│  (fija)      │ └──┴──────────────────────────────────────┘   │  (fija)              │
-└──────────────┴──────────────────────────────────────────────┴──────────────────────┘
-
-Móvil (375 px)
-┌───────────────────────────┐
-│ portada + Crear publicación│
-│ (Todas)(General)(Museo)… → │  ← fila deslizable
-│ [T] Crea una publicación…  │
-│ (Populares)(Recientes)…    │
-│ ┌───────────────────────┐ │
-│ │ Museo · Ana · hace 2 h │ │
-│ │ Título                 │ │
-│ │ Extracto…              │ │
-│ │ (▲ 12 ▼) 💬 4  ⇪       │ │  ← votos en píldora
-│ └───────────────────────┘ │
-│ Acerca del foro · Normas   │
-└───────────────────────────┘
-```
-
-### Publicación (`/foro/publicaciones/:id`)
-
-- Publicación completa con votos, título grande y texto a ancho de lectura.
-- Formulario de comentario arriba y orden **Mejores / Recientes**.
-- Comentarios anidados: avatar con inicial, línea vertical clicable que **contrae el hilo**, botón [−]/[+], votos y «Responder» en línea.
-
-### Crear publicación (`/foro/publicar`)
-
-- Categorías como tarjetas con descripción (radios), título con contador, contenido con ayuda y firma.
-- Normas de convivencia a la derecha (abajo en móvil).
-
-### Inicio
-
-Nueva sección **«Desde el foro»** con las tres conversaciones más activas.
+- **`PortadaDePagina`**: banda de color (o foto), ícono redondo, ruta de navegación, `<h1>`, descripción y acciones. También fija el título de la pestaña.
+- **`PlantillaDePagina`**: portada + contenido + panel. El panel es columna desde `xl` y pasa debajo en pantallas menores.
+- **`Seccion`**: variante `tarjeta` para texto y `abierta` para listas de tarjetas.
+- **`TarjetaPanel`** y **`EnEstaPagina`**: tarjetas del panel; el índice resalta la sección que se está leyendo y solo aparece cuando el panel es columna.
+- **`TarjetaDeContenido`**: eventos, salidas, exposiciones y reconocimientos con la forma de una publicación del foro (contexto arriba, título, descripción, evidencias).
 
 ---
 
-## ⚙️ Decisiones técnicas
+## 📄 Página por página
+
+| Página                | Contenido central                                                     | Panel derecho                                                 |
+| --------------------- | --------------------------------------------------------------------- | ------------------------------------------------------------- |
+| Inicio                | Presentación, «Desde el foro» (con votos), accesos, exposiciones      | Acerca del proyecto, reconocimientos recientes, Museo Virtual |
+| ¿Qué es?              | Qué es, propósito, importancia, actividades, participantes, formación | Pregunta en el foro, índice                                   |
+| Museo Escolar         | Sobre el museo, objetos, ediciones, créditos                          | Invitación al foro (Museo), índice                            |
+| Museo Virtual         | Sala 3D a todo el ancho, visita guiada, libro de visitas              | — (sin panel, para aprovechar el ancho)                       |
+| Ficha de un objeto    | Visor 3D, foto, descripción, importancia, evidencias                  | Ficha (fecha, créditos, exhibido en), foro                    |
+| Salidas pedagógicas   | Muro agrupado por año                                                 | Invitación al foro (Salidas), índice por año con cantidad     |
+| Fechas conmemorativas | Hojas de calendario                                                   | **Próxima conmemoración** y días que faltan, índice           |
+| Visitas y eventos     | Filtro por tipo y muro                                                | Qué significa cada tipo, fotos de eventos, foro               |
+| Reconocimientos       | Muro de reconocimientos                                               | Índice con año                                                |
+| Alianzas              | Tarjetas de aliados con logo                                          | Índice de aliados                                             |
+| Galería               | Filtros en tarjeta y cuadrícula a todo el ancho                       | — (sin panel)                                                 |
+| Contacto              | Formulario                                                            | Información institucional, pregunta en el foro                |
+| Foro                  | Categorías en píldoras, «Crea una publicación…», orden, muro          | Acerca del foro, normas de convivencia                        |
+
+---
+
+## 💬 Foro de la Memoria
+
+- **Muro:** publicaciones con votos a la izquierda (en una píldora en móvil), categoría, autor, antigüedad, extracto, comentarios y compartir. Orden: Populares, Recientes, Más votadas.
+- **Publicación:** texto completo, formulario de comentario y comentarios anidados con una línea vertical que **contrae el hilo**.
+- **Crear publicación:** categorías como tarjetas con descripción, título con contador, contenido con ayuda y firma.
+
+---
+
+## ⚡ Optimización y experiencia
+
+| Mejora                                 | Efecto                                                                                          |
+| -------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| Precarga al apuntar un enlace del menú | La sección se abre ya con datos, sin esqueletos (mismas claves de caché que la página).         |
+| Página actual siempre marcada          | Una publicación marca «Foro»; la ficha de un objeto marca «Museo Escolar».                      |
+| Ruta de navegación en subpáginas       | Volver al nivel superior en un clic.                                                            |
+| Índice que sigue la lectura            | `IntersectionObserver` resalta la sección visible; el índice queda fijo al desplazarse.         |
+| Próxima conmemoración                  | La página de fechas responde de inmediato «¿qué viene y cuándo?».                               |
+| Accesos cruzados al foro               | Cada sección invita a conversar en la categoría que le corresponde.                             |
+| Menos código                           | Se eliminaron `EncabezadoDePagina` y los menús desplegables: una sola plantilla y un solo menú. |
+
+---
+
+## ⚙️ Decisiones técnicas del foro
 
 | Decisión                                 | Motivo                                                                                     |
 | ---------------------------------------- | ------------------------------------------------------------------------------------------ |
@@ -105,7 +123,8 @@ Nueva sección **«Desde el foro»** con las tres conversaciones más activas.
 
 ## 🚧 Pendientes para la siguiente entrega
 
-- 🛡️ **Moderación:** ocultar o borrar publicaciones y comentarios (requiere el panel de administración con autenticación).
+- 🛡️ **Moderación del foro:** ocultar o borrar publicaciones y comentarios (requiere el panel de administración con autenticación).
 - 🚦 **Límite de peticiones** por IP para frenar abusos en publicar y votar.
+- 🔎 **Búsqueda** en el contenido del portal y del foro (requiere un endpoint de búsqueda).
 - 📄 **Paginación de comentarios** si alguna conversación crece a cientos de respuestas.
 - ✅ Validar con el docente las normas de convivencia (`frontend/src/content/foro.js`).

@@ -12,8 +12,8 @@ El **Foro de la Memoria**: un espacio para que estudiantes, docentes, familias y
 | ---------------------------- | --------------------------------------------------------------------------------------------- |
 | `MuroDelForo.jsx`            | Muro paginado de una categoría (o de todas) en el orden elegido, con estado vacío y esqueleto |
 | `TarjetaDePublicacion.jsx`   | Publicación en el muro: votos a la izquierda (abajo en móvil), contexto, título, extracto     |
-| `CategoriasDelForo.jsx`      | Categorías: píldoras deslizables en móvil, columna fija desde `lg`                            |
-| `PanelDelForo.jsx`           | Columna derecha: «Acerca del foro», botón de publicar y normas de convivencia                 |
+| `CategoriasDelForo.jsx`      | Categorías en píldoras sobre el muro: fila deslizable en móvil, varias líneas desde `lg`      |
+| `PanelDelForo.jsx`           | Tarjetas del panel derecho: «Acerca del foro» y normas de convivencia                         |
 | `AtajoParaPublicar.jsx`      | Barra «Crea una publicación…» sobre el muro                                                   |
 | `ControlDeVoto.jsx`          | Flechas de voto y puntaje, en columna o en fila (solo presentación)                           |
 | `useVoto.js`                 | Voto optimista: cambia al instante, confirma con la API y revierte si falla                   |
@@ -22,6 +22,7 @@ El **Foro de la Memoria**: un espacio para que estudiantes, docentes, familias y
 | `FormularioComentario.jsx`   | Comentar o responder (`padreId`); recarga el hilo y el contador                               |
 | `FormularioPublicacion.jsx`  | Crear una publicación: categoría (radios), título, contenido y firma                          |
 | `useFormularioForo.js`       | Estado común de los formularios: datos, errores, foco en el primer error y envío              |
+| `VolverAlForo.jsx`           | Enlace de regreso al muro, en la publicación y en el formulario                               |
 | `BotonCompartir.jsx`         | Menú nativo de compartir o copia del enlace al portapapeles                                   |
 | `Avatar.jsx`                 | Inicial de quien firma sobre un color estable por nombre                                      |
 | `ForoDestacado.jsx`          | Las tres conversaciones más activas, para la página de inicio                                 |
@@ -46,7 +47,7 @@ El portal solo mostraba información; el foro deja que la comunidad **participe*
 
 ## 🛠️ Cómo lo soluciona
 
-- **Distribución de Reddit, adaptable:** tres columnas desde `lg` (categorías · muro · panel), una sola en móvil y tablet. En móvil los votos pasan de la columna izquierda a una píldora junto a las acciones.
+- **Distribución de Reddit, adaptable:** el foro usa la misma plantilla que el resto del portal (navegación lateral · muro · panel). Las categorías van en píldoras sobre el muro y, en móvil, los votos pasan de la columna izquierda a una píldora junto a las acciones.
 - **Sin cuentas:** cada navegador genera un UUID (`identidad.js`) que la API usa para garantizar **un voto por persona y elemento** y para devolver el voto propio (`mi_voto`). La firma se recuerda para no pedirla en cada comentario.
 - **Votos optimistas:** `useVoto` actualiza el puntaje al hacer clic; el muro no se reordena mientras alguien vota (se marca como desactualizado y se refresca al volver).
 - **Hilos en el cliente:** la API entrega los comentarios planos; `armarHilo` los anida y ordena cada nivel (mejor votados, o más recientes).

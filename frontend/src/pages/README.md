@@ -39,21 +39,22 @@ Da un punto de entrada claro por URL y separa la **composición** de una pantall
 
 ## 🛠️ Cómo lo soluciona
 
-- Cada página tiene un único `<h1>` (en `EncabezadoDePagina` o en la portada) y su `<title>` propio.
+- **Misma estructura en todo el sitio:** cada página es una `PlantillaDePagina` con una `PortadaDePagina` (banda de color, ícono, `<h1>`, `<title>`, descripción y acciones), el contenido en tarjetas y un panel derecho contextual (índice «En esta página», próxima conmemoración, invitación al foro…). El Museo Virtual y la galería no llevan panel para aprovechar el ancho.
+- **Listados como muro:** eventos, salidas, exposiciones y reconocimientos se leen en una sola columna, como las publicaciones del foro.
 - Los títulos salen de `app/navegacion.js`: el menú, el pie y la página nunca se contradicen.
 - Las páginas que solo listan una colección (reconocimientos, alianzas) consultan con `recursos` directamente; las que tienen lógica (agrupar, filtrar, validar) delegan en una feature.
 
 ## 💡 Ejemplos de uso
 
 ```jsx
-export function SalidasPedagogicasPage() {
+export function ReconocimientosPage() {
   return (
-    <>
-      <EncabezadoDePagina titulo={PAGINAS.salidas.etiqueta} entradilla="…" />
-      <Contenedor className="py-12">
-        <SalidasPorAnio />
-      </Contenedor>
-    </>
+    <PlantillaDePagina
+      portada={<PortadaDePagina titulo={PAGINAS.reconocimientos.etiqueta} icono="trofeo" />}
+      panel={<EnEstaPagina secciones={[{ id: 'gala', etiqueta: 'Gala de los Mejores' }]} />}
+    >
+      <TarjetaDeContenido id="gala" titulo="Gala de los Mejores" />
+    </PlantillaDePagina>
   )
 }
 ```

@@ -28,11 +28,14 @@ export function crearApiForo(cliente = apiClient) {
         getNextPageParam: siguienteDesplazamiento,
       }),
 
-    destacadas: ({ limite = 3 } = {}) =>
+    destacadas: ({ limite = 3, votante } = {}) =>
       queryOptions({
         queryKey: [RAIZ, 'destacadas', limite],
         queryFn: ({ signal }) =>
-          cliente.get('foro/publicaciones', { params: { orden: 'populares', limite }, signal }),
+          cliente.get('foro/publicaciones', {
+            params: { orden: 'populares', limite, votante },
+            signal,
+          }),
       }),
 
     publicacion: (id, votante) =>

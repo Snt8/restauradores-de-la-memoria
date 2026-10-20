@@ -2,6 +2,7 @@ import { useInfiniteQuery } from '@tanstack/react-query'
 import { GaleriaDeEvidencias } from '@/entities/evidencia/GaleriaDeEvidencias.jsx'
 import { recursos } from '@/shared/api/recursos.js'
 import { useFiltroEnUrl } from '@/shared/lib/useFiltroEnUrl.js'
+import { CLASE_TARJETA } from '@/shared/ui/estilos.js'
 import { EstadoDeConsulta } from '@/shared/ui/EstadoDeConsulta.jsx'
 import { FiltroDeOpciones } from '@/shared/ui/FiltroDeOpciones.jsx'
 
@@ -35,8 +36,9 @@ export function GaleriaMultimedia() {
   const consulta = useInfiniteQuery(recursos.galeria.listaInfinita(filtros, POR_PAGINA))
 
   return (
-    <div className="space-y-8">
-      <div className="space-y-3">
+    <div className="space-y-6">
+      <div className={`${CLASE_TARJETA} space-y-4 p-5 sm:p-6`}>
+        <h2 className="font-sans text-base font-bold">Filtrar</h2>
         <FiltroDeOpciones
           etiqueta="Filtrar por sección"
           opciones={conTodos(SECCIONES)}
